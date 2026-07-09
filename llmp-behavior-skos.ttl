@@ -1,0 +1,536 @@
+@prefix llmpv: <http://example.org/llmp/vocab/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/llmp/vocab/behavior> a owl:Ontology ;
+    owl:versionIRI <http://example.org/llmp/vocab/behavior/0.1.0> ;
+    owl:versionInfo "0.1.0" ;
+    dcterms:title "LLMP Behaviour Controlled Vocabularies"@en ;
+    dcterms:description "SKOS concept schemes containing controlled values for the LLM Persona ontology. These terms are intentionally kept outside the OWL ontology namespace."@en ;
+    dcterms:created "2026-06-12"^^xsd:date ;
+    dcterms:modified "2026-06-12"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespacePrefix "llmpv" ;
+    vann:preferredNamespaceUri "http://example.org/llmp/vocab/" .
+
+#################################################################
+# Big Five trait vocabulary
+#################################################################
+
+llmpv:BigFiveTraitScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "Big Five trait vocabulary"@en ;
+    skos:definition "Controlled vocabulary for the five personality dimensions used in Big Five trait assessments of LLM personas."@en .
+
+llmpv:openness
+    a skos:Concept ;
+    skos:inScheme llmpv:BigFiveTraitScheme ;
+    skos:prefLabel "openness"@en ;
+    skos:definition "Tendency toward curiosity, imagination, novelty, creativity, and openness to new ideas or experiences."@en .
+
+llmpv:conscientiousness
+    a skos:Concept ;
+    skos:inScheme llmpv:BigFiveTraitScheme ;
+    skos:prefLabel "conscientiousness"@en ;
+    skos:definition "Tendency toward organisation, reliability, planning, care, self-discipline, and goal-directed behaviour."@en .
+
+llmpv:extraversion
+    a skos:Concept ;
+    skos:inScheme llmpv:BigFiveTraitScheme ;
+    skos:prefLabel "extraversion"@en ;
+    skos:definition "Tendency toward sociability, assertiveness, energy, expressiveness, and engagement with others."@en .
+
+llmpv:agreeableness
+    a skos:Concept ;
+    skos:inScheme llmpv:BigFiveTraitScheme ;
+    skos:prefLabel "agreeableness"@en ;
+    skos:definition "Tendency toward cooperation, empathy, trust, politeness, helpfulness, and concern for others."@en .
+
+llmpv:neuroticism
+    a skos:Concept ;
+    skos:inScheme llmpv:BigFiveTraitScheme ;
+    skos:prefLabel "neuroticism"@en ;
+    skos:definition "Tendency toward emotional sensitivity, anxiety, worry, mood instability, or stress reactivity."@en .
+
+llmpv:TraitIntensityScheme a skos:ConceptScheme ;
+    skos:prefLabel "trait intensity scheme"@en ;
+    dcterms:description "Controlled values for trait intensity."@en ;
+    skos:hasTopConcept llmpv:TraitIntensity-low, llmpv:TraitIntensity-medium, llmpv:TraitIntensity-high .
+
+llmpv:TraitIntensity-low a skos:Concept ;
+    skos:inScheme llmpv:TraitIntensityScheme ;
+    skos:topConceptOf llmpv:TraitIntensityScheme ;
+    skos:prefLabel "low"@en .
+
+llmpv:TraitIntensity-medium a skos:Concept ;
+    skos:inScheme llmpv:TraitIntensityScheme ;
+    skos:topConceptOf llmpv:TraitIntensityScheme ;
+    skos:prefLabel "medium"@en .
+
+llmpv:TraitIntensity-high a skos:Concept ;
+    skos:inScheme llmpv:TraitIntensityScheme ;
+    skos:topConceptOf llmpv:TraitIntensityScheme ;
+    skos:prefLabel "high"@en .
+
+llmpv:GoalTypeScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP goal type vocabulary"@en ;
+    skos:definition "Controlled vocabulary for classifying the function of goals associated with LLM personas."@en .
+
+llmpv:primaryGoal
+    a skos:Concept ;
+    skos:inScheme llmpv:GoalTypeScheme ;
+    skos:prefLabel "primary"@en ;
+    skos:definition "A central goal that strongly drives the persona's behaviour or decision-making."@en .
+
+llmpv:secondaryGoal
+    a skos:Concept ;
+    skos:inScheme llmpv:GoalTypeScheme ;
+    skos:prefLabel "secondary"@en ;
+    skos:definition "A supporting goal that is relevant to the persona but less central than a primary goal."@en .
+
+llmpv:taskGoal
+    a skos:Concept ;
+    skos:inScheme llmpv:GoalTypeScheme ;
+    skos:prefLabel "task"@en ;
+    skos:definition "A goal related to completing a task, solving a problem, producing an output, or achieving an operational result."@en .
+
+llmpv:socialGoal
+    a skos:Concept ;
+    skos:inScheme llmpv:GoalTypeScheme ;
+    skos:prefLabel "social"@en ;
+    skos:definition "A goal related to social relation, impression, belonging, cooperation, support, recognition, or interaction with others."@en .
+
+llmpv:learningGoal
+    a skos:Concept ;
+    skos:inScheme llmpv:GoalTypeScheme ;
+    skos:prefLabel "learning"@en ;
+    skos:definition "A goal related to acquiring, improving, explaining, transferring, or supporting knowledge, skill, or understanding."@en .
+
+llmpv:productGoal
+    a skos:Concept ;
+    skos:inScheme llmpv:GoalTypeScheme ;
+    skos:prefLabel "product"@en ;
+    skos:definition "A goal related to using, evaluating, buying, adopting, configuring, improving, or recommending a product or service."@en .
+
+llmpv:avoidanceGoal
+    a skos:Concept ;
+    skos:inScheme llmpv:GoalTypeScheme ;
+    skos:prefLabel "avoidance"@en ;
+    skos:definition "A goal describing an outcome, behaviour, situation, risk, or state that the persona seeks to avoid."@en .
+
+
+llmpv:PriorityLevelScheme a skos:ConceptScheme ;
+    skos:prefLabel "priority level scheme"@en ;
+    dcterms:description "Controlled values for priority level."@en ;
+    skos:hasTopConcept llmpv:PriorityLevelLow, llmpv:PriorityLevelMedium, llmpv:PriorityLevelHigh, llmpv:PriorityLevelCritical .
+
+llmpv:PriorityLevelLow a skos:Concept ;
+    skos:inScheme llmpv:PriorityLevelScheme ;
+    skos:topConceptOf llmpv:PriorityLevelScheme ;
+    skos:prefLabel "low"@en .
+
+llmpv:PriorityLevelMedium a skos:Concept ;
+    skos:inScheme llmpv:PriorityLevelScheme ;
+    skos:topConceptOf llmpv:PriorityLevelScheme ;
+    skos:prefLabel "medium"@en .
+
+llmpv:PriorityLevelHigh a skos:Concept ;
+    skos:inScheme llmpv:PriorityLevelScheme ;
+    skos:topConceptOf llmpv:PriorityLevelScheme ;
+    skos:prefLabel "high"@en .
+
+llmpv:PriorityLevelCritical a skos:Concept ;
+    skos:inScheme llmpv:PriorityLevelScheme ;
+    skos:topConceptOf llmpv:PriorityLevelScheme ;
+    skos:prefLabel "critical"@en .
+
+#################################################################
+# Need type vocabulary
+#################################################################
+
+llmpv:NeedTypeScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP need type vocabulary"@en ;
+    skos:definition "Controlled vocabulary for classifying the function of needs associated with LLM personas."@en .
+
+llmpv:functionalNeed
+    a skos:Concept ;
+    skos:inScheme llmpv:NeedTypeScheme ;
+    skos:prefLabel "functional"@en ;
+    skos:definition "A practical need required to complete a task, use a system, access a service, or act successfully."@en .
+
+llmpv:emotionalNeed
+    a skos:Concept ;
+    skos:inScheme llmpv:NeedTypeScheme ;
+    skos:prefLabel "emotional"@en ;
+    skos:definition "A need related to feelings, reassurance, confidence, safety, comfort, trust, or emotional support."@en .
+
+llmpv:socialNeed
+    a skos:Concept ;
+    skos:inScheme llmpv:NeedTypeScheme ;
+    skos:prefLabel "social"@en ;
+    skos:definition "A need related to belonging, recognition, support, collaboration, acceptance, social interaction, or group participation."@en .
+
+llmpv:informationNeed
+    a skos:Concept ;
+    skos:inScheme llmpv:NeedTypeScheme ;
+    skos:prefLabel "information"@en ;
+    skos:definition "A need for explanation, facts, evidence, guidance, comparison, clarification, examples, or supporting information."@en .
+
+llmpv:accessibilityNeed
+    a skos:Concept ;
+    skos:inScheme llmpv:NeedTypeScheme ;
+    skos:prefLabel "accessibility"@en ;
+    skos:definition "A need related to access, usability, ability, limitation, inclusive interaction, or adaptation of content and interface."@en .
+
+llmpv:activationNeed
+    a skos:Concept ;
+    skos:inScheme llmpv:NeedTypeScheme ;
+    skos:prefLabel "activation"@en ;
+    skos:definition "A condition or support factor that activates, enables, motivates, or makes possible the persona's behaviour."@en .
+
+
+llmpv:PreferencePolarityScheme a skos:ConceptScheme ;
+    skos:prefLabel "preference polarity scheme"@en ;
+    dcterms:description "Controlled values for preference polarity."@en ;
+    skos:hasTopConcept llmpv:PreferencePolarity-likes, llmpv:PreferencePolarity-dislikes, llmpv:PreferencePolarity-prefers, llmpv:PreferencePolarity-avoids, llmpv:PreferencePolarity-is-interested-in .
+
+llmpv:likes a skos:Concept ;
+    skos:inScheme llmpv:PreferencePolarityScheme ;
+    skos:topConceptOf llmpv:PreferencePolarityScheme ;
+    skos:prefLabel "likes"@en .
+
+llmpv:dislikes a skos:Concept ;
+    skos:inScheme llmpv:PreferencePolarityScheme ;
+    skos:topConceptOf llmpv:PreferencePolarityScheme ;
+    skos:prefLabel "dislikes"@en .
+
+llmpv:prefers a skos:Concept ;
+    skos:inScheme llmpv:PreferencePolarityScheme ;
+    skos:topConceptOf llmpv:PreferencePolarityScheme ;
+    skos:prefLabel "prefers"@en .
+
+llmpv:avoids a skos:Concept ;
+    skos:inScheme llmpv:PreferencePolarityScheme ;
+    skos:topConceptOf llmpv:PreferencePolarityScheme ;
+    skos:prefLabel "avoids"@en .
+
+llmpv:RiskAttitudeScheme a skos:ConceptScheme ;
+    skos:prefLabel "risk attitude scheme"@en ;
+    dcterms:description "Controlled values for risk attitude."@en ;
+    skos:hasTopConcept llmpv:RiskAttitude-risk-averse, llmpv:RiskAttitude-risk-neutral, llmpv:RiskAttitude-risk-seeking .
+
+llmpv:RiskAttitudeAverse a skos:Concept ;
+    skos:inScheme llmpv:RiskAttitudeScheme ;
+    skos:topConceptOf llmpv:RiskAttitudeScheme ;
+    skos:prefLabel "risk averse"@en .
+
+llmpv:RiskAttitudeNeutral a skos:Concept ;
+    skos:inScheme llmpv:RiskAttitudeScheme ;
+    skos:topConceptOf llmpv:RiskAttitudeScheme ;
+    skos:prefLabel "risk neutral"@en .
+
+llmpv:RiskAttitudeSeeking a skos:Concept ;
+    skos:inScheme llmpv:RiskAttitudeScheme ;
+    skos:topConceptOf llmpv:RiskAttitudeScheme ;
+    skos:prefLabel "risk seeking"@en .
+
+llmpv:DecisionSpeedScheme a skos:ConceptScheme ;
+    skos:prefLabel "decision speed scheme"@en ;
+    dcterms:description "Controlled values for decision speed."@en ;
+    skos:hasTopConcept llmpv:DecisionSpeedSlow, llmpv:DecisionSpeedModerate, llmpv:DecisionSpeedQuick, llmpv:DecisionSpeedImpulsive .
+
+llmpv:DecisionSpeedSlow a skos:Concept ;
+    skos:inScheme llmpv:DecisionSpeedScheme ;
+    skos:topConceptOf llmpv:DecisionSpeedScheme ;
+    skos:prefLabel "slow"@en .
+
+llmpv:DecisionSpeedModerate a skos:Concept ;
+    skos:inScheme llmpv:DecisionSpeedScheme ;
+    skos:topConceptOf llmpv:DecisionSpeedScheme ;
+    skos:prefLabel "moderate"@en .
+
+llmpv:DecisionSpeedQuick a skos:Concept ;
+    skos:inScheme llmpv:DecisionSpeedScheme ;
+    skos:topConceptOf llmpv:DecisionSpeedScheme ;
+    skos:prefLabel "quick"@en .
+
+llmpv:DecisionSpeedImpulsive a skos:Concept ;
+    skos:inScheme llmpv:DecisionSpeedScheme ;
+    skos:topConceptOf llmpv:DecisionSpeedScheme ;
+    skos:prefLabel "impulsive"@en .
+
+llmpv:InformationSeekingLevelScheme a skos:ConceptScheme ;
+    skos:prefLabel "information seeking level scheme"@en ;
+    dcterms:description "Controlled values for information seeking level."@en ;
+    skos:hasTopConcept llmpv:InformationSeekingLevel-low, llmpv:InformationSeekingLevel-medium, llmpv:InformationSeekingLevel-high .
+
+llmpv:InformationSeekingLevel-low a skos:Concept ;
+    skos:inScheme llmpv:InformationSeekingLevelScheme ;
+    skos:topConceptOf llmpv:InformationSeekingLevelScheme ;
+    skos:prefLabel "low"@en .
+
+llmpv:InformationSeekingLevel-medium a skos:Concept ;
+    skos:inScheme llmpv:InformationSeekingLevelScheme ;
+    skos:topConceptOf llmpv:InformationSeekingLevelScheme ;
+    skos:prefLabel "medium"@en .
+
+llmpv:InformationSeekingLevel-high a skos:Concept ;
+    skos:inScheme llmpv:InformationSeekingLevelScheme ;
+    skos:topConceptOf llmpv:InformationSeekingLevelScheme ;
+    skos:prefLabel "high"@en .
+
+llmpv:ConfidenceLevelScheme a skos:ConceptScheme ;
+    skos:prefLabel "confidence level scheme"@en ;
+    dcterms:description "Controlled values for confidence level."@en ;
+    skos:hasTopConcept llmpv:ConfidenceLevelLow, llmpv:ConfidenceLevelMedium, llmpv:ConfidenceLevelHigh, llmpv:ConfidenceLevelOverconfident .
+
+llmpv:ConfidenceLevelLow a skos:Concept ;
+    skos:inScheme llmpv:ConfidenceLevelScheme ;
+    skos:topConceptOf llmpv:ConfidenceLevelScheme ;
+    skos:prefLabel "low"@en .
+
+llmpv:ConfidenceLevelMedium a skos:Concept ;
+    skos:inScheme llmpv:ConfidenceLevelScheme ;
+    skos:topConceptOf llmpv:ConfidenceLevelScheme ;
+    skos:prefLabel "medium"@en .
+
+llmpv:ConfidenceLevelHigh a skos:Concept ;
+    skos:inScheme llmpv:ConfidenceLevelScheme ;
+    skos:topConceptOf llmpv:ConfidenceLevelScheme ;
+    skos:prefLabel "high"@en .
+
+llmpv:ConfidenceLevelOverconfident a skos:Concept ;
+    skos:inScheme llmpv:ConfidenceLevelScheme ;
+    skos:topConceptOf llmpv:ConfidenceLevelScheme ;
+    skos:prefLabel "overconfident"@en .
+
+llmpv:AutonomyLevelScheme a skos:ConceptScheme ;
+    skos:prefLabel "autonomy level scheme"@en ;
+    dcterms:description "Controlled values for autonomy level."@en ;
+    skos:hasTopConcept llmpv:AutonomyLevelLow, llmpv:AutonomyLevelMedium, llmpv:AutonomyLevelHigh .
+
+llmpv:AutonomyLevelLow a skos:Concept ;
+    skos:inScheme llmpv:AutonomyLevelScheme ;
+    skos:topConceptOf llmpv:AutonomyLevelScheme ;
+    skos:prefLabel "low"@en .
+
+llmpv:AutonomyLevelMedium a skos:Concept ;
+    skos:inScheme llmpv:AutonomyLevelScheme ;
+    skos:topConceptOf llmpv:AutonomyLevelScheme ;
+    skos:prefLabel "medium"@en .
+
+llmpv:AutonomyLevelHigh a skos:Concept ;
+    skos:inScheme llmpv:AutonomyLevelScheme ;
+    skos:topConceptOf llmpv:AutonomyLevelScheme ;
+    skos:prefLabel "high"@en .
+
+llmpv:CollaborationPreferenceScheme a skos:ConceptScheme ;
+    skos:prefLabel "collaboration preference scheme"@en ;
+    dcterms:description "Controlled values for collaboration preference."@en ;
+    skos:hasTopConcept llmpv:CollaborationPreferenceIndependent, llmpv:CollaborationPreferenceConsultative, llmpv:CollaborationPreferenceGroupDecision .
+
+llmpv:CollaborationPreferenceIndependent a skos:Concept ;
+    skos:inScheme llmpv:CollaborationPreferenceScheme ;
+    skos:topConceptOf llmpv:CollaborationPreferenceScheme ;
+    skos:prefLabel "independent"@en .
+
+llmpv:CollaborationPreferenceConsultative a skos:Concept ;
+    skos:inScheme llmpv:CollaborationPreferenceScheme ;
+    skos:topConceptOf llmpv:CollaborationPreferenceScheme ;
+    skos:prefLabel "consultative"@en .
+
+llmpv:CollaborationPreferenceGroupDecision a skos:Concept ;
+    skos:inScheme llmpv:CollaborationPreferenceScheme ;
+    skos:topConceptOf llmpv:CollaborationPreferenceScheme ;
+    skos:prefLabel "group decision"@en .
+
+
+#################################################################
+# Decision criterion vocabulary
+#################################################################
+
+llmpv:DecisionCriterionScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP decision criterion vocabulary"@en ;
+    skos:definition "Controlled vocabulary for criteria that an LLM persona may use when evaluating options, making choices, or deciding how to act."@en ;
+    skos:hasTopConcept
+        llmpv:EpistemicDecisionCriterion ,
+        llmpv:PracticalDecisionCriterion ,
+        llmpv:RiskSafetyDecisionCriterion ,
+        llmpv:HumanCentredDecisionCriterion ,
+        llmpv:ValueImpactDecisionCriterion .
+
+llmpv:EpistemicDecisionCriterion
+    a skos:Concept ;
+    skos:topConceptOf llmpv:DecisionCriterionScheme ;
+    skos:prefLabel "epistemic decision criterion"@en ;
+    skos:definition "A decision criterion related to knowledge quality, correctness, evidence, uncertainty, or reliability."@en .
+
+llmpv:PracticalDecisionCriterion
+    a skos:Concept ;
+    skos:topConceptOf llmpv:DecisionCriterionScheme ;
+    skos:prefLabel "practical decision criterion"@en ;
+    skos:definition "A decision criterion related to feasibility, efficiency, cost, speed, or available resources."@en .
+
+llmpv:RiskSafetyDecisionCriterion
+    a skos:Concept ;
+    skos:topConceptOf llmpv:DecisionCriterionScheme ;
+    skos:prefLabel "risk and safety decision criterion"@en ;
+    skos:definition "A decision criterion related to harm avoidance, risk management, safety, privacy, or compliance."@en .
+
+llmpv:HumanCentredDecisionCriterion
+    a skos:Concept ;
+    skos:topConceptOf llmpv:DecisionCriterionScheme ;
+    skos:prefLabel "human-centred decision criterion"@en ;
+    skos:definition "A decision criterion related to user needs, preferences, accessibility, usability, or user benefit."@en .
+
+llmpv:ValueImpactDecisionCriterion
+    a skos:Concept ;
+    skos:topConceptOf llmpv:DecisionCriterionScheme ;
+    skos:prefLabel "value and impact decision criterion"@en ;
+    skos:definition "A decision criterion related to trust, ethics, social impact, sustainability, novelty, or long-term value."@en .
+
+llmpv:accuracyCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:EpistemicDecisionCriterion ;
+    skos:prefLabel "accuracy"@en ;
+    skos:definition "A decision criterion based on correctness, factual reliability, and minimisation of error."@en .
+
+llmpv:evidenceCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:EpistemicDecisionCriterion ;
+    skos:prefLabel "evidence"@en ;
+    skos:definition "A decision criterion based on the availability, quality, strength, or relevance of supporting evidence."@en .
+
+llmpv:certaintyCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:EpistemicDecisionCriterion ;
+    skos:prefLabel "certainty"@en ;
+    skos:definition "A decision criterion based on the degree of confidence, uncertainty, or ambiguity associated with an option."@en .
+
+llmpv:costCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:PracticalDecisionCriterion ;
+    skos:prefLabel "cost"@en ;
+    skos:definition "A decision criterion based on monetary cost, effort, resource use, or opportunity cost."@en .
+
+llmpv:speedCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:PracticalDecisionCriterion ;
+    skos:prefLabel "speed"@en ;
+    skos:definition "A decision criterion based on time, rapidity of execution, or urgency."@en .
+
+llmpv:feasibilityCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:PracticalDecisionCriterion ;
+    skos:prefLabel "feasibility"@en ;
+    skos:definition "A decision criterion based on whether an option can realistically be implemented given available constraints, resources, and capabilities."@en .
+
+llmpv:efficiencyCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:PracticalDecisionCriterion ;
+    skos:prefLabel "efficiency"@en ;
+    skos:definition "A decision criterion based on achieving a desired outcome with minimal waste of time, effort, cost, or resources."@en .
+
+llmpv:safetyCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:RiskSafetyDecisionCriterion ;
+    skos:prefLabel "safety"@en ;
+    skos:definition "A decision criterion based on avoiding harm, danger, unsafe recommendations, or risky outcomes."@en .
+
+llmpv:riskCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:RiskSafetyDecisionCriterion ;
+    skos:prefLabel "risk"@en ;
+    skos:definition "A decision criterion based on identifying, comparing, reducing, or accepting possible negative consequences."@en .
+
+llmpv:privacyCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:RiskSafetyDecisionCriterion ;
+    skos:prefLabel "privacy"@en ;
+    skos:definition "A decision criterion based on protecting personal data, sensitive information, confidentiality, or user control over disclosure."@en .
+
+llmpv:complianceCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:RiskSafetyDecisionCriterion ;
+    skos:prefLabel "compliance"@en ;
+    skos:definition "A decision criterion based on respecting applicable rules, policies, laws, standards, or institutional constraints."@en .
+
+llmpv:userPreferenceCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:HumanCentredDecisionCriterion ;
+    skos:prefLabel "user preference"@en ;
+    skos:definition "A decision criterion based on the user's expressed preferences, goals, expectations, or constraints."@en .
+
+llmpv:userBenefitCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:HumanCentredDecisionCriterion ;
+    skos:prefLabel "user benefit"@en ;
+    skos:definition "A decision criterion based on the expected usefulness, value, or positive outcome for the user."@en .
+
+llmpv:accessibilityCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:HumanCentredDecisionCriterion ;
+    skos:prefLabel "accessibility"@en ;
+    skos:definition "A decision criterion based on whether an option is usable, understandable, or reachable for users with different abilities, constraints, or contexts."@en .
+
+llmpv:usabilityCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:HumanCentredDecisionCriterion ;
+    skos:prefLabel "usability"@en ;
+    skos:definition "A decision criterion based on ease of use, clarity, simplicity, learnability, and interaction quality."@en .
+
+llmpv:trustCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:ValueImpactDecisionCriterion ;
+    skos:prefLabel "trust"@en ;
+    skos:definition "A decision criterion based on whether an option increases, preserves, or risks trust between the persona, the user, and relevant information sources."@en .
+
+llmpv:ethicalCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:ValueImpactDecisionCriterion ;
+    skos:prefLabel "ethical acceptability"@en ;
+    skos:definition "A decision criterion based on fairness, responsibility, respect, non-manipulation, and avoidance of ethically problematic outcomes."@en .
+
+llmpv:socialImpactCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:ValueImpactDecisionCriterion ;
+    skos:prefLabel "social impact"@en ;
+    skos:definition "A decision criterion based on the likely consequences of an option for groups, communities, institutions, or social relations."@en .
+
+llmpv:sustainabilityCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:ValueImpactDecisionCriterion ;
+    skos:prefLabel "sustainability"@en ;
+    skos:definition "A decision criterion based on environmental, social, or long-term resource sustainability."@en .
+
+llmpv:noveltyCriterion
+    a skos:Concept ;
+    skos:inScheme llmpv:DecisionCriterionScheme ;
+    skos:broader llmpv:ValueImpactDecisionCriterion ;
+    skos:prefLabel "novelty"@en ;
+    skos:definition "A decision criterion based on originality, creativity, innovation, or preference for new approaches."@en .

@@ -1,0 +1,197 @@
+@prefix llmpv: <http://example.org/llmp/vocab/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/llmp/vocab/identity> a owl:Ontology ;
+    owl:versionIRI <http://example.org/llmp/vocab/identity/0.1.0> ;
+    owl:versionInfo "0.1.0" ;
+    dcterms:title "LLMP Identity Controlled Vocabularies"@en ;
+    dcterms:description "SKOS concept schemes containing controlled values for the LLM Persona ontology. These terms are intentionally kept outside the OWL ontology namespace."@en ;
+    dcterms:created "2026-06-12"^^xsd:date ;
+    dcterms:modified "2026-07-09"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespacePrefix "llmpv" ;
+    vann:preferredNamespaceUri "http://example.org/llmp/vocab/" .
+
+llmpv:AgentTypeScheme a skos:ConceptScheme ;
+    skos:prefLabel "agent type scheme"@en ;
+    dcterms:description "Controlled values for agent type."@en ;
+    skos:hasTopConcept
+        llmpv:AgentTypeNaturalPerson,
+        llmpv:AgentTypeFictionalPerson,
+        llmpv:AgentTypeHistoricalFigure,
+        llmpv:AgentTypeArtificialAgent,
+        llmpv:AgentTypeEmbodiedRobot,
+        llmpv:AgentTypeVirtualCharacter,
+        llmpv:AgentTypeCompositePersona,
+        llmpv:AgentTypeAudienceSegmentPersona,
+        llmpv:AgentTypeOrganizationRepresentative .
+
+llmpv:AgentTypeNaturalPerson a skos:Concept ;
+    skos:inScheme llmpv:AgentTypeScheme ;
+    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:prefLabel "Natural person"@en .
+
+llmpv:AgentTypeFictionalPerson a skos:Concept ;
+    skos:inScheme llmpv:AgentTypeScheme ;
+    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:prefLabel "Fictional person"@en .
+
+llmpv:AgentTypeHistoricalFigure a skos:Concept ;
+    skos:inScheme llmpv:AgentTypeScheme ;
+    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:prefLabel "Historical figure"@en .
+
+llmpv:AgentTypeArtificialAgent a skos:Concept ;
+    skos:inScheme llmpv:AgentTypeScheme ;
+    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:prefLabel "Artificial agent"@en .
+
+llmpv:AgentTypeEmbodiedRobot a skos:Concept ;
+    skos:inScheme llmpv:AgentTypeScheme ;
+    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:prefLabel "Embodied robot"@en .
+
+llmpv:AgentTypeVirtualCharacter a skos:Concept ;
+    skos:inScheme llmpv:AgentTypeScheme ;
+    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:prefLabel "Virtual character"@en .
+
+llmpv:AgentTypeCompositePersona a skos:Concept ;
+    skos:inScheme llmpv:AgentTypeScheme ;
+    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:prefLabel "Composite persona"@en .
+
+llmpv:AgentTypeAudienceSegmentPersona a skos:Concept ;
+    skos:inScheme llmpv:AgentTypeScheme ;
+    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:prefLabel "Audience segment persona"@en .
+
+llmpv:AgentTypeOrganizationRepresentative a skos:Concept ;
+    skos:inScheme llmpv:AgentTypeScheme ;
+    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:prefLabel "Organization representative"@en .
+
+llmpv:SocialAlignmentScheme a skos:ConceptScheme ;
+    skos:prefLabel "social alignment scheme"@en ;
+    dcterms:description "Controlled values for social alignment."@en ;
+    skos:hasTopConcept
+        llmpv:SocialAlignmentAlly,
+        llmpv:SocialAlignmentEnemy,
+        llmpv:SocialAlignmentRival,
+        llmpv:SocialAlignmentProtector,
+        llmpv:SocialAlignmentNeutral,
+        llmpv:SocialAlignmentDependent .
+
+llmpv:SocialAlignmentAlly a skos:Concept ;
+    skos:inScheme llmpv:SocialAlignmentScheme ;
+    skos:topConceptOf llmpv:SocialAlignmentScheme ;
+    skos:prefLabel "ally"@en .
+
+llmpv:SocialAlignmentEnemy a skos:Concept ;
+    skos:inScheme llmpv:SocialAlignmentScheme ;
+    skos:topConceptOf llmpv:SocialAlignmentScheme ;
+    skos:prefLabel "enemy"@en .
+
+llmpv:SocialAlignmentRival a skos:Concept ;
+    skos:inScheme llmpv:SocialAlignmentScheme ;
+    skos:topConceptOf llmpv:SocialAlignmentScheme ;
+    skos:prefLabel "rival"@en .
+
+llmpv:SocialAlignmentProtector a skos:Concept ;
+    skos:inScheme llmpv:SocialAlignmentScheme ;
+    skos:topConceptOf llmpv:SocialAlignmentScheme ;
+    skos:prefLabel "protector"@en .
+
+llmpv:SocialAlignmentNeutral a skos:Concept ;
+    skos:inScheme llmpv:SocialAlignmentScheme ;
+    skos:topConceptOf llmpv:SocialAlignmentScheme ;
+    skos:prefLabel "neutral"@en .
+
+llmpv:SocialAlignmentDependent a skos:Concept ;
+    skos:inScheme llmpv:SocialAlignmentScheme ;
+    skos:topConceptOf llmpv:SocialAlignmentScheme ;
+    skos:prefLabel "dependent"@en .
+
+llmpv:AudienceRelationRoleScheme a skos:ConceptScheme ;
+    skos:prefLabel "audience relation role scheme"@en ;
+    dcterms:description "Controlled values for audience relation role."@en ;
+    skos:hasTopConcept
+        llmpv:AudienceRelationRoleAssistant,
+        llmpv:AudienceRelationRoleCoach,
+        llmpv:AudienceRelationRoleInterviewer,
+        llmpv:AudienceRelationRoleCompanion,
+        llmpv:AudienceRelationRoleExpert,
+        llmpv:AudienceRelationRoleTutor,
+        llmpv:AudienceRelationRoleCritic,
+        llmpv:AudienceRelationRoleGuide .
+
+llmpv:AudienceRelationRoleAssistant a skos:Concept ;
+    skos:inScheme llmpv:AudienceRelationRoleScheme ;
+    skos:topConceptOf llmpv:AudienceRelationRoleScheme ;
+    skos:prefLabel "assistant"@en .
+
+llmpv:AudienceRelationRoleCoach a skos:Concept ;
+    skos:inScheme llmpv:AudienceRelationRoleScheme ;
+    skos:topConceptOf llmpv:AudienceRelationRoleScheme ;
+    skos:prefLabel "coach"@en .
+
+llmpv:AudienceRelationRoleInterviewer a skos:Concept ;
+    skos:inScheme llmpv:AudienceRelationRoleScheme ;
+    skos:topConceptOf llmpv:AudienceRelationRoleScheme ;
+    skos:prefLabel "interviewer"@en .
+
+llmpv:AudienceRelationRoleCompanion a skos:Concept ;
+    skos:inScheme llmpv:AudienceRelationRoleScheme ;
+    skos:topConceptOf llmpv:AudienceRelationRoleScheme ;
+    skos:prefLabel "companion"@en .
+
+llmpv:AudienceRelationRoleExpert a skos:Concept ;
+    skos:inScheme llmpv:AudienceRelationRoleScheme ;
+    skos:topConceptOf llmpv:AudienceRelationRoleScheme ;
+    skos:prefLabel "expert"@en .
+
+llmpv:AudienceRelationRoleTutor a skos:Concept ;
+    skos:inScheme llmpv:AudienceRelationRoleScheme ;
+    skos:topConceptOf llmpv:AudienceRelationRoleScheme ;
+    skos:prefLabel "tutor"@en .
+
+llmpv:AudienceRelationRoleCritic a skos:Concept ;
+    skos:inScheme llmpv:AudienceRelationRoleScheme ;
+    skos:topConceptOf llmpv:AudienceRelationRoleScheme ;
+    skos:prefLabel "critic"@en .
+
+llmpv:AudienceRelationRoleGuide a skos:Concept ;
+    skos:inScheme llmpv:AudienceRelationRoleScheme ;
+    skos:topConceptOf llmpv:AudienceRelationRoleScheme ;
+    skos:prefLabel "guide"@en .
+
+llmpv:GenderScheme a skos:ConceptScheme ;
+    skos:prefLabel "LLMP gender vocabulary"@en .
+
+llmpv:Woman a skos:Concept ;
+    skos:inScheme llmpv:GenderScheme ;
+    skos:prefLabel "woman"@en .
+
+llmpv:Man a skos:Concept ;
+    skos:inScheme llmpv:GenderScheme ;
+    skos:prefLabel "man"@en .
+
+llmpv:NonBinary a skos:Concept ;
+    skos:inScheme llmpv:GenderScheme ;
+    skos:prefLabel "non-binary"@en .
+
+llmpv:Agender a skos:Concept ;
+    skos:inScheme llmpv:GenderScheme ;
+    skos:prefLabel "agender"@en .
+
+llmpv:GenderFluid a skos:Concept ;
+    skos:inScheme llmpv:GenderScheme ;
+    skos:prefLabel "genderfluid"@en .
+
+llmpv:SelfDescribedGender a skos:Concept ;
+    skos:inScheme llmpv:GenderScheme ;
+    skos:prefLabel "self-described gender"@en .
