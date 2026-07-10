@@ -1,0 +1,103 @@
+doctype html
+html(lang="en")
+  head
+    title LLM Persona Ontology
+    link(rel='stylesheet', href='styles.css')
+    meta(charset='UTF-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+
+  body
+
+    section.cover
+      .inside
+        .description
+          h1 LLM Persona Ontology
+          p The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It organises persona information around the identity and behaviour pillars.
+          p This ontology defines #{classes.length} classes and #{properties.length} properties.
+          a.btn(href="https://github.com/D2KLab/llm_persona_ontology", rel="external", target="_blank")
+            span See it on GitHub
+
+        //- .logo
+          img(src='https://www.doremus.org/wp-content/uploads/2015/06/Logotype-Doremus-VA-Couleurs.png')
+
+    //- section.model-pics
+    //-   img(src='./img/model.composition.png')
+    //-   img(src='./img/model.concert.png')
+    //-   img(src='./img/model.score.png')
+
+    h1 Summary
+    section.summary
+      h2 Classes
+      ul
+        each c in classes
+          li
+            a(href='#'+utils.getHash(c))
+              span= utils.getLabelOrHash(c)
+
+      h2 Properties
+      ul
+        each p in properties
+          li
+            a(href='#'+utils.getHash(p))
+              span= utils.getLabelOrHash(p)
+
+    h1 Classes
+    section.classes.card
+      ul.list
+        each c in classes
+          li
+            h2(id=utils.getHash(c))
+              a(href='#'+utils.getHash(c))
+                span= utils.getLabelOrHash(c)
+                small= ontology.namespace + utils.getHash(c)
+            ul.features
+              each obj, prop in c
+                if utils.isSignificative(prop)
+                  li
+                    div.prop
+                      small= prop
+                    div.obj
+                      span!= utils.print(obj).replace(/\n/g, '<br/>')
+
+    h1 Properties
+    section.properties.card
+      ul.list
+        each p in properties
+          li
+            h2(id=utils.getHash(p))
+              a(href='#'+utils.getHash(p))
+                span= utils.getLabelOrHash(p)
+                small= ontology.namespace + utils.getHash(p)
+            ul.features
+              each obj, prop in p
+                if utils.isSignificative(prop)
+                  li
+                    div.prop
+                      small= prop
+                    div.obj
+                      span!= utils.print(obj).replace(/\n/g, '<br/>')
+
+    footer#appFooter
+      .footerCont
+        div
+          p.descr
+            | The
+            strong LLM Persona Ontology
+            | is under development. 
+            a(href="http://github.com/D2KLab/llm_persona_ontology/issues")
+              | Give us feedback
+            br
+            br
+            a.licenseBadge(rel="license", href="http://creativecommons.org/licenses/by/4.0/")
+              img(alt="Licenza Creative Commons", style="border-width:0", src="https://i.creativecommons.org/l/by/4.0/88x31.png")
+            | This work is licensed under
+            a(rel="license", href="http://creativecommons.org/licenses/by/4.0/") Creative Commons Attribution 4.0 International License
+            | .
+            br
+            br
+            | Photo credit:
+            a(href='https://flic.kr/p/njM9TN') Howard Ignatius
+        .projLogoCont
+          a(href='https://www.eurecom.fr/', rel='external', target='_blank')
+            img(src='./img/EURECOM_logo.png', alt='EURECOM')

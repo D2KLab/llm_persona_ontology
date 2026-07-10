@@ -1,0 +1,6 @@
+{
+  "source": "./src/llmp-ontology.ttl",
+  "namedGraph": "http://example.org/llmp#",
+  "input": "./res/",
+  "output": "./docs/"
+}

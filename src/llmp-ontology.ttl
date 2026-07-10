@@ -8,15 +8,15 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix llmpv: <http://example.org/llmp/vocab/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @base <http://example.org/llmp> .
 
 <http://example.org/llmp> rdf:type owl:Ontology ;
                            owl:versionIRI <http://example.org/llmp/0.1.0> ;
-                           owl:imports llmpv:behavior ,
-                                       llmpv:identity ;
+                           rdfs:label "LLM Persona Ontology"@en ;
+                           dcterms:description "The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It organises persona information around the identity and behaviour pillars."@en ;
                            dcterms:created "2026-06-12"^^xsd:date ;
                            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                            dcterms:modified "2026-06-12"^^xsd:date ;

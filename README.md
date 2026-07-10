@@ -1,6 +1,6 @@
-# LLM Persona Ontology v0.2.0
+# LLM Persona Ontology
 
-This package contains a remade OWL ontology for LLM Personas and separate SKOS vocabularies for controlled terms.
+The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It organises persona information around the identity and behaviour pillars.
 
 ## Design choices
 
