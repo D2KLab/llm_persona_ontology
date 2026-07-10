@@ -19,3 +19,15 @@ The LLM Persona Ontology provides a structured model for representing personas u
 - `llmp-ontology.ttl`: main OWL ontology in Turtle.
 - `llmp-identity-skos.ttl`: identity controlled vocabularies.
 - `llmp-behavior-skos.ttl`: behaviour controlled vocabularies.
+
+## Documentation
+
+The documentation has been automatically generated using [OWL Coat](https://github.com/DOREMUS-ANR/OWL-Coat).
+
+Install:
+
+> npm install -g owl-coat
+
+After editing the template in `res`, regenerate the documentation using
+
+> owlcoat generate
