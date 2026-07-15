@@ -5,21 +5,6 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/llmp/vocab/behavior> a owl:Ontology ;
-    owl:versionIRI <http://example.org/llmp/vocab/behavior/0.1.0> ;
-    owl:versionInfo "0.1.0" ;
-    dcterms:title "LLMP Behaviour Controlled Vocabularies"@en ;
-    dcterms:description "SKOS concept schemes containing controlled values for the LLM Persona ontology. These terms are intentionally kept outside the OWL ontology namespace."@en ;
-    dcterms:created "2026-06-12"^^xsd:date ;
-    dcterms:modified "2026-06-12"^^xsd:date ;
-    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    vann:preferredNamespacePrefix "llmpv" ;
-    vann:preferredNamespaceUri "http://example.org/llmp/vocab/" .
-
-#################################################################
-# Big Five trait vocabulary
-#################################################################
-
 llmpv:BigFiveTraitScheme
     a skos:ConceptScheme ;
     skos:prefLabel "Big Five trait vocabulary"@en ;
@@ -54,26 +39,6 @@ llmpv:neuroticism
     skos:inScheme llmpv:BigFiveTraitScheme ;
     skos:prefLabel "neuroticism"@en ;
     skos:definition "Tendency toward emotional sensitivity, anxiety, worry, mood instability, or stress reactivity."@en .
-
-llmpv:TraitIntensityScheme a skos:ConceptScheme ;
-    skos:prefLabel "trait intensity scheme"@en ;
-    dcterms:description "Controlled values for trait intensity."@en ;
-    skos:hasTopConcept llmpv:TraitIntensity-low, llmpv:TraitIntensity-medium, llmpv:TraitIntensity-high .
-
-llmpv:TraitIntensity-low a skos:Concept ;
-    skos:inScheme llmpv:TraitIntensityScheme ;
-    skos:topConceptOf llmpv:TraitIntensityScheme ;
-    skos:prefLabel "low"@en .
-
-llmpv:TraitIntensity-medium a skos:Concept ;
-    skos:inScheme llmpv:TraitIntensityScheme ;
-    skos:topConceptOf llmpv:TraitIntensityScheme ;
-    skos:prefLabel "medium"@en .
-
-llmpv:TraitIntensity-high a skos:Concept ;
-    skos:inScheme llmpv:TraitIntensityScheme ;
-    skos:topConceptOf llmpv:TraitIntensityScheme ;
-    skos:prefLabel "high"@en .
 
 llmpv:GoalTypeScheme
     a skos:ConceptScheme ;
@@ -122,36 +87,6 @@ llmpv:avoidanceGoal
     skos:prefLabel "avoidance"@en ;
     skos:definition "A goal describing an outcome, behaviour, situation, risk, or state that the persona seeks to avoid."@en .
 
-
-llmpv:PriorityLevelScheme a skos:ConceptScheme ;
-    skos:prefLabel "priority level scheme"@en ;
-    dcterms:description "Controlled values for priority level."@en ;
-    skos:hasTopConcept llmpv:PriorityLevelLow, llmpv:PriorityLevelMedium, llmpv:PriorityLevelHigh, llmpv:PriorityLevelCritical .
-
-llmpv:PriorityLevelLow a skos:Concept ;
-    skos:inScheme llmpv:PriorityLevelScheme ;
-    skos:topConceptOf llmpv:PriorityLevelScheme ;
-    skos:prefLabel "low"@en .
-
-llmpv:PriorityLevelMedium a skos:Concept ;
-    skos:inScheme llmpv:PriorityLevelScheme ;
-    skos:topConceptOf llmpv:PriorityLevelScheme ;
-    skos:prefLabel "medium"@en .
-
-llmpv:PriorityLevelHigh a skos:Concept ;
-    skos:inScheme llmpv:PriorityLevelScheme ;
-    skos:topConceptOf llmpv:PriorityLevelScheme ;
-    skos:prefLabel "high"@en .
-
-llmpv:PriorityLevelCritical a skos:Concept ;
-    skos:inScheme llmpv:PriorityLevelScheme ;
-    skos:topConceptOf llmpv:PriorityLevelScheme ;
-    skos:prefLabel "critical"@en .
-
-#################################################################
-# Need type vocabulary
-#################################################################
-
 llmpv:NeedTypeScheme
     a skos:ConceptScheme ;
     skos:prefLabel "LLMP need type vocabulary"@en ;
@@ -193,11 +128,10 @@ llmpv:activationNeed
     skos:prefLabel "activation"@en ;
     skos:definition "A condition or support factor that activates, enables, motivates, or makes possible the persona's behaviour."@en .
 
-
 llmpv:PreferencePolarityScheme a skos:ConceptScheme ;
     skos:prefLabel "preference polarity scheme"@en ;
     dcterms:description "Controlled values for preference polarity."@en ;
-    skos:hasTopConcept llmpv:PreferencePolarity-likes, llmpv:PreferencePolarity-dislikes, llmpv:PreferencePolarity-prefers, llmpv:PreferencePolarity-avoids, llmpv:PreferencePolarity-is-interested-in .
+    skos:hasTopConcept llmpv:likes, llmpv:dislikes, llmpv:prefers, llmpv:avoids .
 
 llmpv:likes a skos:Concept ;
     skos:inScheme llmpv:PreferencePolarityScheme ;
@@ -222,19 +156,19 @@ llmpv:avoids a skos:Concept ;
 llmpv:RiskAttitudeScheme a skos:ConceptScheme ;
     skos:prefLabel "risk attitude scheme"@en ;
     dcterms:description "Controlled values for risk attitude."@en ;
-    skos:hasTopConcept llmpv:RiskAttitude-risk-averse, llmpv:RiskAttitude-risk-neutral, llmpv:RiskAttitude-risk-seeking .
+    skos:hasTopConcept llmpv:RiskAverse, llmpv:RiskNeutral, llmpv:RiskSeeking .
 
-llmpv:RiskAttitudeAverse a skos:Concept ;
+llmpv:RiskAverse a skos:Concept ;
     skos:inScheme llmpv:RiskAttitudeScheme ;
     skos:topConceptOf llmpv:RiskAttitudeScheme ;
     skos:prefLabel "risk averse"@en .
 
-llmpv:RiskAttitudeNeutral a skos:Concept ;
+llmpv:RiskNeutral a skos:Concept ;
     skos:inScheme llmpv:RiskAttitudeScheme ;
     skos:topConceptOf llmpv:RiskAttitudeScheme ;
     skos:prefLabel "risk neutral"@en .
 
-llmpv:RiskAttitudeSeeking a skos:Concept ;
+llmpv:RiskSeeking a skos:Concept ;
     skos:inScheme llmpv:RiskAttitudeScheme ;
     skos:topConceptOf llmpv:RiskAttitudeScheme ;
     skos:prefLabel "risk seeking"@en .
@@ -264,71 +198,6 @@ llmpv:DecisionSpeedImpulsive a skos:Concept ;
     skos:topConceptOf llmpv:DecisionSpeedScheme ;
     skos:prefLabel "impulsive"@en .
 
-llmpv:InformationSeekingLevelScheme a skos:ConceptScheme ;
-    skos:prefLabel "information seeking level scheme"@en ;
-    dcterms:description "Controlled values for information seeking level."@en ;
-    skos:hasTopConcept llmpv:InformationSeekingLevel-low, llmpv:InformationSeekingLevel-medium, llmpv:InformationSeekingLevel-high .
-
-llmpv:InformationSeekingLevel-low a skos:Concept ;
-    skos:inScheme llmpv:InformationSeekingLevelScheme ;
-    skos:topConceptOf llmpv:InformationSeekingLevelScheme ;
-    skos:prefLabel "low"@en .
-
-llmpv:InformationSeekingLevel-medium a skos:Concept ;
-    skos:inScheme llmpv:InformationSeekingLevelScheme ;
-    skos:topConceptOf llmpv:InformationSeekingLevelScheme ;
-    skos:prefLabel "medium"@en .
-
-llmpv:InformationSeekingLevel-high a skos:Concept ;
-    skos:inScheme llmpv:InformationSeekingLevelScheme ;
-    skos:topConceptOf llmpv:InformationSeekingLevelScheme ;
-    skos:prefLabel "high"@en .
-
-llmpv:ConfidenceLevelScheme a skos:ConceptScheme ;
-    skos:prefLabel "confidence level scheme"@en ;
-    dcterms:description "Controlled values for confidence level."@en ;
-    skos:hasTopConcept llmpv:ConfidenceLevelLow, llmpv:ConfidenceLevelMedium, llmpv:ConfidenceLevelHigh, llmpv:ConfidenceLevelOverconfident .
-
-llmpv:ConfidenceLevelLow a skos:Concept ;
-    skos:inScheme llmpv:ConfidenceLevelScheme ;
-    skos:topConceptOf llmpv:ConfidenceLevelScheme ;
-    skos:prefLabel "low"@en .
-
-llmpv:ConfidenceLevelMedium a skos:Concept ;
-    skos:inScheme llmpv:ConfidenceLevelScheme ;
-    skos:topConceptOf llmpv:ConfidenceLevelScheme ;
-    skos:prefLabel "medium"@en .
-
-llmpv:ConfidenceLevelHigh a skos:Concept ;
-    skos:inScheme llmpv:ConfidenceLevelScheme ;
-    skos:topConceptOf llmpv:ConfidenceLevelScheme ;
-    skos:prefLabel "high"@en .
-
-llmpv:ConfidenceLevelOverconfident a skos:Concept ;
-    skos:inScheme llmpv:ConfidenceLevelScheme ;
-    skos:topConceptOf llmpv:ConfidenceLevelScheme ;
-    skos:prefLabel "overconfident"@en .
-
-llmpv:AutonomyLevelScheme a skos:ConceptScheme ;
-    skos:prefLabel "autonomy level scheme"@en ;
-    dcterms:description "Controlled values for autonomy level."@en ;
-    skos:hasTopConcept llmpv:AutonomyLevelLow, llmpv:AutonomyLevelMedium, llmpv:AutonomyLevelHigh .
-
-llmpv:AutonomyLevelLow a skos:Concept ;
-    skos:inScheme llmpv:AutonomyLevelScheme ;
-    skos:topConceptOf llmpv:AutonomyLevelScheme ;
-    skos:prefLabel "low"@en .
-
-llmpv:AutonomyLevelMedium a skos:Concept ;
-    skos:inScheme llmpv:AutonomyLevelScheme ;
-    skos:topConceptOf llmpv:AutonomyLevelScheme ;
-    skos:prefLabel "medium"@en .
-
-llmpv:AutonomyLevelHigh a skos:Concept ;
-    skos:inScheme llmpv:AutonomyLevelScheme ;
-    skos:topConceptOf llmpv:AutonomyLevelScheme ;
-    skos:prefLabel "high"@en .
-
 llmpv:CollaborationPreferenceScheme a skos:ConceptScheme ;
     skos:prefLabel "collaboration preference scheme"@en ;
     dcterms:description "Controlled values for collaboration preference."@en ;
@@ -348,11 +217,6 @@ llmpv:CollaborationPreferenceGroupDecision a skos:Concept ;
     skos:inScheme llmpv:CollaborationPreferenceScheme ;
     skos:topConceptOf llmpv:CollaborationPreferenceScheme ;
     skos:prefLabel "group decision"@en .
-
-
-#################################################################
-# Decision criterion vocabulary
-#################################################################
 
 llmpv:DecisionCriterionScheme
     a skos:ConceptScheme ;

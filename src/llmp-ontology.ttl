@@ -1,29 +1,66 @@
+@prefix : <http://example.org/llmp#> .
 @prefix bio: <http://purl.org/vocab/bio/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rel: <http://purl.org/vocab/relationship/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix llmp: <http://example.org/llmp#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 @base <http://example.org/llmp> .
 
 <http://example.org/llmp> rdf:type owl:Ontology ;
                            owl:versionIRI <http://example.org/llmp/0.1.0> ;
-                           rdfs:label "LLM Persona Ontology"@en ;
-                           dcterms:description "The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It organises persona information around the identity and behaviour pillars."@en ;
                            dcterms:created "2026-06-12"^^xsd:date ;
                            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                            dcterms:modified "2026-06-12"^^xsd:date ;
                            dcterms:title "LLM Persona Ontology"@en ;
                            vann:preferredNamespacePrefix "llmp" ;
                            vann:preferredNamespaceUri "http://example.org/llmp#" ;
+                           rdfs:label "LLM Persona Ontology"@en ;
                            owl:versionInfo "0.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
 
 #################################################################
 #    Object Properties
@@ -67,6 +104,15 @@ llmp:hasAgentType rdf:type owl:ObjectProperty ;
                   rdfs:comment "Links an LLM persona to a controlled category specifying the kind of entity it represents, such as a natural person, fictional person, virtual character, artificial agent, or organisation representative."@en ,
                                "Values can come from llmpv:AgentTypeScheme."@en ;
                   rdfs:label "has agent type"@en .
+
+
+###  http://example.org/llmp#hasApparentAge
+llmp:hasApparentAge rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf llmp:hasPersonalIdentityFeature ;
+                    rdfs:domain llmp:LLMPersona ;
+                    rdfs:range schema:QuantitativeValue ;
+                    rdfs:comment "Associates an LLM persona with an expressed or perceived age expressed as an exact year (e.g., schema:value 25) or a range of years (e.g., schema:minValue 20, schema:maxValue 30)."@en ;
+                    rdfs:label "has apparent age"@en .
 
 
 ###  http://example.org/llmp#hasAudienceRelationRole
@@ -307,14 +353,6 @@ llmp:hasPersonalIdentityFeature rdf:type owl:ObjectProperty ;
                                 rdfs:label "has personal identity feature"@en .
 
 
-###  http://example.org/llmp#hasPersonalityFeature
-llmp:hasPersonalityFeature rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf llmp:hasBehaviorFeature ;
-                           rdfs:domain llmp:LLMPersona ;
-                           rdfs:comment "Links an LLM persona to a non-literal feature describing stable trait-like tendencies that influence its behaviour."@en ;
-                           rdfs:label "has personality feature"@en .
-
-
 ###  http://example.org/llmp#hasPreference
 llmp:hasPreference rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf llmp:hasBehaviorFeature ;
@@ -324,28 +362,12 @@ llmp:hasPreference rdf:type owl:ObjectProperty ;
                    rdfs:label "has preference"@en .
 
 
-###  http://example.org/llmp#hasPreferredChannel
-llmp:hasPreferredChannel rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf llmp:hasPreference ;
-                         rdfs:domain llmp:LLMPersona ;
-                         rdfs:comment "Links an LLM persona to a preferred communication, interaction, or delivery channel."@en ;
-                         rdfs:label "has preferred channel"@en .
-
-
 ###  http://example.org/llmp#hasPreferredInteractionMode
 llmp:hasPreferredInteractionMode rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf llmp:hasPreference ;
                                  rdfs:domain llmp:LLMPersona ;
                                  rdfs:comment "Links an LLM persona to a preferred mode of interaction, such as dialogue, guided steps, examples, exploration, or direct instruction."@en ;
                                  rdfs:label "has preferred interaction mode"@en .
-
-
-###  http://example.org/llmp#hasPriority
-llmp:hasPriority rdf:type owl:ObjectProperty ;
-                 rdfs:domain llmp:PrioritizableBehaviorItem ;
-                 rdfs:range skos:Concept ;
-                 rdfs:comment "Links a prioritizable behaviour item, such as a goal or need, to a controlled priority level indicating its relative importance for the persona. Values should normally come from the LLMP priority vocabulary."@en ;
-                 rdfs:label "has priority"@en .
 
 
 ###  http://example.org/llmp#hasRelationship
@@ -419,41 +441,18 @@ llmp:hasSpecies rdf:type owl:ObjectProperty ;
                 rdfs:label "has species"@en .
 
 
-###  http://example.org/llmp#hasTaskBehaviorFeature
-llmp:hasTaskBehaviorFeature rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf llmp:hasBehaviorFeature ;
-                            rdfs:domain llmp:LLMPersona ;
-                            rdfs:comment "Links an LLM persona to a non-literal feature describing how it plans, executes, handles errors, attends, learns, persists, or uses tools while performing tasks."@en ;
-                            rdfs:label "has task behavior feature"@en .
-
-
 ###  http://example.org/llmp#hasTraitAssessment
 llmp:hasTraitAssessment rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf llmp:hasPersonalityFeature ;
+                        rdfs:subPropertyOf llmp:hasBehaviorFeature ;
                         rdfs:domain llmp:LLMPersona ;
                         rdfs:range llmp:TraitAssessment ;
                         rdfs:comment "Links an LLM persona to a structured assessment of one Big Five personality trait, such as openness, conscientiousness, extraversion, agreeableness, or neuroticism."@en ;
                         rdfs:label "has trait assessment"@en .
 
 
-###  http://example.org/llmp#hasTraitIntensity
-llmp:hasTraitIntensity rdf:type owl:ObjectProperty ;
-                       rdfs:domain llmp:TraitAssessment ;
-                       rdfs:range skos:Concept ;
-                       rdfs:comment "Links a Big Five trait assessment to a controlled intensity value, such as low, medium, or high."@en ;
-                       rdfs:label "has trait intensity"@en .
-
-
-###  http://example.org/llmp#hasTraitScore
-llmp:hasTraitScore rdf:type owl:ObjectProperty ;
-                   rdfs:domain llmp:TraitAssessment ;
-                   rdfs:range schema:QuantitativeValue ;
-                   rdfs:comment "Links a Big Five trait assessment to a structured quantitative score, including the numeric value and, where relevant, the minimum value, maximum value, unit text, or reference scoring scheme."@en ;
-                   rdfs:label "has trait score"@en .
-
-
 ###  http://example.org/llmp#preferencePolarity
 llmp:preferencePolarity rdf:type owl:ObjectProperty ;
+                        rdfs:domain llmp:PreferenceStatement ;
                         rdfs:range skos:Concept ;
                         rdfs:comment "Links a preference to a controlled polarity value, such as like, dislike, prefer, or avoid."@en ;
                         rdfs:label "preference polarity"@en .
@@ -461,6 +460,7 @@ llmp:preferencePolarity rdf:type owl:ObjectProperty ;
 
 ###  http://example.org/llmp#preferenceTarget
 llmp:preferenceTarget rdf:type owl:ObjectProperty ;
+                      rdfs:domain llmp:PreferenceStatement ;
                       rdfs:comment "Links a preference to the thing, topic, activity, channel, interaction mode, or option that the preference concerns."@en ;
                       rdfs:label "preference target"@en .
 
@@ -557,15 +557,6 @@ llmp:hasAlias rdf:type owl:DatatypeProperty ;
               rdfs:label "has alias"@en .
 
 
-###  http://example.org/llmp#hasApparentAge
-llmp:hasApparentAge rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ;
-                    rdfs:domain llmp:LLMPersona ;
-                    rdfs:range rdf:langString ;
-                    rdfs:comment "Associates an LLM persona with an expressed or perceived age, which may differ from chronological age and may be approximate, fictional, or non-numeric."@en ;
-                    rdfs:label "has apparent age"@en .
-
-
 ###  http://example.org/llmp#hasAttentionPattern
 llmp:hasAttentionPattern rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
@@ -580,7 +571,7 @@ llmp:hasAutonomyLevel rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf llmp:hasDecisionLiteralFeature ;
                       rdfs:domain llmp:LLMPersona ;
                       rdfs:range xsd:decimal ;
-                      rdfs:comment "Associates an LLM persona with a numeric value describing how independently it tends to decide or act."@en ;
+                      rdfs:comment "Associates an LLM persona with a numeric value between 0 and 1 describing how independently it tends to decide or act."@en ;
                       rdfs:label "has autonomy level"@en .
 
 
@@ -652,7 +643,7 @@ llmp:hasConfidenceLevel rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf llmp:hasDecisionLiteralFeature ;
                         rdfs:domain llmp:LLMPersona ;
                         rdfs:range xsd:decimal ;
-                        rdfs:comment "Associates an LLM persona with a numeric value describing how confident it tends to be in its decisions."@en ;
+                        rdfs:comment "Associates an LLM persona with a numeric value between 0 and 1 describing how confident it tends to be in its decisions."@en ;
                         rdfs:label "has confidence level"@en .
 
 
@@ -734,7 +725,7 @@ llmp:hasInformationSeekingLevel rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf llmp:hasDecisionLiteralFeature ;
                                 rdfs:domain llmp:LLMPersona ;
                                 rdfs:range xsd:decimal ;
-                                rdfs:comment "Associates an LLM persona with a numeric value describing how much information it usually seeks before deciding."@en ;
+                                rdfs:comment "Associates an LLM persona with a numeric value between 0 and 1 describing how much information it usually seeks before deciding."@en ;
                                 rdfs:label "has information-seeking level"@en .
 
 
@@ -755,20 +746,12 @@ llmp:hasNeedTrigger rdf:type owl:DatatypeProperty ;
                     rdfs:label "has need trigger"@en .
 
 
-###  http://example.org/llmp#hasNumericPriority
-llmp:hasNumericPriority rdf:type owl:DatatypeProperty ;
-                        rdfs:domain llmp:PrioritizableBehaviorItem ;
-                        rdfs:range xsd:decimal ;
-                        rdfs:comment "Associates a prioritizable behaviour item, such as a goal or need, with a numeric priority value. The interpretation of the value should be defined by the application or by an associated scale."@en ;
-                        rdfs:label "has numeric priority"@en .
-
-
 ###  http://example.org/llmp#hasPersistenceLevel
 llmp:hasPersistenceLevel rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
                          rdfs:domain llmp:LLMPersona ;
                          rdfs:range xsd:decimal ;
-                         rdfs:comment "Associates an LLM persona with a numeric value describing how much effort it sustains despite difficulty."@en ;
+                         rdfs:comment "Associates an LLM persona with a numeric value between 0 and 1 describing how much effort it sustains despite difficulty."@en ;
                          rdfs:label "has persistence level"@en .
 
 
@@ -796,14 +779,6 @@ llmp:hasPersonalIdentityLiteralFeature rdf:type owl:DatatypeProperty ;
                                        rdfs:label "has personal identity literal feature"@en .
 
 
-###  http://example.org/llmp#hasPersonalityLiteralFeature
-llmp:hasPersonalityLiteralFeature rdf:type owl:DatatypeProperty ;
-                                  rdfs:subPropertyOf llmp:hasBehaviorLiteralFeature ;
-                                  rdfs:domain llmp:LLMPersona ;
-                                  rdfs:comment "Links an LLM persona to a literal value describing the expression, score, scale, or explanation of a personality-related tendency."@en ;
-                                  rdfs:label "has personality literal feature"@en .
-
-
 ###  http://example.org/llmp#hasPlanningBehavior
 llmp:hasPlanningBehavior rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
@@ -811,6 +786,14 @@ llmp:hasPlanningBehavior rdf:type owl:DatatypeProperty ;
                          rdfs:range rdf:langString ;
                          rdfs:comment "Describes how an LLM persona prepares before acting or performing a task, including whether it plans carefully, improvises, decomposes problems, or follows predefined steps."@en ;
                          rdfs:label "has planning behavior"@en .
+
+
+###  http://example.org/llmp#hasPriority
+llmp:hasPriority rdf:type owl:DatatypeProperty ;
+                 rdfs:domain llmp:PrioritizableBehaviorItem ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "Links a prioritizable behaviour item, such as a goal or need, to a numeric priority level indicating its relative importance for the persona. Higher values indicate higher priority."@en ;
+                 rdfs:label "has priority"@en .
 
 
 ###  http://example.org/llmp#hasResidenceDescription
@@ -883,6 +866,14 @@ llmp:hasTraitExpression rdf:type owl:DatatypeProperty ;
                         rdfs:label "has trait expression"@en .
 
 
+###  http://example.org/llmp#hasTraitIntensity
+llmp:hasTraitIntensity rdf:type owl:DatatypeProperty ;
+                       rdfs:domain llmp:TraitAssessment ;
+                       rdfs:range xsd:integer ;
+                       rdfs:comment "Links a Big Five trait assessment to a quantitative score between 1 and 5, where 1 indicates low intensity, 3 is medium, and 5 indicates high intensity."@en ;
+                       rdfs:label "has trait intensity"@en .
+
+
 ###  http://example.org/llmp#mayDo
 llmp:mayDo rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf llmp:hasBehaviorConstraintLiteralFeature ;
@@ -921,8 +912,9 @@ llmp:outOfCharacterBehavior rdf:type owl:DatatypeProperty ;
 
 ###  http://example.org/llmp#preferenceStrength
 llmp:preferenceStrength rdf:type owl:DatatypeProperty ;
+                        rdfs:domain llmp:PreferenceStatement ;
                         rdfs:range xsd:decimal ;
-                        rdfs:comment "Associates a preference with a numeric strength value."@en ;
+                        rdfs:comment "Associates a preference with a numeric strength value between 0 and 1."@en ;
                         rdfs:label "preference strength"@en .
 
 
@@ -1043,6 +1035,10 @@ bio:Event rdf:type owl:Class .
 bio:Position rdf:type owl:Class .
 
 
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
 ###  http://www.w3.org/ns/prov#Entity
 prov:Entity rdf:type owl:Class .
 
@@ -1089,7 +1085,8 @@ schema:Role rdf:type owl:Class .
 
 ###  http://example.org/llmp
 <http://example.org/llmp> rdf:type owl:NamedIndividual ;
-                          dcterms:description "An OWL ontology for representing LLM personas without profile wrapper classes. Persona features are organised around four modelling pillars: identity, behaviour, cognition, and communication. Controlled terms are externalised as SKOS concept schemes under a distinct vocabulary namespace."@en .
+                          dcterms:description "An OWL ontology for representing LLM personas without profile wrapper classes. Persona features are organised around four modelling pillars: identity, behaviour, cognition, and communication. Controlled terms are externalised as SKOS concept schemes under a distinct vocabulary namespace."@en ,
+                                              "The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It organises persona information around the identity and behaviour pillars."@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
