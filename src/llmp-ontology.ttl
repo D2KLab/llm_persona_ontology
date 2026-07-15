@@ -1,4 +1,4 @@
-@prefix : <http://example.org/llmp#> .
+@prefix : <https://w3id.org/llm-persona/> .
 @prefix bio: <http://purl.org/vocab/bio/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,23 +6,23 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix llmp: <http://example.org/llmp#> .
+@prefix llmp: <https://w3id.org/llm-persona/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://example.org/llmp> .
+@base <https://w3id.org/llm-persona/> .
 
-<http://example.org/llmp> rdf:type owl:Ontology ;
-                           owl:versionIRI <http://example.org/llmp/0.1.0> ;
+<https://w3id.org/llm-persona/> rdf:type owl:Ontology ;
+                           owl:versionIRI <https://w3id.org/llm-persona/0.1.0> ;
                            dcterms:created "2026-06-12"^^xsd:date ;
                            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                            dcterms:modified "2026-06-12"^^xsd:date ;
                            dcterms:title "LLM Persona Ontology"@en ;
                            vann:preferredNamespacePrefix "llmp" ;
-                           vann:preferredNamespaceUri "http://example.org/llmp#" ;
+                           vann:preferredNamespaceUri "https://w3id.org/llm-persona/" ;
                            rdfs:label "LLM Persona Ontology"@en ;
                            owl:versionInfo "0.1.0" .
 

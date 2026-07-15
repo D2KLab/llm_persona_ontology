@@ -12,7 +12,7 @@
         <div class="description">
           <h1>LLM Persona Ontology</h1>
           <p>The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It organises persona information around the identity and behaviour pillars.</p>
-          <p>This ontology defines 7 classes and 97 properties.</p><a class="btn" href="https://github.com/D2KLab/llm_persona_ontology" rel="external" target="_blank"><span>See it on GitHub</span></a>
+          <p>This ontology defines 7 classes and 91 properties.</p><a class="btn" href="https://github.com/D2KLab/llm_persona_ontology" rel="external" target="_blank"><span>See it on GitHub</span></a>
         </div>
       </div>
     </section>
@@ -34,6 +34,7 @@
         <li><a href="#llmp:hasAchievementEvent"><span>has achievement event</span></a></li>
         <li><a href="#llmp:hasAffiliation"><span>has affiliation</span></a></li>
         <li><a href="#llmp:hasAgentType"><span>has agent type</span></a></li>
+        <li><a href="#llmp:hasApparentAge"><span>has apparent age</span></a></li>
         <li><a href="#llmp:hasAudienceRelationRole"><span>has audience relation role</span></a></li>
         <li><a href="#llmp:hasBehaviorFeature"><span>has behavior feature</span></a></li>
         <li><a href="#llmp:hasBiographicalIdentityFeature"><span>has biographical identity feature</span></a></li>
@@ -61,11 +62,8 @@
         <li><a href="#llmp:hasOriginEvent"><span>has origin event</span></a></li>
         <li><a href="#llmp:hasPersonaFeature"><span>has persona feature</span></a></li>
         <li><a href="#llmp:hasPersonalIdentityFeature"><span>has personal identity feature</span></a></li>
-        <li><a href="#llmp:hasPersonalityFeature"><span>has personality feature</span></a></li>
         <li><a href="#llmp:hasPreference"><span>has preference</span></a></li>
-        <li><a href="#llmp:hasPreferredChannel"><span>has preferred channel</span></a></li>
         <li><a href="#llmp:hasPreferredInteractionMode"><span>has preferred interaction mode</span></a></li>
-        <li><a href="#llmp:hasPriority"><span>has priority</span></a></li>
         <li><a href="#llmp:hasRelationship"><span>has relationship</span></a></li>
         <li><a href="#llmp:hasRelationshipEvent"><span>has relationship event</span></a></li>
         <li><a href="#llmp:hasResidenceEvent"><span>has residence event</span></a></li>
@@ -74,16 +72,12 @@
         <li><a href="#llmp:hasSocialIdentityFeature"><span>has social identity feature</span></a></li>
         <li><a href="#llmp:hasSocialRole"><span>has social role</span></a></li>
         <li><a href="#llmp:hasSpecies"><span>has species</span></a></li>
-        <li><a href="#llmp:hasTaskBehaviorFeature"><span>has task behavior feature</span></a></li>
         <li><a href="#llmp:hasTraitAssessment"><span>has trait assessment</span></a></li>
-        <li><a href="#llmp:hasTraitIntensity"><span>has trait intensity</span></a></li>
-        <li><a href="#llmp:hasTraitScore"><span>has trait score</span></a></li>
         <li><a href="#llmp:preferencePolarity"><span>preference polarity</span></a></li>
         <li><a href="#llmp:preferenceTarget"><span>preference target</span></a></li>
         <li><a href="#llmp:usesDecisionCriterion"><span>uses decision criterion</span></a></li>
         <li><a href="#llmp:followsSocialNorm"><span>follows social norm</span></a></li>
         <li><a href="#llmp:hasAlias"><span>has alias</span></a></li>
-        <li><a href="#llmp:hasApparentAge"><span>has apparent age</span></a></li>
         <li><a href="#llmp:hasAttentionPattern"><span>has attention pattern</span></a></li>
         <li><a href="#llmp:hasAutonomyLevel"><span>has autonomy level</span></a></li>
         <li><a href="#llmp:hasBackstory"><span>has backstory</span></a></li>
@@ -105,13 +99,12 @@
         <li><a href="#llmp:hasInformationSeekingLevel"><span>has information-seeking level</span></a></li>
         <li><a href="#llmp:hasLearningBehavior"><span>has learning behavior</span></a></li>
         <li><a href="#llmp:hasNeedTrigger"><span>has need trigger</span></a></li>
-        <li><a href="#llmp:hasNumericPriority"><span>has numeric priority</span></a></li>
         <li><a href="#llmp:hasPersistenceLevel"><span>has persistence level</span></a></li>
         <li><a href="#llmp:hasPersonaLiteralFeature"><span>has persona literal feature</span></a></li>
         <li><a href="#llmp:hasPersonalDescription"><span>has personal description</span></a></li>
         <li><a href="#llmp:hasPersonalIdentityLiteralFeature"><span>has personal identity literal feature</span></a></li>
-        <li><a href="#llmp:hasPersonalityLiteralFeature"><span>has personality literal feature</span></a></li>
         <li><a href="#llmp:hasPlanningBehavior"><span>has planning behavior</span></a></li>
+        <li><a href="#llmp:hasPriority"><span>has priority</span></a></li>
         <li><a href="#llmp:hasResidenceDescription"><span>has residence description</span></a></li>
         <li><a href="#llmp:hasSocialBoundary"><span>has social boundary</span></a></li>
         <li><a href="#llmp:hasSocialDescription"><span>has social description</span></a></li>
@@ -120,6 +113,7 @@
         <li><a href="#llmp:hasTaskBehaviorLiteralFeature"><span>has task behavior literal feature</span></a></li>
         <li><a href="#llmp:hasToolUseBehavior"><span>has tool-use behavior</span></a></li>
         <li><a href="#llmp:hasTraitExpression"><span>has trait expression</span></a></li>
+        <li><a href="#llmp:hasTraitIntensity"><span>has trait intensity</span></a></li>
         <li><a href="#llmp:mayDo"><span>may do</span></a></li>
         <li><a href="#llmp:mustDo"><span>must do</span></a></li>
         <li><a href="#llmp:mustNotDo"><span>must not do</span></a></li>
@@ -341,6 +335,31 @@
             <li>
               <div class="prop"><small>rdfs:label</small></div>
               <div class="obj"><span>has agent type<small>@en</small></span></div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 id="llmp:hasApparentAge"><a href="#llmp:hasApparentAge"><span>has apparent age</span><small>http://example.org/llmp#llmp:hasApparentAge</small></a></h2>
+          <ul class="features">
+            <li>
+              <div class="prop"><small>rdfs:subPropertyOf</small></div>
+              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:domain</small></div>
+              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:range</small></div>
+              <div class="obj"><span><a href="https://schema.org/QuantitativeValue">schema:QuantitativeValue</a></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:comment</small></div>
+              <div class="obj"><span>Associates an LLM persona with an expressed or perceived age expressed as an exact year (e.g., schema:value 25) or a range of years (e.g., schema:minValue 20, schema:maxValue 30).<small>@en</small></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:label</small></div>
+              <div class="obj"><span>has apparent age<small>@en</small></span></div>
             </li>
           </ul>
         </li>
@@ -972,27 +991,6 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPersonalityFeature"><a href="#llmp:hasPersonalityFeature"><span>has personality feature</span><small>http://example.org/llmp#llmp:hasPersonalityFeature</small></a></h2>
-          <ul class="features">
-            <li>
-              <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Links an LLM persona to a non-literal feature describing stable trait-like tendencies that influence its behaviour.<small>@en</small></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:label</small></div>
-              <div class="obj"><span>has personality feature<small>@en</small></span></div>
-            </li>
-          </ul>
-        </li>
-        <li>
           <h2 id="llmp:hasPreference"><a href="#llmp:hasPreference"><span>has preference</span><small>http://example.org/llmp#llmp:hasPreference</small></a></h2>
           <ul class="features">
             <li>
@@ -1018,27 +1016,6 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPreferredChannel"><a href="#llmp:hasPreferredChannel"><span>has preferred channel</span><small>http://example.org/llmp#llmp:hasPreferredChannel</small></a></h2>
-          <ul class="features">
-            <li>
-              <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPreference">llmp:hasPreference</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Links an LLM persona to a preferred communication, interaction, or delivery channel.<small>@en</small></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:label</small></div>
-              <div class="obj"><span>has preferred channel<small>@en</small></span></div>
-            </li>
-          </ul>
-        </li>
-        <li>
           <h2 id="llmp:hasPreferredInteractionMode"><a href="#llmp:hasPreferredInteractionMode"><span>has preferred interaction mode</span><small>http://example.org/llmp#llmp:hasPreferredInteractionMode</small></a></h2>
           <ul class="features">
             <li>
@@ -1056,27 +1033,6 @@
             <li>
               <div class="prop"><small>rdfs:label</small></div>
               <div class="obj"><span>has preferred interaction mode<small>@en</small></span></div>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h2 id="llmp:hasPriority"><a href="#llmp:hasPriority"><span>has priority</span><small>http://example.org/llmp#llmp:hasPriority</small></a></h2>
-          <ul class="features">
-            <li>
-              <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#PrioritizableBehaviorItem">llmp:PrioritizableBehaviorItem</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Links a prioritizable behaviour item, such as a goal or need, to a controlled priority level indicating its relative importance for the persona. Values should normally come from the LLMP priority vocabulary.<small>@en</small></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:label</small></div>
-              <div class="obj"><span>has priority<small>@en</small></span></div>
             </li>
           </ul>
         </li>
@@ -1277,32 +1233,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasTaskBehaviorFeature"><a href="#llmp:hasTaskBehaviorFeature"><span>has task behavior feature</span><small>http://example.org/llmp#llmp:hasTaskBehaviorFeature</small></a></h2>
-          <ul class="features">
-            <li>
-              <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Links an LLM persona to a non-literal feature describing how it plans, executes, handles errors, attends, learns, persists, or uses tools while performing tasks.<small>@en</small></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:label</small></div>
-              <div class="obj"><span>has task behavior feature<small>@en</small></span></div>
-            </li>
-          </ul>
-        </li>
-        <li>
           <h2 id="llmp:hasTraitAssessment"><a href="#llmp:hasTraitAssessment"><span>has trait assessment</span><small>http://example.org/llmp#llmp:hasTraitAssessment</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalityFeature">llmp:hasPersonalityFeature</a></span></div>
+              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
@@ -1323,50 +1258,12 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasTraitIntensity"><a href="#llmp:hasTraitIntensity"><span>has trait intensity</span><small>http://example.org/llmp#llmp:hasTraitIntensity</small></a></h2>
-          <ul class="features">
-            <li>
-              <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#TraitAssessment">llmp:TraitAssessment</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Links a Big Five trait assessment to a controlled intensity value, such as low, medium, or high.<small>@en</small></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:label</small></div>
-              <div class="obj"><span>has trait intensity<small>@en</small></span></div>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h2 id="llmp:hasTraitScore"><a href="#llmp:hasTraitScore"><span>has trait score</span><small>http://example.org/llmp#llmp:hasTraitScore</small></a></h2>
-          <ul class="features">
-            <li>
-              <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#TraitAssessment">llmp:TraitAssessment</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="https://schema.org/QuantitativeValue">schema:QuantitativeValue</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Links a Big Five trait assessment to a structured quantitative score, including the numeric value and, where relevant, the minimum value, maximum value, unit text, or reference scoring scheme.<small>@en</small></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:label</small></div>
-              <div class="obj"><span>has trait score<small>@en</small></span></div>
-            </li>
-          </ul>
-        </li>
-        <li>
           <h2 id="llmp:preferencePolarity"><a href="#llmp:preferencePolarity"><span>preference polarity</span><small>http://example.org/llmp#llmp:preferencePolarity</small></a></h2>
           <ul class="features">
+            <li>
+              <div class="prop"><small>rdfs:domain</small></div>
+              <div class="obj"><span><a href="http://example.org/llmp#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
+            </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
               <div class="obj"><span><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></span></div>
@@ -1384,6 +1281,10 @@
         <li>
           <h2 id="llmp:preferenceTarget"><a href="#llmp:preferenceTarget"><span>preference target</span><small>http://example.org/llmp#llmp:preferenceTarget</small></a></h2>
           <ul class="features">
+            <li>
+              <div class="prop"><small>rdfs:domain</small></div>
+              <div class="obj"><span><a href="http://example.org/llmp#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
+            </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
               <div class="obj"><span>Links a preference to the thing, topic, activity, channel, interaction mode, or option that the preference concerns.<small>@en</small></span></div>
@@ -1470,31 +1371,6 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasApparentAge"><a href="#llmp:hasApparentAge"><span>has apparent age</span><small>http://example.org/llmp#llmp:hasApparentAge</small></a></h2>
-          <ul class="features">
-            <li>
-              <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Associates an LLM persona with an expressed or perceived age, which may differ from chronological age and may be approximate, fictional, or non-numeric.<small>@en</small></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:label</small></div>
-              <div class="obj"><span>has apparent age<small>@en</small></span></div>
-            </li>
-          </ul>
-        </li>
-        <li>
           <h2 id="llmp:hasAttentionPattern"><a href="#llmp:hasAttentionPattern"><span>has attention pattern</span><small>http://example.org/llmp#llmp:hasAttentionPattern</small></a></h2>
           <ul class="features">
             <li>
@@ -1536,7 +1412,7 @@
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Associates an LLM persona with a numeric value describing how independently it tends to decide or act.<small>@en</small></span></div>
+              <div class="obj"><span>Associates an LLM persona with a numeric value between 0 and 1 describing how independently it tends to decide or act.<small>@en</small></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:label</small></div>
@@ -1724,7 +1600,7 @@
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Associates an LLM persona with a numeric value describing how confident it tends to be in its decisions.<small>@en</small></span></div>
+              <div class="obj"><span>Associates an LLM persona with a numeric value between 0 and 1 describing how confident it tends to be in its decisions.<small>@en</small></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:label</small></div>
@@ -1937,7 +1813,7 @@
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Associates an LLM persona with a numeric value describing how much information it usually seeks before deciding.<small>@en</small></span></div>
+              <div class="obj"><span>Associates an LLM persona with a numeric value between 0 and 1 describing how much information it usually seeks before deciding.<small>@en</small></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:label</small></div>
@@ -1992,27 +1868,6 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasNumericPriority"><a href="#llmp:hasNumericPriority"><span>has numeric priority</span><small>http://example.org/llmp#llmp:hasNumericPriority</small></a></h2>
-          <ul class="features">
-            <li>
-              <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#PrioritizableBehaviorItem">llmp:PrioritizableBehaviorItem</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Associates a prioritizable behaviour item, such as a goal or need, with a numeric priority value. The interpretation of the value should be defined by the application or by an associated scale.<small>@en</small></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:label</small></div>
-              <div class="obj"><span>has numeric priority<small>@en</small></span></div>
-            </li>
-          </ul>
-        </li>
-        <li>
           <h2 id="llmp:hasPersistenceLevel"><a href="#llmp:hasPersistenceLevel"><span>has persistence level</span><small>http://example.org/llmp#llmp:hasPersistenceLevel</small></a></h2>
           <ul class="features">
             <li>
@@ -2029,7 +1884,7 @@
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Associates an LLM persona with a numeric value describing how much effort it sustains despite difficulty.<small>@en</small></span></div>
+              <div class="obj"><span>Associates an LLM persona with a numeric value between 0 and 1 describing how much effort it sustains despite difficulty.<small>@en</small></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:label</small></div>
@@ -2097,27 +1952,6 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPersonalityLiteralFeature"><a href="#llmp:hasPersonalityLiteralFeature"><span>has personality literal feature</span><small>http://example.org/llmp#llmp:hasPersonalityLiteralFeature</small></a></h2>
-          <ul class="features">
-            <li>
-              <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorLiteralFeature">llmp:hasBehaviorLiteralFeature</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Links an LLM persona to a literal value describing the expression, score, scale, or explanation of a personality-related tendency.<small>@en</small></span></div>
-            </li>
-            <li>
-              <div class="prop"><small>rdfs:label</small></div>
-              <div class="obj"><span>has personality literal feature<small>@en</small></span></div>
-            </li>
-          </ul>
-        </li>
-        <li>
           <h2 id="llmp:hasPlanningBehavior"><a href="#llmp:hasPlanningBehavior"><span>has planning behavior</span><small>http://example.org/llmp#llmp:hasPlanningBehavior</small></a></h2>
           <ul class="features">
             <li>
@@ -2139,6 +1973,27 @@
             <li>
               <div class="prop"><small>rdfs:label</small></div>
               <div class="obj"><span>has planning behavior<small>@en</small></span></div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 id="llmp:hasPriority"><a href="#llmp:hasPriority"><span>has priority</span><small>http://example.org/llmp#llmp:hasPriority</small></a></h2>
+          <ul class="features">
+            <li>
+              <div class="prop"><small>rdfs:domain</small></div>
+              <div class="obj"><span><a href="http://example.org/llmp#PrioritizableBehaviorItem">llmp:PrioritizableBehaviorItem</a></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:range</small></div>
+              <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:comment</small></div>
+              <div class="obj"><span>Links a prioritizable behaviour item, such as a goal or need, to a numeric priority level indicating its relative importance for the persona. Higher values indicate higher priority.<small>@en</small></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:label</small></div>
+              <div class="obj"><span>has priority<small>@en</small></span></div>
             </li>
           </ul>
         </li>
@@ -2331,6 +2186,27 @@
           </ul>
         </li>
         <li>
+          <h2 id="llmp:hasTraitIntensity"><a href="#llmp:hasTraitIntensity"><span>has trait intensity</span><small>http://example.org/llmp#llmp:hasTraitIntensity</small></a></h2>
+          <ul class="features">
+            <li>
+              <div class="prop"><small>rdfs:domain</small></div>
+              <div class="obj"><span><a href="http://example.org/llmp#TraitAssessment">llmp:TraitAssessment</a></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:range</small></div>
+              <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:comment</small></div>
+              <div class="obj"><span>Links a Big Five trait assessment to a quantitative score between 1 and 5, where 1 indicates low intensity, 3 is medium, and 5 indicates high intensity.<small>@en</small></span></div>
+            </li>
+            <li>
+              <div class="prop"><small>rdfs:label</small></div>
+              <div class="obj"><span>has trait intensity<small>@en</small></span></div>
+            </li>
+          </ul>
+        </li>
+        <li>
           <h2 id="llmp:mayDo"><a href="#llmp:mayDo"><span>may do</span><small>http://example.org/llmp#llmp:mayDo</small></a></h2>
           <ul class="features">
             <li>
@@ -2434,12 +2310,16 @@
           <h2 id="llmp:preferenceStrength"><a href="#llmp:preferenceStrength"><span>preference strength</span><small>http://example.org/llmp#llmp:preferenceStrength</small></a></h2>
           <ul class="features">
             <li>
+              <div class="prop"><small>rdfs:domain</small></div>
+              <div class="obj"><span><a href="http://example.org/llmp#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
+            </li>
+            <li>
               <div class="prop"><small>rdfs:range</small></div>
               <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
-              <div class="obj"><span>Associates a preference with a numeric strength value.<small>@en</small></span></div>
+              <div class="obj"><span>Associates a preference with a numeric strength value between 0 and 1.<small>@en</small></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:label</small></div>

@@ -4,8 +4,8 @@ The LLM Persona Ontology provides a structured model for representing personas u
 
 ## Design choices
 
-- Main ontology namespace: `http://example.org/llmp#`.
-- Controlled-vocabulary namespace: `http://example.org/llmp/vocab/`.
+- Main ontology namespace: `https://w3id.org/llm-persona/`.
+- Controlled-vocabulary namespace: `https://w3id.org/llm-persona/vocab/`.
 - Persona components are organised through two feature pillars: *Identity* and *Behavior*
 - Pillar-level properties such as `llmp:hasIdentityFeature` and `llmp:hasBehaviorFeature` organise more specific properties, for example `llmp:hasPersonalIdentity` and `llmp:hasTaskBehavior`.
 - Controlled terms are modelled as SKOS concepts in separate vocabularies and referenced from the OWL ontology with `skos:Concept` ranges.
