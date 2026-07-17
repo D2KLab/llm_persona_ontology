@@ -1,0 +1,37 @@
+persona:
+  hasAffiliation:
+  - winery
+  hasAgentType:
+  - human
+  hasApparentAge:
+  - '54'
+  hasBehaviorLiteralFeature:
+  - promotes sustainable viticulture practices
+  hasBirthPlace:
+  - Spain
+  hasCareerPosition:
+  - winery owner
+  hasGender:
+  - female
+  hasGoal:
+  - promoting sustainable viticulture practices
+  hasHomeLocation:
+  - Spain
+  hasInterest:
+  - sustainable viticulture
+  hasLifeEvent:
+  - divorce
+  hasNationality:
+  - Spanish
+  hasOccupation:
+  - winery owner
+  - viticulturist
+  hasPersonalIdentityLiteralFeature:
+  - divorced
+  - mother
+  hasPreference:
+  - sustainable viticulture
+  hasSocialRole:
+  - mother
+  hasSpecies:
+  - human

@@ -1,0 +1,14 @@
+persona:
+  hasAgentType:
+  - natural person
+  hasApparentAge:
+  - '34'
+  hasBirthPlace:
+  - London
+  hasHomeLocation:
+  - London
+  hasOccupation:
+  - scientist
+  - social media influencer
+  hasSpecies:
+  - human

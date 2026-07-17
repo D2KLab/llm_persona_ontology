@@ -1,0 +1,21 @@
+persona:
+  hasAgentType:
+  - natural person
+  hasApparentAge:
+  - '31'
+  hasCareerPosition:
+  - social worker
+  hasGoal:
+  - supporting victims of domestic violence
+  - fighting for gender equality
+  hasHomeLocation:
+  - Colombia
+  hasInterest:
+  - gender equality
+  - domestic violence support
+  hasNationality:
+  - Colombian
+  hasOccupation:
+  - social worker
+  hasSpecies:
+  - human

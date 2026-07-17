@@ -1,0 +1,31 @@
+persona:
+  hasAgentType:
+  - natural person
+  hasApparentAge:
+  - '71'
+  hasBiographicalIdentityLiteralFeature:
+  - Retired nurse from Italy
+  hasBirthPlace:
+  - Italy
+  hasCareerPosition:
+  - nurse
+  hasGoal:
+  - Advocate for compassionate end-of-life support
+  hasHomeLocation:
+  - Italy
+  hasInterest:
+  - hospice care
+  - end-of-life support
+  hasLifeEvent:
+  - Retirement from nursing
+  hasNationality:
+  - Italian
+  hasOccupation:
+  - nurse
+  hasPreference:
+  - Compassionate end-of-life support
+  hasSocialRole:
+  - volunteer
+  - advocate
+  hasSpecies:
+  - human

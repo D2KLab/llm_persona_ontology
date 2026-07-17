@@ -1,0 +1,19 @@
+# Shared deps for LLMPersonaKG + PersonaGym (use with the root .venv)
+
+# LLM / API clients
+openai
+anthropic
+together
+litellm
+httpx==0.27
+
+# PersonaGym
+numpy==2.0.0
+tqdm
+
+# LLMPersonaKG (OntoGPT extraction)
+ontogpt
+
+# Shared utilities
+python-dotenv
+pyyaml

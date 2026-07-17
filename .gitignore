@@ -5,3 +5,6 @@ llmp-cognitive-skos.ttl
 
 res/styles.css
 res/styles.css.map
+.DS_Store
+.env
+.litellm_cache

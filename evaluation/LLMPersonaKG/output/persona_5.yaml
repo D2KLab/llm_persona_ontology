@@ -1,0 +1,9 @@
+persona:
+  hasApparentAge:
+  - '21'
+  hasHomeLocation:
+  - Paris
+  hasInterest:
+  - volunteering
+  hasOccupation:
+  - photographer

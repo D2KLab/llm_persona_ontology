@@ -1,0 +1,9 @@
+persona:
+  hasApparentAge:
+  - '41'
+  hasHomeLocation:
+  - London
+  hasInterest:
+  - hiking
+  hasOccupation:
+  - scientist

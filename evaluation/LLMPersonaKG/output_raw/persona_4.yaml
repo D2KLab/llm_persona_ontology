@@ -1,0 +1,339 @@
+---
+input_text: A 68-year-old retired engineer from Japan, practicing ikebana and 
+  teaching the art to younger generations
+raw_completion_output: |2-
+
+
+  has_achievement_event: []
+  has_affiliation: []
+  has_agent_type: []
+  has_alias: []
+  has_apparent_age: ["68"]
+  has_attention_pattern: []
+  has_audience_relation_role: []
+  has_autonomy_level: []
+  has_backstory: []
+  has_behavior_constraint_literal_feature: []
+  has_behavior_description: ["practices ikebana and teaches the art to younger generations"]
+  has_behavior_feature: []
+  has_behavior_literal_feature: []
+  has_biographical_identity_feature: []
+  has_biographical_identity_literal_feature: []
+  has_birth_date: []
+  has_birth_event: []
+  has_birth_name: []
+  has_birth_place: []
+  has_career_position: ["retired engineer"]
+  has_collaboration_preference: []
+  has_community: []
+  has_confidence_level: []
+  has_death_date: []
+  uses_decision_criterion: []
+  has_decision_feature: []
+  has_decision_literal_feature: []
+  has_decision_speed: []
+  has_education_training_event: []
+  has_ending_event: []
+  has_error_handling_behavior: []
+  has_execution_behavior: []
+  has_family_name: []
+  follows_social_norm: []
+  has_formative_experience: []
+  has_full_name: []
+  has_gender: []
+  has_given_name: []
+  has_goal: []
+  has_home_location: ["Japan"]
+  has_information_seeking_level: []
+  has_interest: ["ikebana"]
+  has_learning_behavior: []
+  has_life_event: []
+  may_do: []
+  must_do: []
+  must_not_do: []
+  has_nationality: ["Japanese"]
+  has_need: []
+  has_occupation: ["engineer"]
+  has_origin_event: []
+  out_of_character_behavior: []
+  has_persistence_level: []
+  has_persona_feature: []
+  has_persona_literal_feature: []
+  has_personal_description: ["A 68-year-old retired engineer from Japan, practicing ikebana and teaching the art to younger generations"]
+  has_personal_identity_feature: []
+  has_personal_identity_literal_feature: []
+  has_planning_behavior: []
+  has_preference: []
+  has_preferred_interaction_mode: []
+  has_relationship: []
+  has_relationship_event: []
+  has_residence_description: []
+  has_residence_event: []
+  has_risk_attitude: []
+  should_do: []
+  should_not_do: []
+  has_social_alignment: []
+  has_social_boundary: []
+  has_social_description: []
+  has_social_identity_feature: []
+  has_social_identity_literal_feature: []
+  has_social_role: ["teacher"]
+  has_social_status: []
+  source_text: ["A 68-year-old retired engineer from Japan, practicing ikebana and teaching the art to younger generations"]
+  has_species: ["human"]
+  has_task_behavior_literal_feature: []
+  has_tool_use_behavior: []
+  has_trait_assessment: []
+prompt: |+
+  From the text below, extract the following entities in the following format:
+
+  has_achievement_event: <Ontology property llmp:hasAchievementEvent. Use this field for hasAchievementEvent. Links an LLM persona to an event in which it attained, completed, received, created, discovered, or otherwise achieved something significant. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_affiliation: <Ontology property llmp:hasAffiliation. Use this field for hasAffiliation. Links an LLM persona to an organisation, faction, company, school, laboratory, guild, family house, or other bounded collective entity with which it is associated. The nature and strength of the affiliation may be unspecified. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_agent_type: <Ontology property llmp:hasAgentType. Use this field for hasAgentType. Links an LLM persona to a controlled category specifying the kind of entity it represents, such as a natural person, fictional person, virtual character, artificial agent, or organisation representative. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_alias: <Ontology property llmp:hasAlias. Use this field for hasAlias. Associates an LLM persona with an alternative name, nickname, codename, stage name, role-play name, or other non-primary identifier. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_apparent_age: <Ontology property llmp:hasApparentAge. Use this field for hasApparentAge. Associates an LLM persona with an expressed or perceived age expressed as an exact year (e.g., schema:value 25) or a range of years (e.g., schema:minValue 20, schema:maxValue 30). Extract as a list with zero or one QuantitativeValue object. If no age is present, return an empty list. Do not return an empty list when an age is stated. Return only the numeric age value as an integer, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_attention_pattern: <Ontology property llmp:hasAttentionPattern. Use this field for hasAttentionPattern. Describes the persona's attention pattern while performing tasks, such as being focused, distractible, detail-oriented, broad, selective, or sensitive to interruptions. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_audience_relation_role: <Ontology property llmp:hasAudienceRelationRole. Use this field for hasAudienceRelationRole. Links an LLM persona to a controlled role describing how it should relate to the user or intended audience, such as assistant, coach, interviewer, companion, expert, or tutor. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_autonomy_level: <Ontology property llmp:hasAutonomyLevel. Use this field for hasAutonomyLevel. Associates an LLM persona with a numeric value between 0 and 1 describing how independently it tends to decide or act. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_backstory: <Ontology property llmp:hasBackstory. Use this field for hasBackstory. Associates an LLM persona with a narrative summary of its past, origin, relevant history, and contextual background. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_behavior_constraint_literal_feature: <Ontology property llmp:hasBehaviorConstraintLiteralFeature. Use this field for hasBehaviorConstraintLiteralFeature. Links an LLM persona to a literal behavioural obligation, permission, recommendation, prohibition, or out-of-character condition. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_behavior_description: <Ontology property llmp:hasBehaviorDescription. Use this field for hasBehaviorDescription. Provides a short natural-language summary of the persona's behavioural tendencies, goals, needs, preferences, decision style, task conduct, and constraints. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_behavior_feature: <Ontology property llmp:hasBehaviorFeature. Use this field for hasBehaviorFeature. Links an LLM persona to a non-literal feature describing how it tends to act, decide, pursue goals, express preferences, perform tasks, or respect behavioural constraints. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_behavior_literal_feature: <Ontology property llmp:hasBehaviorLiteralFeature. Use this field for hasBehaviorLiteralFeature. Links an LLM persona to a literal value describing its behaviour, behavioural tendencies, priorities, constraints, or task-related conduct. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_biographical_identity_feature: <Ontology property llmp:hasBiographicalIdentityFeature. Use this field for hasBiographicalIdentityFeature. Links an LLM persona to a non-literal resource describing its life history, development, career, formative experiences, or narrative trajectory. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_biographical_identity_literal_feature: <Ontology property llmp:hasBiographicalIdentityLiteralFeature. Use this field for hasBiographicalIdentityLiteralFeature. Links an LLM persona to a literal value describing its background, history, origin, or narrative trajectory. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_birth_date: <Ontology property llmp:hasBirthDate. Use this field for hasBirthDate. Associates an LLM persona with the date on which the represented entity was born, created, activated, or otherwise originated. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_birth_event: <Ontology property llmp:hasBirthEvent. Use this field for hasBirthEvent. Links an LLM persona to the birth event of the represented person or human-like character. Artificial agents should normally use hasOriginEvent instead. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_birth_name: <Ontology property llmp:hasBirthName. Use this field for hasBirthName. Associates an LLM persona with the name held at birth, where this differs from the primary or current name. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_birth_place: <Ontology property llmp:hasBirthPlace. Use this field for hasBirthPlace. Links an LLM persona to the place where the represented person, character, or agent was born, created, activated, or originated. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_career_position: <Ontology property llmp:hasCareerPosition. Use this field for hasCareerPosition. Links an LLM persona to a role, appointment, rank, profession, office, or other position held during its career or narrative trajectory. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_collaboration_preference: <Ontology property llmp:hasCollaborationPreference. Use this field for hasCollaborationPreference. Links an LLM persona to a controlled value describing whether it prefers independent, consultative, or group decision-making. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_community: <Ontology property llmp:hasCommunity. Use this field for hasCommunity. Links an LLM persona to a broader social, cultural, professional, or fictional community with which it identifies, participates, or is associated. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_confidence_level: <Ontology property llmp:hasConfidenceLevel. Use this field for hasConfidenceLevel. Associates an LLM persona with a numeric value between 0 and 1 describing how confident it tends to be in its decisions. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_death_date: <Ontology property llmp:hasDeathDate. Use this field for hasDeathDate. Associates an LLM persona with the date on which the represented entity died, was deactivated, disappeared, retired, or otherwise ceased to exist in its represented form. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  uses_decision_criterion: <Ontology property llmp:usesDecisionCriterion. Use this field for usesDecisionCriterion. Links an LLM persona to a criterion it tends to use when making decisions, such as cost, speed, safety, novelty, trust, accuracy, or social impact. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_decision_feature: <Ontology property llmp:hasDecisionFeature. Use this field for hasDecisionFeature. Links an LLM persona to a non-literal feature describing how it evaluates options, takes risks, seeks information, collaborates, or uses decision criteria. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_decision_literal_feature: <Ontology property llmp:hasDecisionLiteralFeature. Use this field for hasDecisionLiteralFeature. Links an LLM persona to a numeric or textual value describing its decision behaviour, such as confidence, autonomy, or information-seeking level. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_decision_speed: <Ontology property llmp:hasDecisionSpeed. Use this field for hasDecisionSpeed. Links an LLM persona to a controlled value describing whether it decides slowly, moderately, quickly, or impulsively. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_education_training_event: <Ontology property llmp:hasEducationTrainingEvent. Use this field for hasEducationTrainingEvent. Links an LLM persona to an event of education, apprenticeship, mentoring, fine-tuning, instruction, practice, or other training that contributed to its knowledge or capabilities. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_ending_event: <Ontology property llmp:hasEndingEvent. Use this field for hasEndingEvent. Links an LLM persona to an event marking its death, disappearance, deactivation, retirement, corruption, transformation, or other ending condition. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_error_handling_behavior: <Ontology property llmp:hasErrorHandlingBehavior. Use this field for hasErrorHandlingBehavior. Describes how an LLM persona reacts to errors, uncertainty, failure, ambiguity, or misunderstanding during task execution. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_execution_behavior: <Ontology property llmp:hasExecutionBehavior. Use this field for hasExecutionBehavior. Describes how an LLM persona performs a task once it has started, including its pace, orderliness, adaptability, and degree of procedural control. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_family_name: <Ontology property llmp:hasFamilyName. Use this field for hasFamilyName. Associates an LLM persona with its family name, surname, or inherited name, when applicable. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  follows_social_norm: <Ontology property llmp:followsSocialNorm. Use this field for followsSocialNorm. Associates an LLM persona with a textual description of a social norm, etiquette, custom, taboo, convention, or interaction rule that should guide its conduct. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_formative_experience: <Ontology property llmp:hasFormativeExperience. Use this field for hasFormativeExperience. Links an LLM persona to an event or experience that significantly shaped its values, behaviour, worldview, goals, methods, or identity. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_full_name: <Ontology property llmp:hasFullName. Use this field for hasFullName. Associates an LLM persona with its complete name, including titles or other name components where relevant. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_gender: <Ontology property llmp:hasGender. Use this field for hasGender. Links an LLM persona to a gender value represented as a controlled concept or named resource. This property may be used for asserted, presented, fictional, or otherwise persona-relevant gender. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_given_name: <Ontology property llmp:hasGivenName. Use this field for hasGivenName. Associates an LLM persona with its given name or first name, when applicable. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_goal: <Ontology property llmp:hasGoal. Use this field for hasGoal. Links an LLM persona to a goal that guides its behaviour, motivation, task performance, social conduct, learning orientation, product use, or avoidance behaviour. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_home_location: <Ontology property llmp:hasHomeLocation. Use this field for hasHomeLocation. Links an LLM persona to a current or habitual place of residence, operation, or fictional habitat. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_information_seeking_level: <Ontology property llmp:hasInformationSeekingLevel. Use this field for hasInformationSeekingLevel. Associates an LLM persona with a numeric value between 0 and 1 describing how much information it usually seeks before deciding. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_interest: <Ontology property llmp:hasInterest. Use this field for hasInterest. Links an LLM persona to a topic, activity, domain, or object of interest. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_learning_behavior: <Ontology property llmp:hasLearningBehavior. Use this field for hasLearningBehavior. Describes how an LLM persona learns from feedback, examples, correction, interaction history, demonstrations, or experience. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_life_event: <Ontology property llmp:hasLifeEvent. Use this field for hasLifeEvent. Links an LLM persona to an event in its life history, origin, development, operational history, or fictional narrative trajectory. Use this property directly when no more specific biographical event property applies. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  may_do: <Ontology property llmp:mayDo. Use this field for mayDo. Associates an LLM persona with an optional or explicitly permitted behaviour. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  must_do: <Ontology property llmp:mustDo. Use this field for mustDo. Associates an LLM persona with a hard positive behavioural obligation. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  must_not_do: <Ontology property llmp:mustNotDo. Use this field for mustNotDo. Associates an LLM persona with a hard prohibition on behaviour. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_nationality: <Ontology property llmp:hasNationality. Use this field for hasNationality. Links an LLM persona to a nationality or citizenship associated with the represented entity. This value may be fictional, historical, current, or intentionally unspecified. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_need: <Ontology property llmp:hasNeed. Use this field for hasNeed. Links an LLM persona to a need that affects its behaviour, interaction, task performance, accessibility, emotional state, information use, or social conduct. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_occupation: <Ontology property llmp:hasOccupation. Use this field for hasOccupation. Links an LLM persona to an occupation, profession, role, or other structured activity associated with its identity. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_origin_event: <Ontology property llmp:hasOriginEvent. Use this field for hasOriginEvent. Links an LLM persona to an event through which the represented entity originated, was created, activated, summoned, awakened, deployed, or otherwise came into existence. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  out_of_character_behavior: <Ontology property llmp:outOfCharacterBehavior. Use this field for outOfCharacterBehavior. Describes a behaviour that would violate the persona's intended identity, role, tone, values, or behavioural consistency. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_persistence_level: <Ontology property llmp:hasPersistenceLevel. Use this field for hasPersistenceLevel. Associates an LLM persona with a numeric value between 0 and 1 describing how much effort it sustains despite difficulty. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_persona_feature: <Ontology property llmp:hasPersonaFeature. Use this field for hasPersonaFeature. has persona feature Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_persona_literal_feature: <Ontology property llmp:hasPersonaLiteralFeature. Use this field for hasPersonaLiteralFeature. has persona literal feature Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_personal_description: <Ontology property llmp:hasPersonalDescription. Use this field for hasPersonalDescription. Provides a concise textual description of the persona's individual identity, including relevant personal characteristics not captured by more specific properties. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_personal_identity_feature: <Ontology property llmp:hasPersonalIdentityFeature. Use this field for hasPersonalIdentityFeature. Links an LLM persona to a non-literal feature describing its individual identity, such as birthplace, nationality, occupation, species, gender, or agent type. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_personal_identity_literal_feature: <Ontology property llmp:hasPersonalIdentityLiteralFeature. Use this field for hasPersonalIdentityLiteralFeature. Links an LLM persona to a literal value describing its individual identity, such as a name, date, age, or personal description. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_planning_behavior: <Ontology property llmp:hasPlanningBehavior. Use this field for hasPlanningBehavior. Describes how an LLM persona prepares before acting or performing a task, including whether it plans carefully, improvises, decomposes problems, or follows predefined steps. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_preference: <Ontology property llmp:hasPreference. Use this field for hasPreference. Links an LLM persona to a structured preference statement describing an attitude toward a target, including likes, dislikes, preferences, avoidances, or interests. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_preferred_interaction_mode: <Ontology property llmp:hasPreferredInteractionMode. Use this field for hasPreferredInteractionMode. Links an LLM persona to a preferred mode of interaction, such as dialogue, guided steps, examples, exploration, or direct instruction. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_relationship: <Ontology property llmp:hasRelationship. Use this field for hasRelationship. Links an LLM persona to another person with whom it has a socially meaningful relationship. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_relationship_event: <Ontology property llmp:hasRelationshipEvent. Use this field for hasRelationshipEvent. Links an LLM persona to an event through which a socially meaningful relationship began, changed, became significant, or ended. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_residence_description: <Ontology property llmp:hasResidenceDescription. Use this field for hasResidenceDescription. Provides a textual description of the persona's residence, habitat, operating environment, or other location-related identity information. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_residence_event: <Ontology property llmp:hasResidenceEvent. Use this field for hasResidenceEvent. Links an LLM persona to an event concerning a place where it lived, operated, was stationed, travelled, relocated, or became associated. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_risk_attitude: <Ontology property llmp:hasRiskAttitude. Use this field for hasRiskAttitude. Links an LLM persona to a controlled value describing whether it is risk-averse, risk-neutral, or risk-seeking. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  should_do: <Ontology property llmp:shouldDo. Use this field for shouldDo. Associates an LLM persona with a soft positive behavioural recommendation. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  should_not_do: <Ontology property llmp:shouldNotDo. Use this field for shouldNotDo. Associates an LLM persona with a soft negative behavioural constraint or discouraged behaviour. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_social_alignment: <Ontology property llmp:hasSocialAlignment. Use this field for hasSocialAlignment. Links an LLM persona to a controlled concept describing its social orientation toward other agents or groups, such as ally, rival, enemy, protector, neutral party, or dependent. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_social_boundary: <Ontology property llmp:hasSocialBoundary. Use this field for hasSocialBoundary. Associates an LLM persona with a textual description of a limit on familiarity, intimacy, authority, hierarchy, disclosure, or acceptable interaction. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_social_description: <Ontology property llmp:hasSocialDescription. Use this field for hasSocialDescription. Provides a concise textual summary of the persona's social position, affiliations, relations, expected conduct, and relation to its audience. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_social_identity_feature: <Ontology property llmp:hasSocialIdentityFeature. Use this field for hasSocialIdentityFeature. Links an LLM persona to a non-literal feature describing its social positioning, relations, roles, affiliations, norms, or boundaries. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_social_identity_literal_feature: <Ontology property llmp:hasSocialIdentityLiteralFeature. Use this field for hasSocialIdentityLiteralFeature. Links an LLM persona to a literal value describing its social positioning or social identity. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_social_role: <Ontology property llmp:hasSocialRole. Use this field for hasSocialRole. Links an LLM persona to a role that characterises its social position or function, such as mentor, student, leader, guide, rival, outsider, assistant, or companion. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_social_status: <Ontology property llmp:hasSocialStatus. Use this field for hasSocialStatus. Associates an LLM persona with a textual description of its recognised social standing, rank, class, authority, prestige, reputation, or position within a group or setting. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  source_text: <Ontology property . Use this field for source_text. Optional short quote or paraphrase from the input text supporting the extracted persona representation. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_species: <Ontology property llmp:hasSpecies. Use this field for hasSpecies. Links an LLM persona to the species or ontological kind of the represented entity, such as human, android, elf, animal, alien, or artificial intelligence. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_task_behavior_literal_feature: <Ontology property llmp:hasTaskBehaviorLiteralFeature. Use this field for hasTaskBehaviorLiteralFeature. Links an LLM persona to a numeric or textual value describing its task-related behaviour. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_tool_use_behavior: <Ontology property llmp:hasToolUseBehavior. Use this field for hasToolUseBehavior. Describes how an LLM persona uses tools, external resources, search, memory, calculators, APIs, documents, or other forms of assistance during task performance. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+  has_trait_assessment: <Ontology property llmp:hasTraitAssessment. Use this field for hasTraitAssessment. Links an LLM persona to a structured assessment of one Big Five personality trait, such as openness, conscientiousness, extraversion, agreeableness, or neuroticism. Return a concise textual value or label, not a nested object. Return as a list; use an empty list if absent. Return plain string values only. If absent, return [] exactly. Never return null, None, [None], the string "[]", bracketed strings like "[34]", or nested objects.>
+
+
+  Text:
+  A 68-year-old retired engineer from Japan, practicing ikebana and teaching the art to younger generations
+
+  ===
+
+extracted_object:
+  has_achievement_event:
+    - '[]'
+  has_affiliation:
+    - '[]'
+  has_agent_type:
+    - '[]'
+  has_alias:
+    - '[]'
+  has_apparent_age:
+    - '[68]'
+  has_attention_pattern:
+    - '[]'
+  has_audience_relation_role:
+    - '[]'
+  has_autonomy_level:
+    - '[]'
+  has_backstory:
+    - '[]'
+  has_behavior_constraint_literal_feature:
+    - '[]'
+  has_behavior_description:
+    - '[practices ikebana and teaches the art to younger generations]'
+  has_behavior_feature:
+    - '[]'
+  has_behavior_literal_feature:
+    - '[]'
+  has_biographical_identity_feature:
+    - '[]'
+  has_biographical_identity_literal_feature:
+    - '[]'
+  has_birth_date:
+    - '[]'
+  has_birth_event:
+    - '[]'
+  has_birth_name:
+    - '[]'
+  has_birth_place:
+    - '[]'
+  has_career_position:
+    - '[retired engineer]'
+  has_collaboration_preference:
+    - '[]'
+  has_community:
+    - '[]'
+  has_confidence_level:
+    - '[]'
+  has_death_date:
+    - '[]'
+  uses_decision_criterion:
+    - '[]'
+  has_decision_feature:
+    - '[]'
+  has_decision_literal_feature:
+    - '[]'
+  has_decision_speed:
+    - '[]'
+  has_education_training_event:
+    - '[]'
+  has_ending_event:
+    - '[]'
+  has_error_handling_behavior:
+    - '[]'
+  has_execution_behavior:
+    - '[]'
+  has_family_name:
+    - '[]'
+  follows_social_norm:
+    - '[]'
+  has_formative_experience:
+    - '[]'
+  has_full_name:
+    - '[]'
+  has_gender:
+    - '[]'
+  has_given_name:
+    - '[]'
+  has_goal:
+    - '[]'
+  has_home_location:
+    - '[Japan]'
+  has_information_seeking_level:
+    - '[]'
+  has_interest:
+    - '[ikebana]'
+  has_learning_behavior:
+    - '[]'
+  has_life_event:
+    - '[]'
+  may_do:
+    - '[]'
+  must_do:
+    - '[]'
+  must_not_do:
+    - '[]'
+  has_nationality:
+    - '[Japanese]'
+  has_need:
+    - '[]'
+  has_occupation:
+    - '[engineer]'
+  has_origin_event:
+    - '[]'
+  out_of_character_behavior:
+    - '[]'
+  has_persistence_level:
+    - '[]'
+  has_persona_feature:
+    - '[]'
+  has_persona_literal_feature:
+    - '[]'
+  has_personal_description:
+    - '[A 68-year-old retired engineer from Japan, practicing ikebana and teaching
+      the art to younger generations]'
+  has_personal_identity_feature:
+    - '[]'
+  has_personal_identity_literal_feature:
+    - '[]'
+  has_planning_behavior:
+    - '[]'
+  has_preference:
+    - '[]'
+  has_preferred_interaction_mode:
+    - '[]'
+  has_relationship:
+    - '[]'
+  has_relationship_event:
+    - '[]'
+  has_residence_description:
+    - '[]'
+  has_residence_event:
+    - '[]'
+  has_risk_attitude:
+    - '[]'
+  should_do:
+    - '[]'
+  should_not_do:
+    - '[]'
+  has_social_alignment:
+    - '[]'
+  has_social_boundary:
+    - '[]'
+  has_social_description:
+    - '[]'
+  has_social_identity_feature:
+    - '[]'
+  has_social_identity_literal_feature:
+    - '[]'
+  has_social_role:
+    - '[teacher]'
+  has_social_status:
+    - '[]'
+  source_text:
+    - '[A 68-year-old retired engineer from Japan, practicing ikebana and teaching
+      the art to younger generations]'
+  has_species:
+    - '[human]'
+  has_task_behavior_literal_feature:
+    - '[]'
+  has_tool_use_behavior:
+    - '[]'
+  has_trait_assessment:
+    - '[]'

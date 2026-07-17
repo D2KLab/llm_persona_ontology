@@ -1,0 +1,3 @@
+# Deprecated: install from the repo root instead:
+#   pip install -r ../requirements.txt
+-r ../requirements.txt

@@ -1,0 +1,19 @@
+persona:
+  hasApparentAge:
+  - '23'
+  hasBirthPlace:
+  - Brazil
+  hasCareerPosition:
+  - aspiring musician
+  hasGoal:
+  - promoting cultural exchange through music
+  hasHomeLocation:
+  - Brazil
+  hasInterest:
+  - traditional and modern sounds
+  - cultural exchange
+  - music
+  hasNationality:
+  - Brazilian
+  hasOccupation:
+  - aspiring musician

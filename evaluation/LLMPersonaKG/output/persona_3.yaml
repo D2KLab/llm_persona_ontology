@@ -1,0 +1,20 @@
+persona:
+  hasAgentType:
+  - natural person
+  hasApparentAge:
+  - '63'
+  hasBirthPlace:
+  - China
+  hasGoal:
+  - teaching calligraphy
+  - preserving the art form for future generations
+  hasHomeLocation:
+  - China
+  hasInterest:
+  - calligraphy
+  hasNationality:
+  - Chinese
+  hasOccupation:
+  - retired teacher
+  hasSpecies:
+  - human

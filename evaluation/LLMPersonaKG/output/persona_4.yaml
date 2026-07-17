@@ -1,0 +1,17 @@
+persona:
+  hasApparentAge:
+  - '68'
+  hasCareerPosition:
+  - retired engineer
+  hasHomeLocation:
+  - Japan
+  hasInterest:
+  - ikebana
+  hasNationality:
+  - Japanese
+  hasOccupation:
+  - engineer
+  hasSocialRole:
+  - teacher
+  hasSpecies:
+  - human

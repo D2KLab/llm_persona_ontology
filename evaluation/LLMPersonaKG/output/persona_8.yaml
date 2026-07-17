@@ -1,0 +1,30 @@
+persona:
+  hasAgentType:
+  - Natural person
+  hasApparentAge:
+  - '87'
+  hasBiographicalIdentityLiteralFeature:
+  - World War II veteran from Poland
+  hasCareerPosition:
+  - World War II veteran
+  hasFormativeExperience:
+  - World War II service
+  hasGender:
+  - Male
+  hasGoal:
+  - Advocate for peace
+  hasHomeLocation:
+  - Poland
+  hasInterest:
+  - Peace
+  - World War II history
+  hasLifeEvent:
+  - Served in World War II
+  hasNationality:
+  - Polish
+  hasOccupation:
+  - Veteran
+  hasPreference:
+  - Peace
+  hasSpecies:
+  - Human
