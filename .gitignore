@@ -2,6 +2,9 @@
 catalog-v001.xml
 llmp-communication-skos.ttl
 llmp-cognitive-skos.ttl
+.venv/
+.venv-old/
+__pycache__/
 
 res/styles.css
 res/styles.css.map

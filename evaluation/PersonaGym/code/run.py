@@ -10,6 +10,10 @@ from personas import *
 import logging
 from api_keys import LITELLM_MODEL, USE_LITELLM
 from tqdm import tqdm
+from dotenv import load_dotenv
+
+load_dotenv()
+
 try:
     import yaml
 except ImportError:
@@ -25,14 +29,15 @@ logger.setLevel(logging.INFO)
 for noisy in ("openai", "httpx", "httpcore"):
     logging.getLogger(noisy).setLevel(logging.WARNING)
 
+LITELLM_API_BASE_EVAL = os.getenv("LITELLM_API_BASE_EVAL", LITELLM_API_BASE)
 # When LiteLLM is configured (see ../.env), these use the proxy model.
 # Otherwise they fall back to the original OpenAI / Together defaults.
 if USE_LITELLM:
-    SETTINGS_MODEL = LITELLM_MODEL
-    QUESTION_MODEL = LITELLM_MODEL
-    EXAMPLE_MODEL = LITELLM_MODEL
-    EVAL_1 = LITELLM_MODEL
-    EVAL_2 = LITELLM_MODEL_EVAL
+    SETTINGS_MODEL = os.getenv("LITELLM_MODEL")
+    QUESTION_MODEL = os.getenv("LITELLM_MODEL")
+    EXAMPLE_MODEL = os.getenv("LITELLM_MODEL")
+    EVAL_1 = os.getenv("LITELLM_MODEL")
+    EVAL_2 = os.getenv("LITELLM_MODEL_EVAL")
 else:
     SETTINGS_MODEL = "gpt-4o-2024-05-13"
     QUESTION_MODEL = "gpt-4o-2024-05-13"
@@ -281,7 +286,7 @@ def score_rubrics(sys_prompt, scoring_prompt, num_evals=1):
 
     for _ in range(num_evals):
         evaluator1 = run_model(input_prompt=scoring_prompt, temperature=0, top_p=0.1, model_card=EVAL_1, system = sys_prompt)
-        evaluator2 = run_model(input_prompt=scoring_prompt, temperature=0, top_p=0.1, model_card=EVAL_2, system = sys_prompt)
+        evaluator2 = run_model(input_prompt=scoring_prompt, temperature=0, top_p=0.1, model_card=EVAL_2, system = sys_prompt, api_base=LITELLM_API_BASE_EVAL)
 
         evaluator1 = parse_evaluations(evaluator1)
         evaluator2 = parse_evaluations(evaluator2)
@@ -314,9 +319,10 @@ def gen_answers(persona, questions, model):
 
 
 def score_answers(persona, task_to_qa, score_example=True):
+    print(f"Scoring answers for persona: {persona}")
     scores = {task:[] for task in task_to_qa}
-    for task in task_to_qa:
-        for i in range(0, len(task_to_qa[task]), 5):
+    for task in tqdm(task_to_qa):
+        for i in tqdm(range(0, len(task_to_qa[task]), 5)):
             selected_qa = task_to_qa[task][i: i + 5]
             rubric = open(f'../rubrics/{task}.txt').read()
             sys_prompt, scoring_prompt = format_rubrics(persona, rubric, selected_qa)

@@ -52,7 +52,8 @@ def run_model(
                     top_p = 0.9,
                     max_tokens = 3000,
                     message = None,
-                    system = None
+                    system = None,
+                    api_base = LITELLM_API_BASE
                 ):
     model_card = _normalize_model_card(model_card)
 
@@ -62,7 +63,7 @@ def run_model(
             input_prompt,
             persona,
             apikey=LITELLM_API_KEY,
-            base_url=LITELLM_API_BASE,
+            base_url=api_base,
             model_card=model_card,
             temperature=temperature,
             top_p=top_p,
