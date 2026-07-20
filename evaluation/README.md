@@ -1,4 +1,4 @@
-# LLM Persona Ontology
+gi# LLM Persona Ontology
 
 A two-stage pipeline that (1) extracts a structured **persona ontology** from free-text
 persona descriptions and (2) **evaluates** how well an LLM plays those personas.

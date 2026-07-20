@@ -9,11 +9,11 @@ Usage:
   python extract_clean_extracted_object.py persona_output.yaml persona_cleaned.yaml --schema llmp_persona_ontogpt_schema_fixed_internal_snake.yaml
 
 Output:
-  extracted_object:
+  persona:
     hasApparentAge:
-      - "34"
+      - 34
     hasOccupation:
-      - "software engineer"
+      - software engineer
 """
 
 from __future__ import annotations
@@ -74,15 +74,28 @@ def split_bracketed_string(value: str) -> list[str]:
     return [text]
 
 
-def clean_value(value: Any) -> list[str]:
+def parse_numeric_string(value: str) -> int | float | str:
+    """Convert an exact numeric string to a number, preserving other text."""
+    text = value.strip()
+    if re.fullmatch(r"[+-]?\d+", text):
+        return int(text)
+    if re.fullmatch(r"[+-]?(?:\d+\.\d*|\.\d+)", text):
+        return float(text)
+    return value
+
+
+def clean_value(value: Any) -> list[Any]:
     if is_empty_scalar(value):
         return []
 
     if isinstance(value, str):
-        return split_bracketed_string(value)
+        return [
+            parse_numeric_string(item)
+            for item in split_bracketed_string(value)
+        ]
 
     if isinstance(value, list):
-        cleaned: list[str] = []
+        cleaned: list[Any] = []
         for item in value:
             cleaned.extend(clean_value(item))
         # deduplicate while preserving order
@@ -94,9 +107,9 @@ def clean_value(value: Any) -> list[str]:
                 result.append(item)
         return result
 
-    # Keep non-string scalar values as strings for robust downstream RDF conversion.
+    # Preserve numeric scalar values as numbers in the cleaned YAML.
     if isinstance(value, (int, float, bool)):
-        return [str(value)]
+        return [value]
 
     # Skip dicts because this workflow expects string-only OntoGPT extraction.
     return []
@@ -159,7 +172,7 @@ def main() -> int:
         raise ValueError("No extracted_object mapping found in input YAML.")
 
     schema_mapping = build_schema_mapping(args.schema)
-    cleaned: dict[str, list[str]] = {}
+    cleaned: dict[str, list[Any]] = {}
 
     for key, value in extracted.items():
         if key == "source_text" and not args.include_source_text:
@@ -170,6 +183,10 @@ def main() -> int:
             continue
         if key == "has_behavior_description":
             continue
+        # These generic properties duplicate more specific ontology fields and
+        # are not useful in the cleaned persona representation.
+        if key.endswith("_literal_feature"):
+            continue
         values = clean_value(value)
         if not values:
             continue
@@ -178,6 +195,10 @@ def main() -> int:
             out_key = key
         else:
             out_key = schema_mapping.get(key, snake_to_lower_camel_after_prefix(key))
+
+        # Also protect against schema mappings that already use camelCase.
+        if out_key.endswith("LiteralFeature"):
+            continue
 
         cleaned[out_key] = values
 
