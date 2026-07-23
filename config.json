@@ -1,6 +1,6 @@
 {
   "source": "./src/llmp-ontology.ttl",
-  "namedGraph": "http://example.org/llmp#",
+  "namedGraph": "https://w3id.org/llm-persona#",
   "input": "./res/",
   "output": "./docs/"
 }

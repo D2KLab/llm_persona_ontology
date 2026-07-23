@@ -1,0 +1,476 @@
+div.table-shell
+  table(aria-label="LLM Persona object and datatype property hierarchy")
+    colgroup
+      col
+      col
+    thead
+      tr
+        th
+          | Object properties · has persona feature
+        th
+          | Datatype properties · has persona literal feature
+    tbody
+      tr.major-row
+        th
+          a(href="#llmp:hasIdentityFeature")
+            | HAS IDENTITY FEATURE
+        th
+          a(href="#llmp:hasIdentityLiteralFeature")
+            | HAS IDENTITY LITERAL FEATURE
+      tr
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasPersonalIdentityFeature", title="https://w3id.org/llm-persona/hasPersonalIdentityFeature")
+            | has personal identity feature
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasPersonalIdentityLiteralFeature", title="https://w3id.org/llm-persona/hasPersonalIdentityLiteralFeature")
+            | has personal identity literal feature
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasAgentType", title="https://w3id.org/llm-persona/hasAgentType")
+            | has agent type
+          span.range
+            | (skos:Concept)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasAlias", title="https://w3id.org/llm-persona/hasAlias")
+            | has alias
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasApparentAge", title="https://w3id.org/llm-persona/hasApparentAge")
+            | has apparent age
+          span.range
+            | (schema:QuantitativeValue)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasBirthDate", title="https://w3id.org/llm-persona/hasBirthDate")
+            | has birth date
+          span.range
+            | (date)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasBirthPlace", title="https://w3id.org/llm-persona/hasBirthPlace")
+            | has birth place
+          span.range
+            | (schema:Place)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasBirthName", title="https://w3id.org/llm-persona/hasBirthName")
+            | has birth name
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasGender", title="https://w3id.org/llm-persona/hasGender")
+            | has gender
+          span.range
+            | (skos:Concept)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasDeathDate", title="https://w3id.org/llm-persona/hasDeathDate")
+            | has death date
+          span.range
+            | (date)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasHomeLocation", title="https://w3id.org/llm-persona/hasHomeLocation")
+            | has home location
+          span.range
+            | (schema:Place)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasFamilyName", title="https://w3id.org/llm-persona/hasFamilyName")
+            | has family name
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasNationality", title="https://w3id.org/llm-persona/hasNationality")
+            | has nationality
+          span.range
+            | (schema:Country)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasFullName", title="https://w3id.org/llm-persona/hasFullName")
+            | has full name
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasOccupation", title="https://w3id.org/llm-persona/hasOccupation")
+            | has occupation
+          span.range
+            | (schema:Occupation)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasGivenName", title="https://w3id.org/llm-persona/hasGivenName")
+            | has given name
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasSpecies", title="https://w3id.org/llm-persona/hasSpecies")
+            | has species
+          span.range
+            | (skos:Concept)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasPersonalDescription", title="https://w3id.org/llm-persona/hasPersonalDescription")
+            | has personal description
+          span.range
+            | (string)
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasResidenceDescription", title="https://w3id.org/llm-persona/hasResidenceDescription")
+            | has residence description
+          span.range
+            | (string)
+      tr
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasBiographicalIdentityFeature", title="https://w3id.org/llm-persona/hasBiographicalIdentityFeature")
+            | has biographical identity feature
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasBiographicalIdentityLiteralFeature", title="https://w3id.org/llm-persona/hasBiographicalIdentityLiteralFeature")
+            | has biographical identity literal feature
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasCareerPosition", title="https://w3id.org/llm-persona/hasCareerPosition")
+            | has career position
+          span.range
+            | (bio:Position)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasBackstory", title="https://w3id.org/llm-persona/hasBackstory")
+            | has backstory
+          span.range
+            | (string)
+      tr
+        td.property-cell.collapsible.depth-1
+          details
+            summary
+              a.property-link(href="#llmp:hasLifeEvent", title="https://w3id.org/llm-persona/hasLifeEvent")
+                | has life event
+              span.range
+                | (bio:Event)
+            ul.nested-properties
+              li
+                a.property-link(href="#llmp:hasAchievementEvent", title="https://w3id.org/llm-persona/hasAchievementEvent")
+                  | has achievement event
+                span.range
+                  | (bio:Event)
+              li
+                a.property-link(href="#llmp:hasBirthEvent", title="https://w3id.org/llm-persona/hasBirthEvent")
+                  | has birth event
+                span.range
+                  | (bio:Birth)
+              li
+                a.property-link(href="#llmp:hasEducationTrainingEvent", title="https://w3id.org/llm-persona/hasEducationTrainingEvent")
+                  | has education or training event
+                span.range
+                  | (bio:Event)
+              li
+                a.property-link(href="#llmp:hasEndingEvent", title="https://w3id.org/llm-persona/hasEndingEvent")
+                  | has ending event
+                span.range
+                  | (bio:Event)
+              li
+                a.property-link(href="#llmp:hasFormativeExperience", title="https://w3id.org/llm-persona/hasFormativeExperience")
+                  | has formative experience
+                span.range
+                  | (bio:Event)
+              li
+                a.property-link(href="#llmp:hasOriginEvent", title="https://w3id.org/llm-persona/hasOriginEvent")
+                  | has origin event
+                span.range
+                  | (bio:Event)
+              li
+                a.property-link(href="#llmp:hasRelationshipEvent", title="https://w3id.org/llm-persona/hasRelationshipEvent")
+                  | has relationship event
+                span.range
+                  | (bio:Event)
+              li
+                a.property-link(href="#llmp:hasResidenceEvent", title="https://w3id.org/llm-persona/hasResidenceEvent")
+                  | has residence event
+                span.range
+                  | (bio:Event)
+        td.empty(aria-hidden="true")
+      tr
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasSocialIdentityFeature", title="https://w3id.org/llm-persona/hasSocialIdentityFeature")
+            | has social identity feature
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasSocialIdentityLiteralFeature", title="https://w3id.org/llm-persona/hasSocialIdentityLiteralFeature")
+            | has social identity literal feature
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasAffiliation", title="https://w3id.org/llm-persona/hasAffiliation")
+            | has affiliation
+          span.range
+            | (foaf:Group ∪ foaf:Organization)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:followsSocialNorm", title="https://w3id.org/llm-persona/followsSocialNorm")
+            | follows social norm
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasAudienceRelationRole", title="https://w3id.org/llm-persona/hasAudienceRelationRole")
+            | has audience relation role
+          span.range
+            | (skos:Concept)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasSocialBoundary", title="https://w3id.org/llm-persona/hasSocialBoundary")
+            | has social boundary
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasCommunity", title="https://w3id.org/llm-persona/hasCommunity")
+            | has community
+          span.range
+            | (llmp:Community)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasSocialDescription", title="https://w3id.org/llm-persona/hasSocialDescription")
+            | has social description
+          span.range
+            | (string)
+      tr
+        td.property-cell.collapsible.depth-1
+          details
+            summary
+              a.property-link(href="#llmp:hasRelationship", title="https://w3id.org/llm-persona/hasRelationship")
+                | has relationship
+              span.range
+                | (foaf:Person)
+            ul.nested-properties
+              li
+                a.property-link(href="http://purl.org/vocab/relationship/childOf", title="http://purl.org/vocab/relationship/childOf")
+                  | childOf
+                span.range(title="Range inherited from a superproperty")
+                  | (foaf:Person)
+              li
+                a.property-link(href="http://purl.org/vocab/relationship/collaboratesWith", title="http://purl.org/vocab/relationship/collaboratesWith")
+                  | collaboratesWith
+                span.range(title="Range inherited from a superproperty")
+                  | (foaf:Person)
+              li
+                a.property-link(href="http://purl.org/vocab/relationship/friendOf", title="http://purl.org/vocab/relationship/friendOf")
+                  | friendOf
+                span.range(title="Range inherited from a superproperty")
+                  | (foaf:Person)
+              li
+                a.property-link(href="http://purl.org/vocab/relationship/mentorOf", title="http://purl.org/vocab/relationship/mentorOf")
+                  | mentorOf
+                span.range(title="Range inherited from a superproperty")
+                  | (foaf:Person)
+              li
+                a.property-link(href="http://purl.org/vocab/relationship/parentOf", title="http://purl.org/vocab/relationship/parentOf")
+                  | parentOf
+                span.range(title="Range inherited from a superproperty")
+                  | (foaf:Person)
+              li
+                a.property-link(href="http://purl.org/vocab/relationship/siblingOf", title="http://purl.org/vocab/relationship/siblingOf")
+                  | siblingOf
+                span.range(title="Range inherited from a superproperty")
+                  | (foaf:Person)
+              li
+                a.property-link(href="http://purl.org/vocab/relationship/spouseOf", title="http://purl.org/vocab/relationship/spouseOf")
+                  | spouseOf
+                span.range(title="Range inherited from a superproperty")
+                  | (foaf:Person)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasSocialStatus", title="https://w3id.org/llm-persona/hasSocialStatus")
+            | has social status
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasSocialAlignment", title="https://w3id.org/llm-persona/hasSocialAlignment")
+            | has social alignment
+          span.range
+            | (skos:Concept)
+        td.empty(aria-hidden="true")
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasSocialRole", title="https://w3id.org/llm-persona/hasSocialRole")
+            | has social role
+          span.range
+            | (schema:Role)
+        td.empty(aria-hidden="true")
+    tbody
+      tr.major-row
+        th
+          a(href="#llmp:hasBehaviorFeature")
+            | HAS BEHAVIOR FEATURE
+        th
+          a(href="#llmp:hasBehaviorLiteralFeature")
+            | HAS BEHAVIOR LITERAL FEATURE
+      tr
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasDecisionFeature", title="https://w3id.org/llm-persona/hasDecisionFeature")
+            | has decision feature
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasDecisionLiteralFeature", title="https://w3id.org/llm-persona/hasDecisionLiteralFeature")
+            | has decision literal feature
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasCollaborationPreference", title="https://w3id.org/llm-persona/hasCollaborationPreference")
+            | has collaboration preference
+          span.range
+            | (skos:Concept)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasAutonomyLevel", title="https://w3id.org/llm-persona/hasAutonomyLevel")
+            | has autonomy level
+          span.range
+            | (decimal)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasDecisionSpeed", title="https://w3id.org/llm-persona/hasDecisionSpeed")
+            | has decision speed
+          span.range
+            | (skos:Concept)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasConfidenceLevel", title="https://w3id.org/llm-persona/hasConfidenceLevel")
+            | has confidence level
+          span.range
+            | (decimal)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasRiskAttitude", title="https://w3id.org/llm-persona/hasRiskAttitude")
+            | has risk attitude
+          span.range
+            | (skos:Concept)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasInformationSeekingLevel", title="https://w3id.org/llm-persona/hasInformationSeekingLevel")
+            | has information-seeking level
+          span.range
+            | (decimal)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:usesDecisionCriterion", title="https://w3id.org/llm-persona/usesDecisionCriterion")
+            | uses decision criterion
+          span.range
+            | (skos:Concept)
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasBehaviorDescription", title="https://w3id.org/llm-persona/hasBehaviorDescription")
+            | has behavior description
+          span.range
+            | (string)
+      tr
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasGoal", title="https://w3id.org/llm-persona/hasGoal")
+            | has goal
+          span.range
+            | (llmp:Goal)
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasBehaviorConstraintLiteralFeature", title="https://w3id.org/llm-persona/hasBehaviorConstraintLiteralFeature")
+            | has behavior constraint literal feature
+      tr
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasNeed", title="https://w3id.org/llm-persona/hasNeed")
+            | has need
+          span.range
+            | (llmp:Need)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:mayDo", title="https://w3id.org/llm-persona/mayDo")
+            | may do
+          span.range
+            | (string)
+      tr
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasPreference", title="https://w3id.org/llm-persona/hasPreference")
+            | has preference
+          span.range
+            | (llmp:PreferenceStatement)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:mustDo", title="https://w3id.org/llm-persona/mustDo")
+            | must do
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasInterest", title="https://w3id.org/llm-persona/hasInterest")
+            | has interest
+          span.range(title="Range inherited from a superproperty")
+            | (llmp:PreferenceStatement)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:mustNotDo", title="https://w3id.org/llm-persona/mustNotDo")
+            | must not do
+          span.range
+            | (string)
+      tr
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasPreferredInteractionMode", title="https://w3id.org/llm-persona/hasPreferredInteractionMode")
+            | has preferred interaction mode
+          span.range(title="Range inherited from a superproperty")
+            | (llmp:PreferenceStatement)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:outOfCharacterBehavior", title="https://w3id.org/llm-persona/outOfCharacterBehavior")
+            | out-of-character behavior
+          span.range
+            | (string)
+      tr
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasTraitAssessment", title="https://w3id.org/llm-persona/hasTraitAssessment")
+            | has trait assessment
+          span.range
+            | (llmp:TraitAssessment)
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:shouldDo", title="https://w3id.org/llm-persona/shouldDo")
+            | should do
+          span.range
+            | (string)
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:shouldNotDo", title="https://w3id.org/llm-persona/shouldNotDo")
+            | should not do
+          span.range
+            | (string)
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.subgroup.depth-0
+          a.property-link(href="#llmp:hasTaskBehaviorLiteralFeature", title="https://w3id.org/llm-persona/hasTaskBehaviorLiteralFeature")
+            | has task behavior literal feature
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasAttentionPattern", title="https://w3id.org/llm-persona/hasAttentionPattern")
+            | has attention pattern
+          span.range
+            | (string)
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasErrorHandlingBehavior", title="https://w3id.org/llm-persona/hasErrorHandlingBehavior")
+            | has error-handling behavior
+          span.range
+            | (string)
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasExecutionBehavior", title="https://w3id.org/llm-persona/hasExecutionBehavior")
+            | has execution behavior
+          span.range
+            | (string)
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasLearningBehavior", title="https://w3id.org/llm-persona/hasLearningBehavior")
+            | has learning behavior
+          span.range
+            | (string)
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasPersistenceLevel", title="https://w3id.org/llm-persona/hasPersistenceLevel")
+            | has persistence level
+          span.range
+            | (decimal)
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasPlanningBehavior", title="https://w3id.org/llm-persona/hasPlanningBehavior")
+            | has planning behavior
+          span.range
+            | (string)
+      tr
+        td.empty(aria-hidden="true")
+        td.property-cell.property.depth-1
+          a.property-link(href="#llmp:hasToolUseBehavior", title="https://w3id.org/llm-persona/hasToolUseBehavior")
+            | has tool-use behavior
+          span.range
+            | (string)

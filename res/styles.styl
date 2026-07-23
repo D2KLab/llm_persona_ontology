@@ -31,10 +31,13 @@ a
   &:hover
     text-decoration underline
 
+
 section
 h1
   max-width 900px
   margin auto
+  margin-top 1em
+
 
 .cover
   max-width none
@@ -143,3 +146,109 @@ h1
       small
         opacity .5
         font-size .8em
+
+
+.table-shell
+  overflow-x auto
+  border 1px solid materialYellow
+  border-radius 14px
+
+table
+  width 100%
+  min-width 780px
+  border-collapse collapse
+  table-layout fixed
+
+col
+  width 50%
+
+thead
+  th
+    padding 16px 20px
+    background #fafbfc
+    color var(--muted)
+    border-bottom 1px solid materialYellow
+    font-size 0.76rem
+    font-weight 750
+    letter-spacing 0.08em
+    text-align left
+    text-transform uppercase
+
+thead th + th,
+    tbody td + td,
+    tbody th + th
+  border-left 1px solid materialYellow
+
+tbody td,
+    tbody th
+  padding 12px 20px
+  border-bottom 1px solid materialYellow
+  text-align left
+  vertical-align top
+
+tbody
+  &:last-child
+    tr
+      &:last-child
+        td
+          border-bottom 0
+  & + tbody
+    .major-row
+      th
+        border-top 12px solid materialBlue
+
+.major-row
+  th
+    padding 14px 20px
+    background materialYellow
+    color #fff
+    font-size 0.8rem
+    letter-spacing 0.075em
+  a
+    color inherit
+    text-decoration none
+
+.property-cell
+  position relative
+  font-size 0.95rem
+  &.subgroup
+    background rgba(materialYellow, 0.2)
+    font-size 0.79rem
+    font-weight 800
+    letter-spacing 0.055em
+    text-transform uppercase
+    .range
+      text-transform none
+  &.depth-1
+    padding-left 38px
+    &::before
+      left 20px
+  &.depth-2
+    padding-left 58px
+    &::before
+      left 40px
+  &.depth-3
+    padding-left 78px
+    &::before
+      left 60px
+
+.property-cell.depth-1::before,
+    .property-cell.depth-2::before,
+    .property-cell.depth-3::before
+  content ""
+  position absolute
+  top 50%
+  width 12px
+  border-top 1px solid #bcc4d1
+.property-cell.collapsible
+  padding-left 21px !important
+  &:before
+    content none !important
+
+.property-link
+  color materialBlue
+  font-weight 620
+  text-decoration none
+  &:hover
+    text-decoration underline
+    text-underline-offset 3px

@@ -16,6 +16,233 @@
         </div>
       </div>
     </section>
+    <section>
+      The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It models both Identity (demographic, biographical, and social characteristics) and Behaviour (personality, goals, preferences, reasoning styles, and behavioural constraints), enabling personas to be represented, queried, compared, and edited independently of natural-language prompts.
+      Rather than describing personas as free-text prompts, it encodes identity, behavioural characteristics, preferences, goals, and constraints as structured RDF knowledge. This enables semantic querying, validation, comparison, reuse, and automatic generation of persona prompts while remaining interoperable with existing Semantic Web vocabularies.<br>An example of a persona represented in the ontology is shown below:
+      <pre> ex:persona a llmp:LLMPersona ;
+  llmp:hasAgentType llmpv:NaturalPerson ;
+  llmp:hasApparentAge "58"^^xsd:integer ;
+  llmp:hasOccupation ex:Artist ;
+  llmp:hasHomeLocation ex:NewYork ;
+  llmp:hasInterest ex:Volunteering ;
+  llmp:hasSpecies ex:Human .</pre>
+    </section>
+    <h1>LLM Persona properties</h1>
+    <section>
+      <div class="table-shell">
+        <table aria-label="LLM Persona object and datatype property hierarchy">
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Object properties · has persona feature</th>
+              <th>Datatype properties · has persona literal feature</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="major-row">
+              <th><a href="#llmp:hasIdentityFeature">HAS IDENTITY FEATURE</a></th>
+              <th><a href="#llmp:hasIdentityLiteralFeature">HAS IDENTITY LITERAL FEATURE</a></th>
+            </tr>
+            <tr>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasPersonalIdentityFeature" title="https://w3id.org/llm-persona/hasPersonalIdentityFeature">has personal identity feature</a></td>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasPersonalIdentityLiteralFeature" title="https://w3id.org/llm-persona/hasPersonalIdentityLiteralFeature">has personal identity literal feature</a></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasAgentType" title="https://w3id.org/llm-persona/hasAgentType">has agent type</a><span class="range">(skos:Concept)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasAlias" title="https://w3id.org/llm-persona/hasAlias">has alias</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasApparentAge" title="https://w3id.org/llm-persona/hasApparentAge">has apparent age</a><span class="range">(schema:QuantitativeValue)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasBirthDate" title="https://w3id.org/llm-persona/hasBirthDate">has birth date</a><span class="range">(date)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasBirthPlace" title="https://w3id.org/llm-persona/hasBirthPlace">has birth place</a><span class="range">(schema:Place)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasBirthName" title="https://w3id.org/llm-persona/hasBirthName">has birth name</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasGender" title="https://w3id.org/llm-persona/hasGender">has gender</a><span class="range">(skos:Concept)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasDeathDate" title="https://w3id.org/llm-persona/hasDeathDate">has death date</a><span class="range">(date)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasHomeLocation" title="https://w3id.org/llm-persona/hasHomeLocation">has home location</a><span class="range">(schema:Place)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasFamilyName" title="https://w3id.org/llm-persona/hasFamilyName">has family name</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasNationality" title="https://w3id.org/llm-persona/hasNationality">has nationality</a><span class="range">(schema:Country)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasFullName" title="https://w3id.org/llm-persona/hasFullName">has full name</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasOccupation" title="https://w3id.org/llm-persona/hasOccupation">has occupation</a><span class="range">(schema:Occupation)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasGivenName" title="https://w3id.org/llm-persona/hasGivenName">has given name</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasSpecies" title="https://w3id.org/llm-persona/hasSpecies">has species</a><span class="range">(skos:Concept)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasPersonalDescription" title="https://w3id.org/llm-persona/hasPersonalDescription">has personal description</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasResidenceDescription" title="https://w3id.org/llm-persona/hasResidenceDescription">has residence description</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasBiographicalIdentityFeature" title="https://w3id.org/llm-persona/hasBiographicalIdentityFeature">has biographical identity feature</a></td>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasBiographicalIdentityLiteralFeature" title="https://w3id.org/llm-persona/hasBiographicalIdentityLiteralFeature">has biographical identity literal feature</a></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasCareerPosition" title="https://w3id.org/llm-persona/hasCareerPosition">has career position</a><span class="range">(bio:Position)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasBackstory" title="https://w3id.org/llm-persona/hasBackstory">has backstory</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell collapsible depth-1">
+                <details>
+                  <summary><a class="property-link" href="#llmp:hasLifeEvent" title="https://w3id.org/llm-persona/hasLifeEvent">has life event</a><span class="range">(bio:Event)</span></summary>
+                  <ul class="nested-properties">
+                    <li><a class="property-link" href="#llmp:hasAchievementEvent" title="https://w3id.org/llm-persona/hasAchievementEvent">has achievement event</a><span class="range">(bio:Event)</span></li>
+                    <li><a class="property-link" href="#llmp:hasBirthEvent" title="https://w3id.org/llm-persona/hasBirthEvent">has birth event</a><span class="range">(bio:Birth)</span></li>
+                    <li><a class="property-link" href="#llmp:hasEducationTrainingEvent" title="https://w3id.org/llm-persona/hasEducationTrainingEvent">has education or training event</a><span class="range">(bio:Event)</span></li>
+                    <li><a class="property-link" href="#llmp:hasEndingEvent" title="https://w3id.org/llm-persona/hasEndingEvent">has ending event</a><span class="range">(bio:Event)</span></li>
+                    <li><a class="property-link" href="#llmp:hasFormativeExperience" title="https://w3id.org/llm-persona/hasFormativeExperience">has formative experience</a><span class="range">(bio:Event)</span></li>
+                    <li><a class="property-link" href="#llmp:hasOriginEvent" title="https://w3id.org/llm-persona/hasOriginEvent">has origin event</a><span class="range">(bio:Event)</span></li>
+                    <li><a class="property-link" href="#llmp:hasRelationshipEvent" title="https://w3id.org/llm-persona/hasRelationshipEvent">has relationship event</a><span class="range">(bio:Event)</span></li>
+                    <li><a class="property-link" href="#llmp:hasResidenceEvent" title="https://w3id.org/llm-persona/hasResidenceEvent">has residence event</a><span class="range">(bio:Event)</span></li>
+                  </ul>
+                </details>
+              </td>
+              <td class="empty" aria-hidden="true"></td>
+            </tr>
+            <tr>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasSocialIdentityFeature" title="https://w3id.org/llm-persona/hasSocialIdentityFeature">has social identity feature</a></td>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasSocialIdentityLiteralFeature" title="https://w3id.org/llm-persona/hasSocialIdentityLiteralFeature">has social identity literal feature</a></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasAffiliation" title="https://w3id.org/llm-persona/hasAffiliation">has affiliation</a><span class="range">(foaf:Group ∪ foaf:Organization)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:followsSocialNorm" title="https://w3id.org/llm-persona/followsSocialNorm">follows social norm</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasAudienceRelationRole" title="https://w3id.org/llm-persona/hasAudienceRelationRole">has audience relation role</a><span class="range">(skos:Concept)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasSocialBoundary" title="https://w3id.org/llm-persona/hasSocialBoundary">has social boundary</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasCommunity" title="https://w3id.org/llm-persona/hasCommunity">has community</a><span class="range">(llmp:Community)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasSocialDescription" title="https://w3id.org/llm-persona/hasSocialDescription">has social description</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell collapsible depth-1">
+                <details>
+                  <summary><a class="property-link" href="#llmp:hasRelationship" title="https://w3id.org/llm-persona/hasRelationship">has relationship</a><span class="range">(foaf:Person)</span></summary>
+                  <ul class="nested-properties">
+                    <li><a class="property-link" href="http://purl.org/vocab/relationship/childOf" title="http://purl.org/vocab/relationship/childOf">childOf</a><span class="range" title="Range inherited from a superproperty">(foaf:Person)</span></li>
+                    <li><a class="property-link" href="http://purl.org/vocab/relationship/collaboratesWith" title="http://purl.org/vocab/relationship/collaboratesWith">collaboratesWith</a><span class="range" title="Range inherited from a superproperty">(foaf:Person)</span></li>
+                    <li><a class="property-link" href="http://purl.org/vocab/relationship/friendOf" title="http://purl.org/vocab/relationship/friendOf">friendOf</a><span class="range" title="Range inherited from a superproperty">(foaf:Person)</span></li>
+                    <li><a class="property-link" href="http://purl.org/vocab/relationship/mentorOf" title="http://purl.org/vocab/relationship/mentorOf">mentorOf</a><span class="range" title="Range inherited from a superproperty">(foaf:Person)</span></li>
+                    <li><a class="property-link" href="http://purl.org/vocab/relationship/parentOf" title="http://purl.org/vocab/relationship/parentOf">parentOf</a><span class="range" title="Range inherited from a superproperty">(foaf:Person)</span></li>
+                    <li><a class="property-link" href="http://purl.org/vocab/relationship/siblingOf" title="http://purl.org/vocab/relationship/siblingOf">siblingOf</a><span class="range" title="Range inherited from a superproperty">(foaf:Person)</span></li>
+                    <li><a class="property-link" href="http://purl.org/vocab/relationship/spouseOf" title="http://purl.org/vocab/relationship/spouseOf">spouseOf</a><span class="range" title="Range inherited from a superproperty">(foaf:Person)</span></li>
+                  </ul>
+                </details>
+              </td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasSocialStatus" title="https://w3id.org/llm-persona/hasSocialStatus">has social status</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasSocialAlignment" title="https://w3id.org/llm-persona/hasSocialAlignment">has social alignment</a><span class="range">(skos:Concept)</span></td>
+              <td class="empty" aria-hidden="true"></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasSocialRole" title="https://w3id.org/llm-persona/hasSocialRole">has social role</a><span class="range">(schema:Role)</span></td>
+              <td class="empty" aria-hidden="true"></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="major-row">
+              <th><a href="#llmp:hasBehaviorFeature">HAS BEHAVIOR FEATURE</a></th>
+              <th><a href="#llmp:hasBehaviorLiteralFeature">HAS BEHAVIOR LITERAL FEATURE</a></th>
+            </tr>
+            <tr>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasDecisionFeature" title="https://w3id.org/llm-persona/hasDecisionFeature">has decision feature</a></td>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasDecisionLiteralFeature" title="https://w3id.org/llm-persona/hasDecisionLiteralFeature">has decision literal feature</a></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasCollaborationPreference" title="https://w3id.org/llm-persona/hasCollaborationPreference">has collaboration preference</a><span class="range">(skos:Concept)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasAutonomyLevel" title="https://w3id.org/llm-persona/hasAutonomyLevel">has autonomy level</a><span class="range">(decimal)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasDecisionSpeed" title="https://w3id.org/llm-persona/hasDecisionSpeed">has decision speed</a><span class="range">(skos:Concept)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasConfidenceLevel" title="https://w3id.org/llm-persona/hasConfidenceLevel">has confidence level</a><span class="range">(decimal)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasRiskAttitude" title="https://w3id.org/llm-persona/hasRiskAttitude">has risk attitude</a><span class="range">(skos:Concept)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasInformationSeekingLevel" title="https://w3id.org/llm-persona/hasInformationSeekingLevel">has information-seeking level</a><span class="range">(decimal)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:usesDecisionCriterion" title="https://w3id.org/llm-persona/usesDecisionCriterion">uses decision criterion</a><span class="range">(skos:Concept)</span></td>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasBehaviorDescription" title="https://w3id.org/llm-persona/hasBehaviorDescription">has behavior description</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasGoal" title="https://w3id.org/llm-persona/hasGoal">has goal</a><span class="range">(llmp:Goal)</span></td>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasBehaviorConstraintLiteralFeature" title="https://w3id.org/llm-persona/hasBehaviorConstraintLiteralFeature">has behavior constraint literal feature</a></td>
+            </tr>
+            <tr>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasNeed" title="https://w3id.org/llm-persona/hasNeed">has need</a><span class="range">(llmp:Need)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:mayDo" title="https://w3id.org/llm-persona/mayDo">may do</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasPreference" title="https://w3id.org/llm-persona/hasPreference">has preference</a><span class="range">(llmp:PreferenceStatement)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:mustDo" title="https://w3id.org/llm-persona/mustDo">must do</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasInterest" title="https://w3id.org/llm-persona/hasInterest">has interest</a><span class="range" title="Range inherited from a superproperty">(llmp:PreferenceStatement)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:mustNotDo" title="https://w3id.org/llm-persona/mustNotDo">must not do</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasPreferredInteractionMode" title="https://w3id.org/llm-persona/hasPreferredInteractionMode">has preferred interaction mode</a><span class="range" title="Range inherited from a superproperty">(llmp:PreferenceStatement)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:outOfCharacterBehavior" title="https://w3id.org/llm-persona/outOfCharacterBehavior">out-of-character behavior</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasTraitAssessment" title="https://w3id.org/llm-persona/hasTraitAssessment">has trait assessment</a><span class="range">(llmp:TraitAssessment)</span></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:shouldDo" title="https://w3id.org/llm-persona/shouldDo">should do</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:shouldNotDo" title="https://w3id.org/llm-persona/shouldNotDo">should not do</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell subgroup depth-0"><a class="property-link" href="#llmp:hasTaskBehaviorLiteralFeature" title="https://w3id.org/llm-persona/hasTaskBehaviorLiteralFeature">has task behavior literal feature</a></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasAttentionPattern" title="https://w3id.org/llm-persona/hasAttentionPattern">has attention pattern</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasErrorHandlingBehavior" title="https://w3id.org/llm-persona/hasErrorHandlingBehavior">has error-handling behavior</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasExecutionBehavior" title="https://w3id.org/llm-persona/hasExecutionBehavior">has execution behavior</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasLearningBehavior" title="https://w3id.org/llm-persona/hasLearningBehavior">has learning behavior</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasPersistenceLevel" title="https://w3id.org/llm-persona/hasPersistenceLevel">has persistence level</a><span class="range">(decimal)</span></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasPlanningBehavior" title="https://w3id.org/llm-persona/hasPlanningBehavior">has planning behavior</a><span class="range">(string)</span></td>
+            </tr>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="property-cell property depth-1"><a class="property-link" href="#llmp:hasToolUseBehavior" title="https://w3id.org/llm-persona/hasToolUseBehavior">has tool-use behavior</a><span class="range">(string)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
     <h1>Summary</h1>
     <section class="summary">
       <h2>Classes</h2>
@@ -127,7 +354,7 @@
     <section class="classes card">
       <ul class="list">
         <li>
-          <h2 id="llmp:Community"><a href="#llmp:Community"><span>community</span><small>http://example.org/llmp#llmp:Community</small></a></h2>
+          <h2 id="llmp:Community"><a href="#llmp:Community"><span>community</span><small>https://w3id.org/llm-persona#llmp:Community</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subClassOf</small></div>
@@ -144,11 +371,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:Goal"><a href="#llmp:Goal"><span>goal</span><small>http://example.org/llmp#llmp:Goal</small></a></h2>
+          <h2 id="llmp:Goal"><a href="#llmp:Goal"><span>goal</span><small>https://w3id.org/llm-persona#llmp:Goal</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subClassOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#PrioritizableBehaviorItem">llmp:PrioritizableBehaviorItem</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#PrioritizableBehaviorItem">llmp:PrioritizableBehaviorItem</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -161,7 +388,7 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:LLMPersona"><a href="#llmp:LLMPersona"><span>LLM Persona</span><small>http://example.org/llmp#llmp:LLMPersona</small></a></h2>
+          <h2 id="llmp:LLMPersona"><a href="#llmp:LLMPersona"><span>LLM Persona</span><small>https://w3id.org/llm-persona#llmp:LLMPersona</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subClassOf</small></div>
@@ -178,11 +405,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:Need"><a href="#llmp:Need"><span>need</span><small>http://example.org/llmp#llmp:Need</small></a></h2>
+          <h2 id="llmp:Need"><a href="#llmp:Need"><span>need</span><small>https://w3id.org/llm-persona#llmp:Need</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subClassOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#PrioritizableBehaviorItem">llmp:PrioritizableBehaviorItem</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#PrioritizableBehaviorItem">llmp:PrioritizableBehaviorItem</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -195,7 +422,7 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:PreferenceStatement"><a href="#llmp:PreferenceStatement"><span>preference statement</span><small>http://example.org/llmp#llmp:PreferenceStatement</small></a></h2>
+          <h2 id="llmp:PreferenceStatement"><a href="#llmp:PreferenceStatement"><span>preference statement</span><small>https://w3id.org/llm-persona#llmp:PreferenceStatement</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -208,7 +435,7 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:PrioritizableBehaviorItem"><a href="#llmp:PrioritizableBehaviorItem"><span>prioritizable behaviour item</span><small>http://example.org/llmp#llmp:PrioritizableBehaviorItem</small></a></h2>
+          <h2 id="llmp:PrioritizableBehaviorItem"><a href="#llmp:PrioritizableBehaviorItem"><span>prioritizable behaviour item</span><small>https://w3id.org/llm-persona#llmp:PrioritizableBehaviorItem</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -221,7 +448,7 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:TraitAssessment"><a href="#llmp:TraitAssessment"><span>Trait assessment</span><small>http://example.org/llmp#llmp:TraitAssessment</small></a></h2>
+          <h2 id="llmp:TraitAssessment"><a href="#llmp:TraitAssessment"><span>Trait assessment</span><small>https://w3id.org/llm-persona#llmp:TraitAssessment</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subClassOf</small></div>
@@ -243,11 +470,11 @@
     <section class="properties card">
       <ul class="list">
         <li>
-          <h2 id="llmp:assessesTrait"><a href="#llmp:assessesTrait"><span>assesses trait</span><small>http://example.org/llmp#llmp:assessesTrait</small></a></h2>
+          <h2 id="llmp:assessesTrait"><a href="#llmp:assessesTrait"><span>assesses trait</span><small>https://w3id.org/llm-persona#llmp:assessesTrait</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#TraitAssessment">llmp:TraitAssessment</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#TraitAssessment">llmp:TraitAssessment</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -264,15 +491,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasAchievementEvent"><a href="#llmp:hasAchievementEvent"><span>has achievement event</span><small>http://example.org/llmp#llmp:hasAchievementEvent</small></a></h2>
+          <h2 id="llmp:hasAchievementEvent"><a href="#llmp:hasAchievementEvent"><span>has achievement event</span><small>https://w3id.org/llm-persona#llmp:hasAchievementEvent</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -289,15 +516,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasAffiliation"><a href="#llmp:hasAffiliation"><span>has affiliation</span><small>http://example.org/llmp#llmp:hasAffiliation</small></a></h2>
+          <h2 id="llmp:hasAffiliation"><a href="#llmp:hasAffiliation"><span>has affiliation</span><small>https://w3id.org/llm-persona#llmp:hasAffiliation</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -314,15 +541,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasAgentType"><a href="#llmp:hasAgentType"><span>has agent type</span><small>http://example.org/llmp#llmp:hasAgentType</small></a></h2>
+          <h2 id="llmp:hasAgentType"><a href="#llmp:hasAgentType"><span>has agent type</span><small>https://w3id.org/llm-persona#llmp:hasAgentType</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -339,15 +566,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasApparentAge"><a href="#llmp:hasApparentAge"><span>has apparent age</span><small>http://example.org/llmp#llmp:hasApparentAge</small></a></h2>
+          <h2 id="llmp:hasApparentAge"><a href="#llmp:hasApparentAge"><span>has apparent age</span><small>https://w3id.org/llm-persona#llmp:hasApparentAge</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -364,15 +591,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasAudienceRelationRole"><a href="#llmp:hasAudienceRelationRole"><span>has audience relation role</span><small>http://example.org/llmp#llmp:hasAudienceRelationRole</small></a></h2>
+          <h2 id="llmp:hasAudienceRelationRole"><a href="#llmp:hasAudienceRelationRole"><span>has audience relation role</span><small>https://w3id.org/llm-persona#llmp:hasAudienceRelationRole</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -389,15 +616,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBehaviorFeature"><a href="#llmp:hasBehaviorFeature"><span>has behavior feature</span><small>http://example.org/llmp#llmp:hasBehaviorFeature</small></a></h2>
+          <h2 id="llmp:hasBehaviorFeature"><a href="#llmp:hasBehaviorFeature"><span>has behavior feature</span><small>https://w3id.org/llm-persona#llmp:hasBehaviorFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonaFeature">llmp:hasPersonaFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonaFeature">llmp:hasPersonaFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -410,15 +637,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBiographicalIdentityFeature"><a href="#llmp:hasBiographicalIdentityFeature"><span>has biographical identity feature</span><small>http://example.org/llmp#llmp:hasBiographicalIdentityFeature</small></a></h2>
+          <h2 id="llmp:hasBiographicalIdentityFeature"><a href="#llmp:hasBiographicalIdentityFeature"><span>has biographical identity feature</span><small>https://w3id.org/llm-persona#llmp:hasBiographicalIdentityFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasIdentityFeature">llmp:hasIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasIdentityFeature">llmp:hasIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -431,15 +658,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBirthEvent"><a href="#llmp:hasBirthEvent"><span>has birth event</span><small>http://example.org/llmp#llmp:hasBirthEvent</small></a></h2>
+          <h2 id="llmp:hasBirthEvent"><a href="#llmp:hasBirthEvent"><span>has birth event</span><small>https://w3id.org/llm-persona#llmp:hasBirthEvent</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -456,15 +683,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBirthPlace"><a href="#llmp:hasBirthPlace"><span>has birth place</span><small>http://example.org/llmp#llmp:hasBirthPlace</small></a></h2>
+          <h2 id="llmp:hasBirthPlace"><a href="#llmp:hasBirthPlace"><span>has birth place</span><small>https://w3id.org/llm-persona#llmp:hasBirthPlace</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/birthPlace">schema:birthPlace</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/birthPlace">schema:birthPlace</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -481,15 +708,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasCareerPosition"><a href="#llmp:hasCareerPosition"><span>has career position</span><small>http://example.org/llmp#llmp:hasCareerPosition</small></a></h2>
+          <h2 id="llmp:hasCareerPosition"><a href="#llmp:hasCareerPosition"><span>has career position</span><small>https://w3id.org/llm-persona#llmp:hasCareerPosition</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBiographicalIdentityFeature">llmp:hasBiographicalIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBiographicalIdentityFeature">llmp:hasBiographicalIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -506,15 +733,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasCollaborationPreference"><a href="#llmp:hasCollaborationPreference"><span>has collaboration preference</span><small>http://example.org/llmp#llmp:hasCollaborationPreference</small></a></h2>
+          <h2 id="llmp:hasCollaborationPreference"><a href="#llmp:hasCollaborationPreference"><span>has collaboration preference</span><small>https://w3id.org/llm-persona#llmp:hasCollaborationPreference</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasDecisionFeature">llmp:hasDecisionFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasDecisionFeature">llmp:hasDecisionFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -531,19 +758,19 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasCommunity"><a href="#llmp:hasCommunity"><span>has community</span><small>http://example.org/llmp#llmp:hasCommunity</small></a></h2>
+          <h2 id="llmp:hasCommunity"><a href="#llmp:hasCommunity"><span>has community</span><small>https://w3id.org/llm-persona#llmp:hasCommunity</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#Community">llmp:Community</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Community">llmp:Community</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -556,15 +783,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasDecisionFeature"><a href="#llmp:hasDecisionFeature"><span>has decision feature</span><small>http://example.org/llmp#llmp:hasDecisionFeature</small></a></h2>
+          <h2 id="llmp:hasDecisionFeature"><a href="#llmp:hasDecisionFeature"><span>has decision feature</span><small>https://w3id.org/llm-persona#llmp:hasDecisionFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -577,15 +804,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasDecisionSpeed"><a href="#llmp:hasDecisionSpeed"><span>has decision speed</span><small>http://example.org/llmp#llmp:hasDecisionSpeed</small></a></h2>
+          <h2 id="llmp:hasDecisionSpeed"><a href="#llmp:hasDecisionSpeed"><span>has decision speed</span><small>https://w3id.org/llm-persona#llmp:hasDecisionSpeed</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasDecisionFeature">llmp:hasDecisionFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasDecisionFeature">llmp:hasDecisionFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -602,15 +829,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasEducationTrainingEvent"><a href="#llmp:hasEducationTrainingEvent"><span>has education or training event</span><small>http://example.org/llmp#llmp:hasEducationTrainingEvent</small></a></h2>
+          <h2 id="llmp:hasEducationTrainingEvent"><a href="#llmp:hasEducationTrainingEvent"><span>has education or training event</span><small>https://w3id.org/llm-persona#llmp:hasEducationTrainingEvent</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -627,15 +854,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasEndingEvent"><a href="#llmp:hasEndingEvent"><span>has ending event</span><small>http://example.org/llmp#llmp:hasEndingEvent</small></a></h2>
+          <h2 id="llmp:hasEndingEvent"><a href="#llmp:hasEndingEvent"><span>has ending event</span><small>https://w3id.org/llm-persona#llmp:hasEndingEvent</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -652,15 +879,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasFormativeExperience"><a href="#llmp:hasFormativeExperience"><span>has formative experience</span><small>http://example.org/llmp#llmp:hasFormativeExperience</small></a></h2>
+          <h2 id="llmp:hasFormativeExperience"><a href="#llmp:hasFormativeExperience"><span>has formative experience</span><small>https://w3id.org/llm-persona#llmp:hasFormativeExperience</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -677,15 +904,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasGender"><a href="#llmp:hasGender"><span>has gender</span><small>http://example.org/llmp#llmp:hasGender</small></a></h2>
+          <h2 id="llmp:hasGender"><a href="#llmp:hasGender"><span>has gender</span><small>https://w3id.org/llm-persona#llmp:hasGender</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/gender">schema:gender</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/gender">schema:gender</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -702,19 +929,19 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasGoal"><a href="#llmp:hasGoal"><span>has goal</span><small>http://example.org/llmp#llmp:hasGoal</small></a></h2>
+          <h2 id="llmp:hasGoal"><a href="#llmp:hasGoal"><span>has goal</span><small>https://w3id.org/llm-persona#llmp:hasGoal</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#Goal">llmp:Goal</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Goal">llmp:Goal</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -727,11 +954,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasGoalType"><a href="#llmp:hasGoalType"><span>has goal type</span><small>http://example.org/llmp#llmp:hasGoalType</small></a></h2>
+          <h2 id="llmp:hasGoalType"><a href="#llmp:hasGoalType"><span>has goal type</span><small>https://w3id.org/llm-persona#llmp:hasGoalType</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#Goal">llmp:Goal</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Goal">llmp:Goal</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -748,15 +975,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasHomeLocation"><a href="#llmp:hasHomeLocation"><span>has home location</span><small>http://example.org/llmp#llmp:hasHomeLocation</small></a></h2>
+          <h2 id="llmp:hasHomeLocation"><a href="#llmp:hasHomeLocation"><span>has home location</span><small>https://w3id.org/llm-persona#llmp:hasHomeLocation</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/homeLocation">schema:homeLocation</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/homeLocation">schema:homeLocation</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -773,11 +1000,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasIdentityFeature"><a href="#llmp:hasIdentityFeature"><span>has identity feature</span><small>http://example.org/llmp#llmp:hasIdentityFeature</small></a></h2>
+          <h2 id="llmp:hasIdentityFeature"><a href="#llmp:hasIdentityFeature"><span>has identity feature</span><small>https://w3id.org/llm-persona#llmp:hasIdentityFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonaFeature">llmp:hasPersonaFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonaFeature">llmp:hasPersonaFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -790,15 +1017,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasInterest"><a href="#llmp:hasInterest"><span>has interest</span><small>http://example.org/llmp#llmp:hasInterest</small></a></h2>
+          <h2 id="llmp:hasInterest"><a href="#llmp:hasInterest"><span>has interest</span><small>https://w3id.org/llm-persona#llmp:hasInterest</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPreference">llmp:hasPreference</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPreference">llmp:hasPreference</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -811,15 +1038,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasLifeEvent"><a href="#llmp:hasLifeEvent"><span>has life event</span><small>http://example.org/llmp#llmp:hasLifeEvent</small></a></h2>
+          <h2 id="llmp:hasLifeEvent"><a href="#llmp:hasLifeEvent"><span>has life event</span><small>https://w3id.org/llm-persona#llmp:hasLifeEvent</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBiographicalIdentityFeature">llmp:hasBiographicalIdentityFeature</a><br/><a href="http://purl.org/vocab/bio/0.1/event">bio:event</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBiographicalIdentityFeature">llmp:hasBiographicalIdentityFeature</a><br/><a href="http://purl.org/vocab/bio/0.1/event">bio:event</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -836,15 +1063,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasNationality"><a href="#llmp:hasNationality"><span>has nationality</span><small>http://example.org/llmp#llmp:hasNationality</small></a></h2>
+          <h2 id="llmp:hasNationality"><a href="#llmp:hasNationality"><span>has nationality</span><small>https://w3id.org/llm-persona#llmp:hasNationality</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/nationality">schema:nationality</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/nationality">schema:nationality</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -861,19 +1088,19 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasNeed"><a href="#llmp:hasNeed"><span>has need</span><small>http://example.org/llmp#llmp:hasNeed</small></a></h2>
+          <h2 id="llmp:hasNeed"><a href="#llmp:hasNeed"><span>has need</span><small>https://w3id.org/llm-persona#llmp:hasNeed</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#Need">llmp:Need</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Need">llmp:Need</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -886,11 +1113,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasNeedType"><a href="#llmp:hasNeedType"><span>has need type</span><small>http://example.org/llmp#llmp:hasNeedType</small></a></h2>
+          <h2 id="llmp:hasNeedType"><a href="#llmp:hasNeedType"><span>has need type</span><small>https://w3id.org/llm-persona#llmp:hasNeedType</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#Need">llmp:Need</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Need">llmp:Need</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -907,15 +1134,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasOccupation"><a href="#llmp:hasOccupation"><span>has occupation</span><small>http://example.org/llmp#llmp:hasOccupation</small></a></h2>
+          <h2 id="llmp:hasOccupation"><a href="#llmp:hasOccupation"><span>has occupation</span><small>https://w3id.org/llm-persona#llmp:hasOccupation</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/hasOccupation">schema:hasOccupation</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a><br/><a href="https://schema.org/hasOccupation">schema:hasOccupation</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -932,15 +1159,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasOriginEvent"><a href="#llmp:hasOriginEvent"><span>has origin event</span><small>http://example.org/llmp#llmp:hasOriginEvent</small></a></h2>
+          <h2 id="llmp:hasOriginEvent"><a href="#llmp:hasOriginEvent"><span>has origin event</span><small>https://w3id.org/llm-persona#llmp:hasOriginEvent</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -957,11 +1184,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPersonaFeature"><a href="#llmp:hasPersonaFeature"><span>has persona feature</span><small>http://example.org/llmp#llmp:hasPersonaFeature</small></a></h2>
+          <h2 id="llmp:hasPersonaFeature"><a href="#llmp:hasPersonaFeature"><span>has persona feature</span><small>https://w3id.org/llm-persona#llmp:hasPersonaFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:label</small></div>
@@ -970,15 +1197,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPersonalIdentityFeature"><a href="#llmp:hasPersonalIdentityFeature"><span>has personal identity feature</span><small>http://example.org/llmp#llmp:hasPersonalIdentityFeature</small></a></h2>
+          <h2 id="llmp:hasPersonalIdentityFeature"><a href="#llmp:hasPersonalIdentityFeature"><span>has personal identity feature</span><small>https://w3id.org/llm-persona#llmp:hasPersonalIdentityFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasIdentityFeature">llmp:hasIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasIdentityFeature">llmp:hasIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -991,19 +1218,19 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPreference"><a href="#llmp:hasPreference"><span>has preference</span><small>http://example.org/llmp#llmp:hasPreference</small></a></h2>
+          <h2 id="llmp:hasPreference"><a href="#llmp:hasPreference"><span>has preference</span><small>https://w3id.org/llm-persona#llmp:hasPreference</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1016,15 +1243,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPreferredInteractionMode"><a href="#llmp:hasPreferredInteractionMode"><span>has preferred interaction mode</span><small>http://example.org/llmp#llmp:hasPreferredInteractionMode</small></a></h2>
+          <h2 id="llmp:hasPreferredInteractionMode"><a href="#llmp:hasPreferredInteractionMode"><span>has preferred interaction mode</span><small>https://w3id.org/llm-persona#llmp:hasPreferredInteractionMode</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPreference">llmp:hasPreference</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPreference">llmp:hasPreference</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1037,15 +1264,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasRelationship"><a href="#llmp:hasRelationship"><span>has relationship</span><small>http://example.org/llmp#llmp:hasRelationship</small></a></h2>
+          <h2 id="llmp:hasRelationship"><a href="#llmp:hasRelationship"><span>has relationship</span><small>https://w3id.org/llm-persona#llmp:hasRelationship</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1062,15 +1289,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasRelationshipEvent"><a href="#llmp:hasRelationshipEvent"><span>has relationship event</span><small>http://example.org/llmp#llmp:hasRelationshipEvent</small></a></h2>
+          <h2 id="llmp:hasRelationshipEvent"><a href="#llmp:hasRelationshipEvent"><span>has relationship event</span><small>https://w3id.org/llm-persona#llmp:hasRelationshipEvent</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1087,15 +1314,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasResidenceEvent"><a href="#llmp:hasResidenceEvent"><span>has residence event</span><small>http://example.org/llmp#llmp:hasResidenceEvent</small></a></h2>
+          <h2 id="llmp:hasResidenceEvent"><a href="#llmp:hasResidenceEvent"><span>has residence event</span><small>https://w3id.org/llm-persona#llmp:hasResidenceEvent</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasLifeEvent">llmp:hasLifeEvent</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1112,15 +1339,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasRiskAttitude"><a href="#llmp:hasRiskAttitude"><span>has risk attitude</span><small>http://example.org/llmp#llmp:hasRiskAttitude</small></a></h2>
+          <h2 id="llmp:hasRiskAttitude"><a href="#llmp:hasRiskAttitude"><span>has risk attitude</span><small>https://w3id.org/llm-persona#llmp:hasRiskAttitude</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasDecisionFeature">llmp:hasDecisionFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasDecisionFeature">llmp:hasDecisionFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1137,15 +1364,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasSocialAlignment"><a href="#llmp:hasSocialAlignment"><span>has social alignment</span><small>http://example.org/llmp#llmp:hasSocialAlignment</small></a></h2>
+          <h2 id="llmp:hasSocialAlignment"><a href="#llmp:hasSocialAlignment"><span>has social alignment</span><small>https://w3id.org/llm-persona#llmp:hasSocialAlignment</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1162,15 +1389,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasSocialIdentityFeature"><a href="#llmp:hasSocialIdentityFeature"><span>has social identity feature</span><small>http://example.org/llmp#llmp:hasSocialIdentityFeature</small></a></h2>
+          <h2 id="llmp:hasSocialIdentityFeature"><a href="#llmp:hasSocialIdentityFeature"><span>has social identity feature</span><small>https://w3id.org/llm-persona#llmp:hasSocialIdentityFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasIdentityFeature">llmp:hasIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasIdentityFeature">llmp:hasIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1183,15 +1410,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasSocialRole"><a href="#llmp:hasSocialRole"><span>has social role</span><small>http://example.org/llmp#llmp:hasSocialRole</small></a></h2>
+          <h2 id="llmp:hasSocialRole"><a href="#llmp:hasSocialRole"><span>has social role</span><small>https://w3id.org/llm-persona#llmp:hasSocialRole</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityFeature">llmp:hasSocialIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1208,15 +1435,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasSpecies"><a href="#llmp:hasSpecies"><span>has species</span><small>http://example.org/llmp#llmp:hasSpecies</small></a></h2>
+          <h2 id="llmp:hasSpecies"><a href="#llmp:hasSpecies"><span>has species</span><small>https://w3id.org/llm-persona#llmp:hasSpecies</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityFeature">llmp:hasPersonalIdentityFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1233,19 +1460,19 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasTraitAssessment"><a href="#llmp:hasTraitAssessment"><span>has trait assessment</span><small>http://example.org/llmp#llmp:hasTraitAssessment</small></a></h2>
+          <h2 id="llmp:hasTraitAssessment"><a href="#llmp:hasTraitAssessment"><span>has trait assessment</span><small>https://w3id.org/llm-persona#llmp:hasTraitAssessment</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorFeature">llmp:hasBehaviorFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#TraitAssessment">llmp:TraitAssessment</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#TraitAssessment">llmp:TraitAssessment</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1258,11 +1485,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:preferencePolarity"><a href="#llmp:preferencePolarity"><span>preference polarity</span><small>http://example.org/llmp#llmp:preferencePolarity</small></a></h2>
+          <h2 id="llmp:preferencePolarity"><a href="#llmp:preferencePolarity"><span>preference polarity</span><small>https://w3id.org/llm-persona#llmp:preferencePolarity</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1279,11 +1506,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:preferenceTarget"><a href="#llmp:preferenceTarget"><span>preference target</span><small>http://example.org/llmp#llmp:preferenceTarget</small></a></h2>
+          <h2 id="llmp:preferenceTarget"><a href="#llmp:preferenceTarget"><span>preference target</span><small>https://w3id.org/llm-persona#llmp:preferenceTarget</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1296,15 +1523,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:usesDecisionCriterion"><a href="#llmp:usesDecisionCriterion"><span>uses decision criterion</span><small>http://example.org/llmp#llmp:usesDecisionCriterion</small></a></h2>
+          <h2 id="llmp:usesDecisionCriterion"><a href="#llmp:usesDecisionCriterion"><span>uses decision criterion</span><small>https://w3id.org/llm-persona#llmp:usesDecisionCriterion</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasDecisionFeature">llmp:hasDecisionFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasDecisionFeature">llmp:hasDecisionFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1321,15 +1548,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:followsSocialNorm"><a href="#llmp:followsSocialNorm"><span>follows social norm</span><small>http://example.org/llmp#llmp:followsSocialNorm</small></a></h2>
+          <h2 id="llmp:followsSocialNorm"><a href="#llmp:followsSocialNorm"><span>follows social norm</span><small>https://w3id.org/llm-persona#llmp:followsSocialNorm</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityLiteralFeature">llmp:hasSocialIdentityLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityLiteralFeature">llmp:hasSocialIdentityLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1346,15 +1573,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasAlias"><a href="#llmp:hasAlias"><span>has alias</span><small>http://example.org/llmp#llmp:hasAlias</small></a></h2>
+          <h2 id="llmp:hasAlias"><a href="#llmp:hasAlias"><span>has alias</span><small>https://w3id.org/llm-persona#llmp:hasAlias</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="http://xmlns.com/foaf/0.1/nick">foaf:nick</a><br/><a href="https://schema.org/alternateName">schema:alternateName</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="http://xmlns.com/foaf/0.1/nick">foaf:nick</a><br/><a href="https://schema.org/alternateName">schema:alternateName</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1371,15 +1598,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasAttentionPattern"><a href="#llmp:hasAttentionPattern"><span>has attention pattern</span><small>http://example.org/llmp#llmp:hasAttentionPattern</small></a></h2>
+          <h2 id="llmp:hasAttentionPattern"><a href="#llmp:hasAttentionPattern"><span>has attention pattern</span><small>https://w3id.org/llm-persona#llmp:hasAttentionPattern</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1396,19 +1623,19 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasAutonomyLevel"><a href="#llmp:hasAutonomyLevel"><span>has autonomy level</span><small>http://example.org/llmp#llmp:hasAutonomyLevel</small></a></h2>
+          <h2 id="llmp:hasAutonomyLevel"><a href="#llmp:hasAutonomyLevel"><span>has autonomy level</span><small>https://w3id.org/llm-persona#llmp:hasAutonomyLevel</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasDecisionLiteralFeature">llmp:hasDecisionLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasDecisionLiteralFeature">llmp:hasDecisionLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Range0to1">llmp:Range0to1</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1421,15 +1648,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBackstory"><a href="#llmp:hasBackstory"><span>has backstory</span><small>http://example.org/llmp#llmp:hasBackstory</small></a></h2>
+          <h2 id="llmp:hasBackstory"><a href="#llmp:hasBackstory"><span>has backstory</span><small>https://w3id.org/llm-persona#llmp:hasBackstory</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBiographicalIdentityLiteralFeature">llmp:hasBiographicalIdentityLiteralFeature</a><br/><a href="http://purl.org/dc/terms/description">dcterms:description</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBiographicalIdentityLiteralFeature">llmp:hasBiographicalIdentityLiteralFeature</a><br/><a href="http://purl.org/dc/terms/description">dcterms:description</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1446,15 +1673,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBehaviorConstraintLiteralFeature"><a href="#llmp:hasBehaviorConstraintLiteralFeature"><span>has behavior constraint literal feature</span><small>http://example.org/llmp#llmp:hasBehaviorConstraintLiteralFeature</small></a></h2>
+          <h2 id="llmp:hasBehaviorConstraintLiteralFeature"><a href="#llmp:hasBehaviorConstraintLiteralFeature"><span>has behavior constraint literal feature</span><small>https://w3id.org/llm-persona#llmp:hasBehaviorConstraintLiteralFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorLiteralFeature">llmp:hasBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorLiteralFeature">llmp:hasBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1467,15 +1694,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBehaviorDescription"><a href="#llmp:hasBehaviorDescription"><span>has behavior description</span><small>http://example.org/llmp#llmp:hasBehaviorDescription</small></a></h2>
+          <h2 id="llmp:hasBehaviorDescription"><a href="#llmp:hasBehaviorDescription"><span>has behavior description</span><small>https://w3id.org/llm-persona#llmp:hasBehaviorDescription</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorLiteralFeature">llmp:hasBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorLiteralFeature">llmp:hasBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1492,15 +1719,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBehaviorLiteralFeature"><a href="#llmp:hasBehaviorLiteralFeature"><span>has behavior literal feature</span><small>http://example.org/llmp#llmp:hasBehaviorLiteralFeature</small></a></h2>
+          <h2 id="llmp:hasBehaviorLiteralFeature"><a href="#llmp:hasBehaviorLiteralFeature"><span>has behavior literal feature</span><small>https://w3id.org/llm-persona#llmp:hasBehaviorLiteralFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonaLiteralFeature">llmp:hasPersonaLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonaLiteralFeature">llmp:hasPersonaLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1513,15 +1740,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBiographicalIdentityLiteralFeature"><a href="#llmp:hasBiographicalIdentityLiteralFeature"><span>has biographical identity literal feature</span><small>http://example.org/llmp#llmp:hasBiographicalIdentityLiteralFeature</small></a></h2>
+          <h2 id="llmp:hasBiographicalIdentityLiteralFeature"><a href="#llmp:hasBiographicalIdentityLiteralFeature"><span>has biographical identity literal feature</span><small>https://w3id.org/llm-persona#llmp:hasBiographicalIdentityLiteralFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasIdentityLiteralFeature">llmp:hasIdentityLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasIdentityLiteralFeature">llmp:hasIdentityLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1534,15 +1761,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBirthDate"><a href="#llmp:hasBirthDate"><span>has birth date</span><small>http://example.org/llmp#llmp:hasBirthDate</small></a></h2>
+          <h2 id="llmp:hasBirthDate"><a href="#llmp:hasBirthDate"><span>has birth date</span><small>https://w3id.org/llm-persona#llmp:hasBirthDate</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="https://schema.org/birthDate">schema:birthDate</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="https://schema.org/birthDate">schema:birthDate</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1559,15 +1786,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasBirthName"><a href="#llmp:hasBirthName"><span>has birth name</span><small>http://example.org/llmp#llmp:hasBirthName</small></a></h2>
+          <h2 id="llmp:hasBirthName"><a href="#llmp:hasBirthName"><span>has birth name</span><small>https://w3id.org/llm-persona#llmp:hasBirthName</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="https://schema.org/alternateName">schema:alternateName</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="https://schema.org/alternateName">schema:alternateName</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1584,19 +1811,19 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasConfidenceLevel"><a href="#llmp:hasConfidenceLevel"><span>has confidence level</span><small>http://example.org/llmp#llmp:hasConfidenceLevel</small></a></h2>
+          <h2 id="llmp:hasConfidenceLevel"><a href="#llmp:hasConfidenceLevel"><span>has confidence level</span><small>https://w3id.org/llm-persona#llmp:hasConfidenceLevel</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasDecisionLiteralFeature">llmp:hasDecisionLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasDecisionLiteralFeature">llmp:hasDecisionLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Range0to1">llmp:Range0to1</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1609,15 +1836,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasDeathDate"><a href="#llmp:hasDeathDate"><span>has death date</span><small>http://example.org/llmp#llmp:hasDeathDate</small></a></h2>
+          <h2 id="llmp:hasDeathDate"><a href="#llmp:hasDeathDate"><span>has death date</span><small>https://w3id.org/llm-persona#llmp:hasDeathDate</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="https://schema.org/deathDate">schema:deathDate</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="https://schema.org/deathDate">schema:deathDate</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1634,15 +1861,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasDecisionLiteralFeature"><a href="#llmp:hasDecisionLiteralFeature"><span>has decision literal feature</span><small>http://example.org/llmp#llmp:hasDecisionLiteralFeature</small></a></h2>
+          <h2 id="llmp:hasDecisionLiteralFeature"><a href="#llmp:hasDecisionLiteralFeature"><span>has decision literal feature</span><small>https://w3id.org/llm-persona#llmp:hasDecisionLiteralFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorLiteralFeature">llmp:hasBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorLiteralFeature">llmp:hasBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1655,15 +1882,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasErrorHandlingBehavior"><a href="#llmp:hasErrorHandlingBehavior"><span>has error-handling behavior</span><small>http://example.org/llmp#llmp:hasErrorHandlingBehavior</small></a></h2>
+          <h2 id="llmp:hasErrorHandlingBehavior"><a href="#llmp:hasErrorHandlingBehavior"><span>has error-handling behavior</span><small>https://w3id.org/llm-persona#llmp:hasErrorHandlingBehavior</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1680,15 +1907,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasExecutionBehavior"><a href="#llmp:hasExecutionBehavior"><span>has execution behavior</span><small>http://example.org/llmp#llmp:hasExecutionBehavior</small></a></h2>
+          <h2 id="llmp:hasExecutionBehavior"><a href="#llmp:hasExecutionBehavior"><span>has execution behavior</span><small>https://w3id.org/llm-persona#llmp:hasExecutionBehavior</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1705,15 +1932,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasFamilyName"><a href="#llmp:hasFamilyName"><span>has family name</span><small>http://example.org/llmp#llmp:hasFamilyName</small></a></h2>
+          <h2 id="llmp:hasFamilyName"><a href="#llmp:hasFamilyName"><span>has family name</span><small>https://w3id.org/llm-persona#llmp:hasFamilyName</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="http://xmlns.com/foaf/0.1/familyName">foaf:familyName</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="http://xmlns.com/foaf/0.1/familyName">foaf:familyName</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1730,15 +1957,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasFullName"><a href="#llmp:hasFullName"><span>has full name</span><small>http://example.org/llmp#llmp:hasFullName</small></a></h2>
+          <h2 id="llmp:hasFullName"><a href="#llmp:hasFullName"><span>has full name</span><small>https://w3id.org/llm-persona#llmp:hasFullName</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="http://xmlns.com/foaf/0.1/name">foaf:name</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="http://xmlns.com/foaf/0.1/name">foaf:name</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1755,15 +1982,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasGivenName"><a href="#llmp:hasGivenName"><span>has given name</span><small>http://example.org/llmp#llmp:hasGivenName</small></a></h2>
+          <h2 id="llmp:hasGivenName"><a href="#llmp:hasGivenName"><span>has given name</span><small>https://w3id.org/llm-persona#llmp:hasGivenName</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="http://xmlns.com/foaf/0.1/givenName">foaf:givenName</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="http://xmlns.com/foaf/0.1/givenName">foaf:givenName</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1780,11 +2007,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasIdentityLiteralFeature"><a href="#llmp:hasIdentityLiteralFeature"><span>has identity literal feature</span><small>http://example.org/llmp#llmp:hasIdentityLiteralFeature</small></a></h2>
+          <h2 id="llmp:hasIdentityLiteralFeature"><a href="#llmp:hasIdentityLiteralFeature"><span>has identity literal feature</span><small>https://w3id.org/llm-persona#llmp:hasIdentityLiteralFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonaLiteralFeature">llmp:hasPersonaLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonaLiteralFeature">llmp:hasPersonaLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1797,19 +2024,19 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasInformationSeekingLevel"><a href="#llmp:hasInformationSeekingLevel"><span>has information-seeking level</span><small>http://example.org/llmp#llmp:hasInformationSeekingLevel</small></a></h2>
+          <h2 id="llmp:hasInformationSeekingLevel"><a href="#llmp:hasInformationSeekingLevel"><span>has information-seeking level</span><small>https://w3id.org/llm-persona#llmp:hasInformationSeekingLevel</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasDecisionLiteralFeature">llmp:hasDecisionLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasDecisionLiteralFeature">llmp:hasDecisionLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Range0to1">llmp:Range0to1</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1822,15 +2049,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasLearningBehavior"><a href="#llmp:hasLearningBehavior"><span>has learning behavior</span><small>http://example.org/llmp#llmp:hasLearningBehavior</small></a></h2>
+          <h2 id="llmp:hasLearningBehavior"><a href="#llmp:hasLearningBehavior"><span>has learning behavior</span><small>https://w3id.org/llm-persona#llmp:hasLearningBehavior</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1847,11 +2074,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasNeedTrigger"><a href="#llmp:hasNeedTrigger"><span>has need trigger</span><small>http://example.org/llmp#llmp:hasNeedTrigger</small></a></h2>
+          <h2 id="llmp:hasNeedTrigger"><a href="#llmp:hasNeedTrigger"><span>has need trigger</span><small>https://w3id.org/llm-persona#llmp:hasNeedTrigger</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#Need">llmp:Need</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Need">llmp:Need</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1868,19 +2095,19 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPersistenceLevel"><a href="#llmp:hasPersistenceLevel"><span>has persistence level</span><small>http://example.org/llmp#llmp:hasPersistenceLevel</small></a></h2>
+          <h2 id="llmp:hasPersistenceLevel"><a href="#llmp:hasPersistenceLevel"><span>has persistence level</span><small>https://w3id.org/llm-persona#llmp:hasPersistenceLevel</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Range0to1">llmp:Range0to1</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1893,11 +2120,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPersonaLiteralFeature"><a href="#llmp:hasPersonaLiteralFeature"><span>has persona literal feature</span><small>http://example.org/llmp#llmp:hasPersonaLiteralFeature</small></a></h2>
+          <h2 id="llmp:hasPersonaLiteralFeature"><a href="#llmp:hasPersonaLiteralFeature"><span>has persona literal feature</span><small>https://w3id.org/llm-persona#llmp:hasPersonaLiteralFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:label</small></div>
@@ -1906,15 +2133,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPersonalDescription"><a href="#llmp:hasPersonalDescription"><span>has personal description</span><small>http://example.org/llmp#llmp:hasPersonalDescription</small></a></h2>
+          <h2 id="llmp:hasPersonalDescription"><a href="#llmp:hasPersonalDescription"><span>has personal description</span><small>https://w3id.org/llm-persona#llmp:hasPersonalDescription</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="https://schema.org/description">schema:description</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a><br/><a href="https://schema.org/description">schema:description</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1931,15 +2158,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPersonalIdentityLiteralFeature"><a href="#llmp:hasPersonalIdentityLiteralFeature"><span>has personal identity literal feature</span><small>http://example.org/llmp#llmp:hasPersonalIdentityLiteralFeature</small></a></h2>
+          <h2 id="llmp:hasPersonalIdentityLiteralFeature"><a href="#llmp:hasPersonalIdentityLiteralFeature"><span>has personal identity literal feature</span><small>https://w3id.org/llm-persona#llmp:hasPersonalIdentityLiteralFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasIdentityLiteralFeature">llmp:hasIdentityLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasIdentityLiteralFeature">llmp:hasIdentityLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -1952,15 +2179,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPlanningBehavior"><a href="#llmp:hasPlanningBehavior"><span>has planning behavior</span><small>http://example.org/llmp#llmp:hasPlanningBehavior</small></a></h2>
+          <h2 id="llmp:hasPlanningBehavior"><a href="#llmp:hasPlanningBehavior"><span>has planning behavior</span><small>https://w3id.org/llm-persona#llmp:hasPlanningBehavior</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1977,11 +2204,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasPriority"><a href="#llmp:hasPriority"><span>has priority</span><small>http://example.org/llmp#llmp:hasPriority</small></a></h2>
+          <h2 id="llmp:hasPriority"><a href="#llmp:hasPriority"><span>has priority</span><small>https://w3id.org/llm-persona#llmp:hasPriority</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#PrioritizableBehaviorItem">llmp:PrioritizableBehaviorItem</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#PrioritizableBehaviorItem">llmp:PrioritizableBehaviorItem</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -1998,15 +2225,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasResidenceDescription"><a href="#llmp:hasResidenceDescription"><span>has residence description</span><small>http://example.org/llmp#llmp:hasResidenceDescription</small></a></h2>
+          <h2 id="llmp:hasResidenceDescription"><a href="#llmp:hasResidenceDescription"><span>has residence description</span><small>https://w3id.org/llm-persona#llmp:hasResidenceDescription</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasPersonalIdentityLiteralFeature">llmp:hasPersonalIdentityLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2023,15 +2250,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasSocialBoundary"><a href="#llmp:hasSocialBoundary"><span>has social boundary</span><small>http://example.org/llmp#llmp:hasSocialBoundary</small></a></h2>
+          <h2 id="llmp:hasSocialBoundary"><a href="#llmp:hasSocialBoundary"><span>has social boundary</span><small>https://w3id.org/llm-persona#llmp:hasSocialBoundary</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityLiteralFeature">llmp:hasSocialIdentityLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityLiteralFeature">llmp:hasSocialIdentityLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2048,15 +2275,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasSocialDescription"><a href="#llmp:hasSocialDescription"><span>has social description</span><small>http://example.org/llmp#llmp:hasSocialDescription</small></a></h2>
+          <h2 id="llmp:hasSocialDescription"><a href="#llmp:hasSocialDescription"><span>has social description</span><small>https://w3id.org/llm-persona#llmp:hasSocialDescription</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityLiteralFeature">llmp:hasSocialIdentityLiteralFeature</a><br/><a href="https://schema.org/description">schema:description</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityLiteralFeature">llmp:hasSocialIdentityLiteralFeature</a><br/><a href="https://schema.org/description">schema:description</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2073,15 +2300,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasSocialIdentityLiteralFeature"><a href="#llmp:hasSocialIdentityLiteralFeature"><span>has social identity literal feature</span><small>http://example.org/llmp#llmp:hasSocialIdentityLiteralFeature</small></a></h2>
+          <h2 id="llmp:hasSocialIdentityLiteralFeature"><a href="#llmp:hasSocialIdentityLiteralFeature"><span>has social identity literal feature</span><small>https://w3id.org/llm-persona#llmp:hasSocialIdentityLiteralFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasIdentityLiteralFeature">llmp:hasIdentityLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasIdentityLiteralFeature">llmp:hasIdentityLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -2094,15 +2321,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasSocialStatus"><a href="#llmp:hasSocialStatus"><span>has social status</span><small>http://example.org/llmp#llmp:hasSocialStatus</small></a></h2>
+          <h2 id="llmp:hasSocialStatus"><a href="#llmp:hasSocialStatus"><span>has social status</span><small>https://w3id.org/llm-persona#llmp:hasSocialStatus</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasSocialIdentityLiteralFeature">llmp:hasSocialIdentityLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasSocialIdentityLiteralFeature">llmp:hasSocialIdentityLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2119,15 +2346,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasTaskBehaviorLiteralFeature"><a href="#llmp:hasTaskBehaviorLiteralFeature"><span>has task behavior literal feature</span><small>http://example.org/llmp#llmp:hasTaskBehaviorLiteralFeature</small></a></h2>
+          <h2 id="llmp:hasTaskBehaviorLiteralFeature"><a href="#llmp:hasTaskBehaviorLiteralFeature"><span>has task behavior literal feature</span><small>https://w3id.org/llm-persona#llmp:hasTaskBehaviorLiteralFeature</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorLiteralFeature">llmp:hasBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorLiteralFeature">llmp:hasBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -2140,15 +2367,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasToolUseBehavior"><a href="#llmp:hasToolUseBehavior"><span>has tool-use behavior</span><small>http://example.org/llmp#llmp:hasToolUseBehavior</small></a></h2>
+          <h2 id="llmp:hasToolUseBehavior"><a href="#llmp:hasToolUseBehavior"><span>has tool-use behavior</span><small>https://w3id.org/llm-persona#llmp:hasToolUseBehavior</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasTaskBehaviorLiteralFeature">llmp:hasTaskBehaviorLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2165,11 +2392,11 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasTraitExpression"><a href="#llmp:hasTraitExpression"><span>has trait expression</span><small>http://example.org/llmp#llmp:hasTraitExpression</small></a></h2>
+          <h2 id="llmp:hasTraitExpression"><a href="#llmp:hasTraitExpression"><span>has trait expression</span><small>https://w3id.org/llm-persona#llmp:hasTraitExpression</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#TraitAssessment">llmp:TraitAssessment</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#TraitAssessment">llmp:TraitAssessment</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2186,15 +2413,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:hasTraitIntensity"><a href="#llmp:hasTraitIntensity"><span>has trait intensity</span><small>http://example.org/llmp#llmp:hasTraitIntensity</small></a></h2>
+          <h2 id="llmp:hasTraitIntensity"><a href="#llmp:hasTraitIntensity"><span>has trait intensity</span><small>https://w3id.org/llm-persona#llmp:hasTraitIntensity</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#TraitAssessment">llmp:TraitAssessment</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#TraitAssessment">llmp:TraitAssessment</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Range1To5">llmp:Range1To5</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -2207,15 +2434,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:mayDo"><a href="#llmp:mayDo"><span>may do</span><small>http://example.org/llmp#llmp:mayDo</small></a></h2>
+          <h2 id="llmp:mayDo"><a href="#llmp:mayDo"><span>may do</span><small>https://w3id.org/llm-persona#llmp:mayDo</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2232,15 +2459,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:mustDo"><a href="#llmp:mustDo"><span>must do</span><small>http://example.org/llmp#llmp:mustDo</small></a></h2>
+          <h2 id="llmp:mustDo"><a href="#llmp:mustDo"><span>must do</span><small>https://w3id.org/llm-persona#llmp:mustDo</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2257,15 +2484,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:mustNotDo"><a href="#llmp:mustNotDo"><span>must not do</span><small>http://example.org/llmp#llmp:mustNotDo</small></a></h2>
+          <h2 id="llmp:mustNotDo"><a href="#llmp:mustNotDo"><span>must not do</span><small>https://w3id.org/llm-persona#llmp:mustNotDo</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2282,15 +2509,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:outOfCharacterBehavior"><a href="#llmp:outOfCharacterBehavior"><span>out-of-character behavior</span><small>http://example.org/llmp#llmp:outOfCharacterBehavior</small></a></h2>
+          <h2 id="llmp:outOfCharacterBehavior"><a href="#llmp:outOfCharacterBehavior"><span>out-of-character behavior</span><small>https://w3id.org/llm-persona#llmp:outOfCharacterBehavior</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2307,15 +2534,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:preferenceStrength"><a href="#llmp:preferenceStrength"><span>preference strength</span><small>http://example.org/llmp#llmp:preferenceStrength</small></a></h2>
+          <h2 id="llmp:preferenceStrength"><a href="#llmp:preferenceStrength"><span>preference strength</span><small>https://w3id.org/llm-persona#llmp:preferenceStrength</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#PreferenceStatement">llmp:PreferenceStatement</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
-              <div class="obj"><span><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#Range0To1">llmp:Range0To1</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:comment</small></div>
@@ -2328,15 +2555,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:shouldDo"><a href="#llmp:shouldDo"><span>should do</span><small>http://example.org/llmp#llmp:shouldDo</small></a></h2>
+          <h2 id="llmp:shouldDo"><a href="#llmp:shouldDo"><span>should do</span><small>https://w3id.org/llm-persona#llmp:shouldDo</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2353,15 +2580,15 @@
           </ul>
         </li>
         <li>
-          <h2 id="llmp:shouldNotDo"><a href="#llmp:shouldNotDo"><span>should not do</span><small>http://example.org/llmp#llmp:shouldNotDo</small></a></h2>
+          <h2 id="llmp:shouldNotDo"><a href="#llmp:shouldNotDo"><span>should not do</span><small>https://w3id.org/llm-persona#llmp:shouldNotDo</small></a></h2>
           <ul class="features">
             <li>
               <div class="prop"><small>rdfs:subPropertyOf</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#hasBehaviorConstraintLiteralFeature">llmp:hasBehaviorConstraintLiteralFeature</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:domain</small></div>
-              <div class="obj"><span><a href="http://example.org/llmp#LLMPersona">llmp:LLMPersona</a></span></div>
+              <div class="obj"><span><a href="https://w3id.org/llm-persona#LLMPersona">llmp:LLMPersona</a></span></div>
             </li>
             <li>
               <div class="prop"><small>rdfs:range</small></div>
@@ -2382,7 +2609,7 @@
     <footer id="appFooter">
       <div class="footerCont">
         <div>
-          <p class="descr">The<strong>LLM Persona Ontology</strong>is under development. <a href="http://github.com/D2KLab/llm_persona_ontology/issues">Give us feedback</a><br><br><a class="licenseBadge" rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>This work is licensed under<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br><br>Photo credit:<a href="https://flic.kr/p/njM9TN">Howard Ignatius</a></p>
+          <p class="descr">The<strong>LLM Persona Ontology</strong>is under development. <a href="http://github.com/D2KLab/llm_persona_ontology/issues">Give us feedback</a><br><br><a class="licenseBadge" rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>This work is licensed under<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br><br>Photo credit:<a href="https://www.pexels.com/photo/futuristic-cyberpunk-ai-portrait-with-glowing-eyes-37911407/">Shubham Dhage</a></p>
         </div>
         <div class="projLogoCont"><a href="https://www.eurecom.fr/" rel="external" target="_blank"><img src="./img/EURECOM_logo.png" alt="EURECOM"></a></div>
       </div>

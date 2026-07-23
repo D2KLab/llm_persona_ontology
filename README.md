@@ -1,6 +1,8 @@
 # LLM Persona Ontology
 
-The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It organises persona information around the identity and behaviour pillars.
+The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It models both Identity (demographic, biographical, and social characteristics) and Behaviour (personality, goals, preferences, reasoning styles, and behavioural constraints), enabling personas to be represented, queried, compared, and edited independently of natural-language prompts.
+
+Rather than describing personas as free-text prompts, it encodes identity, behavioural characteristics, preferences, goals, and constraints as structured RDF knowledge. This enables semantic querying, validation, comparison, reuse, and automatic generation of persona prompts while remaining interoperable with existing Semantic Web vocabularies.
 
 ## Design choices
 

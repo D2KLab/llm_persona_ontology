@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/llm-persona/> .
+@prefix : <https://w3id.org/llm-persona#> .
 @prefix bio: <http://purl.org/vocab/bio/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,16 +6,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix llmp: <https://w3id.org/llm-persona/> .
+@prefix llmp: <https://w3id.org/llm-persona#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/llm-persona/> .
 
-<https://w3id.org/llm-persona/> rdf:type owl:Ontology ;
+<https://w3id.org/llm-persona> rdf:type owl:Ontology ;
                            owl:versionIRI <https://w3id.org/llm-persona/0.1.0> ;
                            dcterms:created "2026-06-12"^^xsd:date ;
                            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
@@ -570,7 +569,7 @@ llmp:hasAttentionPattern rdf:type owl:DatatypeProperty ;
 llmp:hasAutonomyLevel rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf llmp:hasDecisionLiteralFeature ;
                       rdfs:domain llmp:LLMPersona ;
-                      rdfs:range xsd:decimal ;
+                      rdfs:range llmp:Range0to1 ;
                       rdfs:comment "Associates an LLM persona with a numeric value between 0 and 1 describing how independently it tends to decide or act."@en ;
                       rdfs:label "has autonomy level"@en .
 
@@ -642,7 +641,7 @@ llmp:hasBirthName rdf:type owl:DatatypeProperty ;
 llmp:hasConfidenceLevel rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf llmp:hasDecisionLiteralFeature ;
                         rdfs:domain llmp:LLMPersona ;
-                        rdfs:range xsd:decimal ;
+                        rdfs:range llmp:Range0to1;
                         rdfs:comment "Associates an LLM persona with a numeric value between 0 and 1 describing how confident it tends to be in its decisions."@en ;
                         rdfs:label "has confidence level"@en .
 
@@ -724,7 +723,7 @@ llmp:hasIdentityLiteralFeature rdf:type owl:DatatypeProperty ;
 llmp:hasInformationSeekingLevel rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf llmp:hasDecisionLiteralFeature ;
                                 rdfs:domain llmp:LLMPersona ;
-                                rdfs:range xsd:decimal ;
+                                rdfs:range llmp:Range0to1;
                                 rdfs:comment "Associates an LLM persona with a numeric value between 0 and 1 describing how much information it usually seeks before deciding."@en ;
                                 rdfs:label "has information-seeking level"@en .
 
@@ -750,7 +749,7 @@ llmp:hasNeedTrigger rdf:type owl:DatatypeProperty ;
 llmp:hasPersistenceLevel rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
                          rdfs:domain llmp:LLMPersona ;
-                         rdfs:range xsd:decimal ;
+                         rdfs:range llmp:Range0to1 ;
                          rdfs:comment "Associates an LLM persona with a numeric value between 0 and 1 describing how much effort it sustains despite difficulty."@en ;
                          rdfs:label "has persistence level"@en .
 
@@ -865,12 +864,22 @@ llmp:hasTraitExpression rdf:type owl:DatatypeProperty ;
                         rdfs:comment "Describes how the assessed Big Five trait appears in the persona's behaviour, language, interaction style, or task conduct."@en ;
                         rdfs:label "has trait expression"@en .
 
+llmp:Range1To5 a rdfs:Datatype ;
+                            owl:onDatatype xsd:integer ;
+                            owl:withRestrictions (
+                                [
+                                    xsd:minInclusive "1"^^xsd:integer
+                                ]
+                                [
+                                    xsd:maxInclusive "5"^^xsd:integer
+                                ]
+                            ).
+                        
 
 ###  http://example.org/llmp#hasTraitIntensity
 llmp:hasTraitIntensity rdf:type owl:DatatypeProperty ;
                        rdfs:domain llmp:TraitAssessment ;
-                       rdfs:range xsd:integer ;
-                       rdfs:comment "Links a Big Five trait assessment to a quantitative score between 1 and 5, where 1 indicates low intensity, 3 is medium, and 5 indicates high intensity."@en ;
+                        rdfs:range llmp:Range1To5 ;                rdfs:comment "Links a Big Five trait assessment to a quantitative score between 1 and 5, where 1 indicates low intensity, 3 is medium, and 5 indicates high intensity."@en ;
                        rdfs:label "has trait intensity"@en .
 
 
@@ -909,11 +918,21 @@ llmp:outOfCharacterBehavior rdf:type owl:DatatypeProperty ;
                             rdfs:comment "Describes a behaviour that would violate the persona's intended identity, role, tone, values, or behavioural consistency."@en ;
                             rdfs:label "out-of-character behavior"@en .
 
+llmp:Range0To1 a rdfs:Datatype ;
+                            owl:onDatatype xsd:decimal ;
+                            owl:withRestrictions (
+                                [
+                                    xsd:minInclusive "0"^^xsd:decimal
+                                ]
+                                [
+                                    xsd:maxInclusive "1"^^xsd:decimal
+                                ]
+                            ).
 
 ###  http://example.org/llmp#preferenceStrength
 llmp:preferenceStrength rdf:type owl:DatatypeProperty ;
                         rdfs:domain llmp:PreferenceStatement ;
-                        rdfs:range xsd:decimal ;
+                        rdfs:range llmp:Range0To1 ;
                         rdfs:comment "Associates a preference with a numeric strength value between 0 and 1."@en ;
                         rdfs:label "preference strength"@en .
 
