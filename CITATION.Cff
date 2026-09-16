@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this ontology, please cite it as below."
+title: "LLM Persona Ontology"
+type: dataset
+url: "https://w3id.org/llm-persona/"
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Sillano"
+    given-names: "Andrea"
+  - family-names: "Lisena"
+    given-names: "Pasquale"
+  - family-names: "Troncy"
+    given-names: "Raphael"
+  - family-names: "De Russis"
+    given-names: "Luigi"
+  title: "Formalising Personas for Large Language Models: An Ontological Approach"
+  month: 10
+  year: 2026
+  conference:
+    name: "25th International Semantic Web Conference (ISWC 2026)"
+    date-start: 2026-10-25
+    date-end: 2026-10-29
+    location: "Bari, Italy"
+  publisher: "CEUR-WS.org"
