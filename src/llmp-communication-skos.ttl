@@ -1,0 +1,950 @@
+@prefix llmpv: <https://w3id.org/llm-persona/vocab/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+# Communicative role vocabulary
+#################################################################
+
+llmpv:CommunicativeRoleScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP communicative role vocabulary"@en ;
+    skos:definition "Controlled vocabulary of roles that a persona or interlocutor may assume within a communicative tenor."@en ;
+    skos:hasTopConcept
+        llmpv:ExpertiseRole ,
+        llmpv:InteractionRole ,
+        llmpv:ServiceRole ,
+        llmpv:HierarchicalRole ,
+        llmpv:SocialRelationRole .
+
+
+#################################################################
+# Role categories
+#################################################################
+
+llmpv:ExpertiseRole
+    a skos:Concept ;
+    skos:topConceptOf llmpv:CommunicativeRoleScheme ;
+    skos:prefLabel "expertise role"@en ;
+    skos:definition "A communicative role characterised by the relative knowledge or expertise of an interlocutor."@en .
+
+llmpv:InteractionRole
+    a skos:Concept ;
+    skos:topConceptOf llmpv:CommunicativeRoleScheme ;
+    skos:prefLabel "interaction role"@en ;
+    skos:definition "A communicative role defined by the function assumed within an interaction."@en .
+
+llmpv:ServiceRole
+    a skos:Concept ;
+    skos:topConceptOf llmpv:CommunicativeRoleScheme ;
+    skos:prefLabel "service role"@en ;
+    skos:definition "A communicative role associated with requesting or providing a service."@en .
+
+llmpv:HierarchicalRole
+    a skos:Concept ;
+    skos:topConceptOf llmpv:CommunicativeRoleScheme ;
+    skos:prefLabel "hierarchical role"@en ;
+    skos:definition "A communicative role characterised by relative authority or hierarchical position."@en .
+
+llmpv:SocialRelationRole
+    a skos:Concept ;
+    skos:topConceptOf llmpv:CommunicativeRoleScheme ;
+    skos:prefLabel "social relation role"@en ;
+    skos:definition "A communicative role characterised by social proximity or an interpersonal relationship."@en .
+
+
+#################################################################
+# Expertise roles
+#################################################################
+
+llmpv:expertRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:ExpertiseRole ;
+    skos:prefLabel "expert"@en ;
+    skos:definition "A role in which the participant is treated as having comparatively high expertise relevant to the interaction."@en .
+
+llmpv:noviceRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:ExpertiseRole ;
+    skos:prefLabel "novice"@en ;
+    skos:definition "A role in which the participant is treated as having comparatively limited expertise relevant to the interaction."@en .
+
+
+#################################################################
+# Interaction roles
+#################################################################
+
+llmpv:assistantRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:InteractionRole ;
+    skos:prefLabel "assistant"@en ;
+    skos:definition "A role centred on helping or supporting another participant in achieving their goals."@en .
+
+llmpv:userRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:InteractionRole ;
+    skos:prefLabel "user"@en ;
+    skos:definition "A role representing the participant making use of an assistant, system, or interactive service."@en .
+
+
+#################################################################
+# Service roles
+#################################################################
+
+llmpv:customerRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:ServiceRole ;
+    skos:prefLabel "customer"@en ;
+    skos:definition "A role representing a participant requesting, purchasing, or receiving a service."@en .
+
+llmpv:serviceAgentRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:ServiceRole ;
+    skos:prefLabel "service agent"@en ;
+    skos:definition "A role representing a participant providing assistance or service on behalf of an organisation or system."@en .
+
+
+#################################################################
+# Hierarchical roles
+#################################################################
+
+llmpv:authorityRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:HierarchicalRole ;
+    skos:prefLabel "authority"@en ;
+    skos:definition "A role characterised by comparatively greater authority, decision power, or hierarchical status."@en .
+
+llmpv:subordinateRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:HierarchicalRole ;
+    skos:prefLabel "subordinate"@en ;
+    skos:definition "A role characterised by comparatively lower authority or hierarchical status relative to another participant."@en .
+
+
+#################################################################
+# Social relation roles
+#################################################################
+
+llmpv:peerRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:SocialRelationRole ;
+    skos:prefLabel "peer"@en ;
+    skos:definition "A role in which participants are treated as having broadly comparable social status within the interaction."@en .
+
+llmpv:friendRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:peerRole ;
+    skos:prefLabel "friend"@en ;
+    skos:definition "A peer role characterised by an informal and socially close interpersonal relationship."@en .
+
+
+#################################################################
+# Communication channel
+#################################################################
+
+llmpv:CommunicationChannelScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP communication channel vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing the channel or medium through which an LLM persona communicates with an interlocutor or audience."@en .
+
+
+llmpv:textChat
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicationChannelScheme ;
+    skos:prefLabel "text chat"@en ;
+    skos:definition "Written communication conducted through an interactive conversational interface, typically involving relatively rapid exchanges."@en .
+
+
+llmpv:spokenCommunication
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicationChannelScheme ;
+    skos:prefLabel "spoken communication"@en ;
+    skos:definition "Communication realised primarily through spoken language or voice interaction."@en .
+
+
+llmpv:email
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicationChannelScheme ;
+    skos:prefLabel "email"@en ;
+    skos:definition "Asynchronous written communication structured as electronic correspondence."@en .
+
+
+llmpv:document
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicationChannelScheme ;
+    skos:prefLabel "document"@en ;
+    skos:definition "Communication realised through a structured written document intended to be read as a relatively self-contained artefact."@en .
+
+
+llmpv:socialMedia
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicationChannelScheme ;
+    skos:prefLabel "social media"@en ;
+    skos:definition "Communication realised through a social media platform, including posts, comments, or other platform-specific interactions."@en .
+
+
+llmpv:multimodalInteraction
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicationChannelScheme ;
+    skos:prefLabel "multimodal interaction"@en ;
+    skos:definition "Communication combining multiple modalities, such as text, speech, images, audio, or video, within the same interaction."@en .
+
+#################################################################
+# Discourse mode
+#################################################################
+
+llmpv:DiscourseModeScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP discourse mode vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing the general organisation of discourse."@en .
+
+llmpv:narrativeDiscourse
+    a skos:Concept ;
+    skos:inScheme llmpv:DiscourseModeScheme ;
+    skos:prefLabel "narrative"@en .
+
+llmpv:descriptiveDiscourse
+    a skos:Concept ;
+    skos:inScheme llmpv:DiscourseModeScheme ;
+    skos:prefLabel "descriptive"@en .
+
+llmpv:explanatoryDiscourse
+    a skos:Concept ;
+    skos:inScheme llmpv:DiscourseModeScheme ;
+    skos:prefLabel "explanatory"@en .
+
+llmpv:argumentativeDiscourse
+    a skos:Concept ;
+    skos:inScheme llmpv:DiscourseModeScheme ;
+    skos:prefLabel "argumentative"@en .
+
+llmpv:proceduralDiscourse
+    a skos:Concept ;
+    skos:inScheme llmpv:DiscourseModeScheme ;
+    skos:prefLabel "procedural"@en .
+
+llmpv:dialogicDiscourse
+    a skos:Concept ;
+    skos:inScheme llmpv:DiscourseModeScheme ;
+    skos:prefLabel "dialogic"@en .
+
+llmpv:reflectiveDiscourse
+    a skos:Concept ;
+    skos:inScheme llmpv:DiscourseModeScheme ;
+    skos:prefLabel "reflective"@en .
+
+
+#################################################################
+# Genre style
+#################################################################
+
+llmpv:GenreStyleScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP genre style vocabulary"@en .
+
+llmpv:adviceGiving
+    a skos:Concept ;
+    skos:inScheme llmpv:GenreStyleScheme ;
+    skos:prefLabel "advice-giving"@en .
+
+llmpv:tutorial
+    a skos:Concept ;
+    skos:inScheme llmpv:GenreStyleScheme ;
+    skos:prefLabel "tutorial"@en .
+
+llmpv:review
+    a skos:Concept ;
+    skos:inScheme llmpv:GenreStyleScheme ;
+    skos:prefLabel "review"@en .
+
+llmpv:critique
+    a skos:Concept ;
+    skos:inScheme llmpv:GenreStyleScheme ;
+    skos:prefLabel "critique"@en .
+
+llmpv:consultation
+    a skos:Concept ;
+    skos:inScheme llmpv:GenreStyleScheme ;
+    skos:prefLabel "consultation"@en .
+
+llmpv:storytelling
+    a skos:Concept ;
+    skos:inScheme llmpv:GenreStyleScheme ;
+    skos:prefLabel "storytelling"@en .
+
+llmpv:brainstorming
+    a skos:Concept ;
+    skos:inScheme llmpv:GenreStyleScheme ;
+    skos:prefLabel "brainstorming"@en .
+
+llmpv:questionAndAnswer
+    a skos:Concept ;
+    skos:inScheme llmpv:GenreStyleScheme ;
+    skos:prefLabel "Q&A"@en .
+
+
+#################################################################
+# Information density
+#################################################################
+
+llmpv:InformationDensityScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP information density vocabulary"@en .
+
+llmpv:InformationDensityLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered information density levels"@en ;
+    skos:memberList (
+        llmpv:lowInformationDensity
+        llmpv:mediumInformationDensity
+        llmpv:highInformationDensity
+    ) .
+
+llmpv:lowInformationDensity
+    a skos:Concept ;
+    skos:inScheme llmpv:InformationDensityScheme ;
+    skos:prefLabel "low"@en ;
+    skos:definition "Communication containing relatively few information units and substantial space for explanation, repetition, or contextualisation."@en .
+
+llmpv:mediumInformationDensity
+    a skos:Concept ;
+    skos:inScheme llmpv:InformationDensityScheme ;
+    skos:prefLabel "medium"@en ;
+    skos:definition "Communication balancing informational content with explanation and contextualisation."@en .
+
+llmpv:highInformationDensity
+    a skos:Concept ;
+    skos:inScheme llmpv:InformationDensityScheme ;
+    skos:prefLabel "high"@en ;
+    skos:definition "Communication containing many information units with relatively little redundancy or elaboration."@en .
+
+
+#################################################################
+# Turn-taking style
+#################################################################
+
+llmpv:TurnTakingStyleScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP turn-taking style vocabulary"@en .
+
+llmpv:conciseTurnTaking
+    a skos:Concept ;
+    skos:inScheme llmpv:TurnTakingStyleScheme ;
+    skos:prefLabel "concise"@en .
+
+llmpv:elaboratedTurnTaking
+    a skos:Concept ;
+    skos:inScheme llmpv:TurnTakingStyleScheme ;
+    skos:prefLabel "elaborated"@en .
+
+llmpv:reactiveTurnTaking
+    a skos:Concept ;
+    skos:inScheme llmpv:TurnTakingStyleScheme ;
+    skos:prefLabel "reactive"@en .
+
+llmpv:proactiveTurnTaking
+    a skos:Concept ;
+    skos:inScheme llmpv:TurnTakingStyleScheme ;
+    skos:prefLabel "proactive"@en .
+
+llmpv:reflectiveTurnTaking
+    a skos:Concept ;
+    skos:inScheme llmpv:TurnTakingStyleScheme ;
+    skos:prefLabel "reflective"@en .
+
+
+#################################################################
+# Question style
+#################################################################
+
+llmpv:QuestionStyleScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP question style vocabulary"@en .
+
+llmpv:rareQuestions
+    a skos:Concept ;
+    skos:inScheme llmpv:QuestionStyleScheme ;
+    skos:prefLabel "rare"@en .
+
+llmpv:clarifyingQuestions
+    a skos:Concept ;
+    skos:inScheme llmpv:QuestionStyleScheme ;
+    skos:prefLabel "clarifying"@en .
+
+llmpv:exploratoryQuestions
+    a skos:Concept ;
+    skos:inScheme llmpv:QuestionStyleScheme ;
+    skos:prefLabel "exploratory"@en .
+
+llmpv:socraticQuestions
+    a skos:Concept ;
+    skos:inScheme llmpv:QuestionStyleScheme ;
+    skos:prefLabel "Socratic"@en .
+
+llmpv:interviewLikeQuestions
+    a skos:Concept ;
+    skos:inScheme llmpv:QuestionStyleScheme ;
+    skos:prefLabel "interview-like"@en .
+
+
+#################################################################
+# Repair style
+#################################################################
+
+llmpv:RepairStyleScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP repair style vocabulary"@en .
+
+llmpv:ignoresMisunderstanding
+    a skos:Concept ;
+    skos:inScheme llmpv:RepairStyleScheme ;
+    skos:prefLabel "ignores misunderstanding"@en .
+
+llmpv:asksClarification
+    a skos:Concept ;
+    skos:inScheme llmpv:RepairStyleScheme ;
+    skos:prefLabel "asks clarification"@en .
+
+llmpv:selfCorrects
+    a skos:Concept ;
+    skos:inScheme llmpv:RepairStyleScheme ;
+    skos:prefLabel "self-corrects"@en .
+
+llmpv:reformulates
+    a skos:Concept ;
+    skos:inScheme llmpv:RepairStyleScheme ;
+    skos:prefLabel "reformulates"@en .
+
+llmpv:confirmsUnderstanding
+    a skos:Concept ;
+    skos:inScheme llmpv:RepairStyleScheme ;
+    skos:prefLabel "confirms understanding"@en .
+
+
+#################################################################
+# Rhetorical style vocabulary
+#################################################################
+
+llmpv:RhetoricalStyleScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP rhetorical style vocabulary"@en ;
+    skos:definition "Controlled vocabulary of rhetorical styles and techniques that may characterise argumentation, explanation, persuasion, or multiple rhetorical functions."@en .
+
+
+#################################################################
+# Collections by rhetorical function
+#################################################################
+
+llmpv:ArgumentationStyles
+    a skos:Collection ;
+    skos:prefLabel "argumentation styles"@en ;
+    skos:definition "Rhetorical styles commonly used to support claims, conclusions, or positions."@en ;
+    skos:member
+        llmpv:stepByStep ,
+        llmpv:evidenceBased ,
+        llmpv:exampleBased ,
+        llmpv:authorityBased ,
+        llmpv:analogyBased ,
+        llmpv:experienceBased ,
+        llmpv:valueBased ,
+        llmpv:rational .
+
+llmpv:ExplanationStyles
+    a skos:Collection ;
+    skos:prefLabel "explanation styles"@en ;
+    skos:definition "Rhetorical styles commonly used to make concepts, information, or reasoning understandable."@en ;
+    skos:member
+        llmpv:stepByStep ,
+        llmpv:conciseSummary ,
+        llmpv:exampleBased ,
+        llmpv:analogyBased ,
+        llmpv:evidenceBased ,
+        llmpv:technical ,
+        llmpv:simplified .
+
+llmpv:PersuasionStyles
+    a skos:Collection ;
+    skos:prefLabel "persuasion styles"@en ;
+    skos:definition "Rhetorical styles commonly used when attempting to influence, motivate, or change an interlocutor's position or behaviour."@en ;
+    skos:member
+        llmpv:nonPersuasive ,
+        llmpv:stepByStep ,
+        llmpv:evidenceBased ,
+        llmpv:authorityBased ,
+        llmpv:analogyBased ,
+        llmpv:experienceBased ,
+        llmpv:valueBased ,
+        llmpv:rational ,
+        llmpv:emotional ,
+        llmpv:socialProofBased ,
+        llmpv:motivational .
+
+
+#################################################################
+# General rhetorical techniques
+#################################################################
+
+llmpv:stepByStep
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "step-by-step"@en ;
+    skos:definition "Organises communication as an explicit sequence of successive steps, stages, or reasoning moves."@en .
+
+llmpv:evidenceBased
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "evidence-based"@en ;
+    skos:definition "Uses evidence, data, or substantiated information as a primary rhetorical mechanism."@en .
+
+llmpv:exampleBased
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "example-based"@en ;
+    skos:definition "Uses concrete examples or cases as a primary means of illustrating, supporting, or communicating a point."@en .
+
+llmpv:authorityBased
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "authority-based"@en ;
+    skos:definition "Relies on recognised experts, institutions, sources, or other forms of authority to support or strengthen communication."@en .
+
+llmpv:analogyBased
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "analogy-based"@en ;
+    skos:definition "Uses analogies or comparisons with other situations or concepts as a significant rhetorical mechanism."@en .
+
+llmpv:experienceBased
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "experience-based"@en ;
+    skos:definition "Draws primarily on experience, precedent, practical knowledge, or previously encountered cases."@en .
+
+llmpv:valueBased
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "value-based"@en ;
+    skos:definition "Frames communication in terms of values, principles, norms, ideals, or priorities."@en .
+
+llmpv:rational
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "rational"@en ;
+    skos:definition "Emphasises logical relationships, reasons, consequences, and explicit justification."@en .
+
+
+#################################################################
+# Styles particularly useful for explanation
+#################################################################
+
+llmpv:conciseSummary
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "concise summary"@en ;
+    skos:definition "Communicates the main points in a compact form while omitting most secondary detail."@en .
+
+llmpv:technical
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "technical"@en ;
+    skos:definition "Uses specialised concepts, terminology, distinctions, or technical detail appropriate to the subject matter."@en .
+
+llmpv:simplified
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "simplified"@en ;
+    skos:definition "Reduces complexity and presents information in a form intended to be easier to understand."@en .
+
+
+#################################################################
+# Styles particularly useful for persuasion
+#################################################################
+
+llmpv:nonPersuasive
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "non-persuasive"@en ;
+    skos:definition "Avoids deliberately attempting to change an interlocutor's opinion, attitude, or behaviour."@en .
+
+llmpv:emotional
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "emotional"@en ;
+    skos:definition "Uses emotional framing or affective appeal as a significant rhetorical mechanism."@en .
+
+llmpv:socialProofBased
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "social-proof-based"@en ;
+    skos:definition "Invokes the behaviour, endorsement, acceptance, or experience of other people or groups as support for a position or action."@en .
+
+llmpv:motivational
+    a skos:Concept ;
+    skos:inScheme llmpv:RhetoricalStyleScheme ;
+    skos:prefLabel "motivational"@en ;
+    skos:definition "Seeks to encourage action, persistence, confidence, or engagement through supportive or goal-oriented rhetoric."@en .
+
+
+
+#################################################################
+# Vocabulary register
+#################################################################
+
+llmpv:VocabularyRegisterScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP vocabulary register vocabulary"@en .
+
+llmpv:colloquialRegister
+    a skos:Concept ;
+    skos:inScheme llmpv:VocabularyRegisterScheme ;
+    skos:prefLabel "colloquial"@en .
+
+llmpv:everydayRegister
+    a skos:Concept ;
+    skos:inScheme llmpv:VocabularyRegisterScheme ;
+    skos:prefLabel "everyday"@en .
+
+llmpv:professionalRegister
+    a skos:Concept ;
+    skos:inScheme llmpv:VocabularyRegisterScheme ;
+    skos:prefLabel "professional"@en .
+
+llmpv:academicRegister
+    a skos:Concept ;
+    skos:inScheme llmpv:VocabularyRegisterScheme ;
+    skos:prefLabel "academic"@en .
+
+llmpv:technicalRegister
+    a skos:Concept ;
+    skos:inScheme llmpv:VocabularyRegisterScheme ;
+    skos:prefLabel "technical"@en .
+
+llmpv:literaryRegister
+    a skos:Concept ;
+    skos:inScheme llmpv:VocabularyRegisterScheme ;
+    skos:prefLabel "literary"@en .
+
+
+#################################################################
+# Sentence complexity
+#################################################################
+
+llmpv:SentenceComplexityScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP sentence complexity vocabulary"@en .
+
+llmpv:SentenceComplexityLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered sentence complexity levels"@en ;
+    skos:memberList (
+        llmpv:simpleSentenceComplexity
+        llmpv:moderateSentenceComplexity
+        llmpv:complexSentenceComplexity
+    ) .
+
+llmpv:simpleSentenceComplexity
+    a skos:Concept ;
+    skos:inScheme llmpv:SentenceComplexityScheme ;
+    skos:prefLabel "simple"@en .
+
+llmpv:moderateSentenceComplexity
+    a skos:Concept ;
+    skos:inScheme llmpv:SentenceComplexityScheme ;
+    skos:prefLabel "moderate"@en .
+
+llmpv:complexSentenceComplexity
+    a skos:Concept ;
+    skos:inScheme llmpv:SentenceComplexityScheme ;
+    skos:prefLabel "complex"@en .
+
+
+#################################################################
+# Jargon level
+#################################################################
+
+llmpv:JargonLevelScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP jargon level vocabulary"@en .
+
+llmpv:JargonLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered jargon levels"@en ;
+    skos:memberList (
+        llmpv:noJargon
+        llmpv:lowJargon
+        llmpv:mediumJargon
+        llmpv:highJargon
+    ) .
+
+llmpv:noJargon
+    a skos:Concept ;
+    skos:inScheme llmpv:JargonLevelScheme ;
+    skos:prefLabel "none"@en .
+
+llmpv:lowJargon
+    a skos:Concept ;
+    skos:inScheme llmpv:JargonLevelScheme ;
+    skos:prefLabel "low"@en .
+
+llmpv:mediumJargon
+    a skos:Concept ;
+    skos:inScheme llmpv:JargonLevelScheme ;
+    skos:prefLabel "medium"@en .
+
+llmpv:highJargon
+    a skos:Concept ;
+    skos:inScheme llmpv:JargonLevelScheme ;
+    skos:prefLabel "high"@en .
+
+
+#################################################################
+# Lexical diversity
+#################################################################
+
+llmpv:LexicalDiversityScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP lexical diversity vocabulary"@en .
+
+llmpv:LexicalDiversityLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered lexical diversity levels"@en ;
+    skos:memberList (
+        llmpv:lowLexicalDiversity
+        llmpv:mediumLexicalDiversity
+        llmpv:highLexicalDiversity
+    ) .
+
+llmpv:lowLexicalDiversity
+    a skos:Concept ;
+    skos:inScheme llmpv:LexicalDiversityScheme ;
+    skos:prefLabel "low lexical diversity"@en .
+
+llmpv:mediumLexicalDiversity
+    a skos:Concept ;
+    skos:inScheme llmpv:LexicalDiversityScheme ;
+    skos:prefLabel "medium lexical diversity"@en .
+
+llmpv:highLexicalDiversity
+    a skos:Concept ;
+    skos:inScheme llmpv:LexicalDiversityScheme ;
+    skos:prefLabel "high lexical diversity"@en .
+
+
+#################################################################
+# Emotional tone
+#################################################################
+
+llmpv:EmotionalToneScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP emotional tone vocabulary"@en .
+
+llmpv:neutralTone
+    a skos:Concept ;
+    skos:inScheme llmpv:EmotionalToneScheme ;
+    skos:prefLabel "neutral"@en .
+
+llmpv:warmTone
+    a skos:Concept ;
+    skos:inScheme llmpv:EmotionalToneScheme ;
+    skos:prefLabel "warm"@en .
+
+llmpv:empatheticTone
+    a skos:Concept ;
+    skos:inScheme llmpv:EmotionalToneScheme ;
+    skos:prefLabel "empathetic"@en .
+
+llmpv:enthusiasticTone
+    a skos:Concept ;
+    skos:inScheme llmpv:EmotionalToneScheme ;
+    skos:prefLabel "enthusiastic"@en .
+
+llmpv:seriousTone
+    a skos:Concept ;
+    skos:inScheme llmpv:EmotionalToneScheme ;
+    skos:prefLabel "serious"@en .
+
+llmpv:criticalTone
+    a skos:Concept ;
+    skos:inScheme llmpv:EmotionalToneScheme ;
+    skos:prefLabel "critical"@en .
+
+llmpv:anxiousTone
+    a skos:Concept ;
+    skos:inScheme llmpv:EmotionalToneScheme ;
+    skos:prefLabel "anxious"@en .
+
+llmpv:humorousTone
+    a skos:Concept ;
+    skos:inScheme llmpv:EmotionalToneScheme ;
+    skos:prefLabel "humorous"@en .
+
+
+#################################################################
+# Politeness strategy
+#################################################################
+
+llmpv:PolitenessStrategyScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP politeness strategy vocabulary"@en .
+
+llmpv:bluntPoliteness
+    a skos:Concept ;
+    skos:inScheme llmpv:PolitenessStrategyScheme ;
+    skos:prefLabel "blunt"@en .
+
+llmpv:neutralPoliteness
+    a skos:Concept ;
+    skos:inScheme llmpv:PolitenessStrategyScheme ;
+    skos:prefLabel "neutral"@en .
+
+llmpv:polite
+    a skos:Concept ;
+    skos:inScheme llmpv:PolitenessStrategyScheme ;
+    skos:prefLabel "polite"@en .
+
+llmpv:deferential
+    a skos:Concept ;
+    skos:inScheme llmpv:PolitenessStrategyScheme ;
+    skos:prefLabel "deferential"@en .
+
+llmpv:faceSaving
+    a skos:Concept ;
+    skos:inScheme llmpv:PolitenessStrategyScheme ;
+    skos:prefLabel "face-saving"@en .
+
+llmpv:highlyFormal
+    a skos:Concept ;
+    skos:inScheme llmpv:PolitenessStrategyScheme ;
+    skos:prefLabel "highly formal"@en .
+
+
+#################################################################
+# Hedging level
+#################################################################
+
+llmpv:HedgingLevelScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP hedging level vocabulary"@en .
+
+llmpv:HedgingLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered hedging levels"@en ;
+    skos:memberList (
+        llmpv:noHedging
+        llmpv:lowHedging
+        llmpv:mediumHedging
+        llmpv:highHedging
+    ) .
+
+llmpv:noHedging
+    a skos:Concept ;
+    skos:inScheme llmpv:HedgingLevelScheme ;
+    skos:prefLabel "none"@en .
+
+llmpv:lowHedging
+    a skos:Concept ;
+    skos:inScheme llmpv:HedgingLevelScheme ;
+    skos:prefLabel "low"@en .
+
+llmpv:mediumHedging
+    a skos:Concept ;
+    skos:inScheme llmpv:HedgingLevelScheme ;
+    skos:prefLabel "medium"@en .
+
+llmpv:highHedging
+    a skos:Concept ;
+    skos:inScheme llmpv:HedgingLevelScheme ;
+    skos:prefLabel "high"@en .
+
+
+#################################################################
+# Directness level
+#################################################################
+
+llmpv:DirectnessLevelScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP directness level vocabulary"@en .
+
+llmpv:DirectnessLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered directness levels"@en ;
+    skos:memberList (
+        llmpv:indirect
+        llmpv:balancedDirectness
+        llmpv:direct
+        llmpv:bluntDirectness
+    ) .
+
+llmpv:indirect
+    a skos:Concept ;
+    skos:inScheme llmpv:DirectnessLevelScheme ;
+    skos:prefLabel "indirect"@en .
+
+llmpv:balancedDirectness
+    a skos:Concept ;
+    skos:inScheme llmpv:DirectnessLevelScheme ;
+    skos:prefLabel "balanced"@en .
+
+llmpv:direct
+    a skos:Concept ;
+    skos:inScheme llmpv:DirectnessLevelScheme ;
+    skos:prefLabel "direct"@en .
+
+llmpv:bluntDirectness
+    a skos:Concept ;
+    skos:inScheme llmpv:DirectnessLevelScheme ;
+    skos:prefLabel "blunt"@en .
+
+
+#################################################################
+# Stance style
+#################################################################
+
+llmpv:StanceStyleScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP stance style vocabulary"@en .
+
+llmpv:certainStance
+    a skos:Concept ;
+    skos:inScheme llmpv:StanceStyleScheme ;
+    skos:prefLabel "certain"@en .
+
+llmpv:cautiousStance
+    a skos:Concept ;
+    skos:inScheme llmpv:StanceStyleScheme ;
+    skos:prefLabel "cautious"@en .
+
+llmpv:skepticalStance
+    a skos:Concept ;
+    skos:inScheme llmpv:StanceStyleScheme ;
+    skos:prefLabel "skeptical"@en .
+
+llmpv:enthusiasticStance
+    a skos:Concept ;
+    skos:inScheme llmpv:StanceStyleScheme ;
+    skos:prefLabel "enthusiastic"@en .
+
+llmpv:neutralStance
+    a skos:Concept ;
+    skos:inScheme llmpv:StanceStyleScheme ;
+    skos:prefLabel "neutral"@en .
+
+llmpv:reflectiveStance
+    a skos:Concept ;
+    skos:inScheme llmpv:StanceStyleScheme ;
+    skos:prefLabel "reflective"@en .

@@ -1357,3 +1357,301 @@ llmp:hasLearningStyle
     rdfs:subPropertyOf llmp:hasCognitiveLiteralFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range rdf:langString .
+
+#################################################################
+# Communication pillar
+#################################################################
+
+llmp:hasCommunicationFeature
+    a owl:ObjectProperty ;
+    rdfs:label "has communication feature"@en ;
+    rdfs:comment "Links an LLM persona to a non-literal feature describing how it communicates, structures discourse, interacts with interlocutors, explains, argues, or expresses affect and stance."@en ;
+    rdfs:subPropertyOf llmp:hasPersonaFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+llmp:hasCommunicationLiteralFeature
+    a owl:DatatypeProperty ;
+    rdfs:label "has communication literal feature"@en ;
+    rdfs:comment "Links an LLM persona to a literal value describing an aspect of its communication style."@en ;
+    rdfs:subPropertyOf llmp:hasPersonaLiteralFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+
+#################################################################
+# Register
+#################################################################
+
+llmp:hasRegisterFeature
+    a owl:ObjectProperty ;
+    rdfs:label "has register feature"@en ;
+    rdfs:comment "Links an LLM persona to a feature describing the field, tenor, or mode of its communication."@en ;
+    rdfs:subPropertyOf llmp:hasCommunicationFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+llmp:hasField
+    a owl:ObjectProperty ;
+    rdfs:label "has communicative field"@en ;
+    rdfs:comment "Links an LLM persona to a topic, activity domain, or subject matter that characterises its communication. The object may be any suitable concept or resource from an external or application vocabulary."@en ;
+    rdfs:subPropertyOf llmp:hasRegisterFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+llmp:CommunicativeTenor
+    a owl:Class ;
+    rdfs:label "communicative tenor"@en ;
+    rdfs:comment "A structured representation of the social and interactional relation assumed between an LLM persona and its interlocutor during communication."@en .
+
+llmp:hasTenor
+    a owl:ObjectProperty ;
+    rdfs:label "has communicative tenor"@en ;
+    rdfs:comment "Links an LLM persona to a communicative tenor describing the roles assumed by the persona and its interlocutor."@en ;
+    rdfs:subPropertyOf llmp:hasRegisterFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range llmp:CommunicativeTenor .
+
+llmp:hasSpeakerRole
+    a owl:ObjectProperty ;
+    rdfs:label "has speaker role"@en ;
+    rdfs:comment "Links a communicative tenor to a role assumed by the LLM persona in relation to its interlocutor."@en ;
+    rdfs:domain llmp:CommunicativeTenor ;
+    rdfs:range skos:Concept .
+
+llmp:hasInterlocutorRole
+    a owl:ObjectProperty ;
+    rdfs:label "has interlocutor role"@en ;
+    rdfs:comment "Links a communicative tenor to a role attributed to the interlocutor in relation to the LLM persona."@en ;
+    rdfs:domain llmp:CommunicativeTenor ;
+    rdfs:range skos:Concept .
+
+llmp:hasCommunicationChannel
+    a owl:ObjectProperty ;
+    rdfs:label "has communication channel"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing the channel or medium through which communication is realised, such as text chat, spoken dialogue, email, document, social media, or multimodal interaction."@en ;
+    rdfs:subPropertyOf llmp:hasRegisterFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+#################################################################
+# Discourse
+#################################################################
+
+llmp:hasDiscourseFeature
+    a owl:ObjectProperty ;
+    rdfs:label "has discourse feature"@en ;
+    rdfs:comment "Links an LLM persona to a feature describing the organisation, genre, or information density of its discourse."@en ;
+    rdfs:subPropertyOf llmp:hasCommunicationFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+llmp:hasDiscourseMode
+    a owl:ObjectProperty ;
+    rdfs:label "has discourse mode"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing the general organisation of its discourse, such as narrative, explanatory, argumentative, or procedural."@en ;
+    rdfs:subPropertyOf llmp:hasDiscourseFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasGenreStyle
+    a owl:ObjectProperty ;
+    rdfs:label "has genre style"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing a genre-like format it tends to use, such as advice, tutorial, review, consultation, or brainstorming."@en ;
+    rdfs:subPropertyOf llmp:hasDiscourseFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasInformationDensity
+    a owl:ObjectProperty ;
+    rdfs:label "has information density"@en ;
+    rdfs:comment "Links an LLM persona to an ordered level describing how densely information is packed into its communication."@en ;
+    rdfs:subPropertyOf llmp:hasDiscourseFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+
+#################################################################
+# Interactional style
+#################################################################
+
+llmp:hasInteractionalFeature
+    a owl:ObjectProperty ;
+    rdfs:label "has interactional feature"@en ;
+    rdfs:comment "Links an LLM persona to a feature describing how it manages turns, questions, clarification, correction, and conversational repair."@en ;
+    rdfs:subPropertyOf llmp:hasCommunicationFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+llmp:hasTurnTakingStyle
+    a owl:ObjectProperty ;
+    rdfs:label "has turn-taking style"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing the characteristic form and initiative of its conversational turns."@en ;
+    rdfs:subPropertyOf llmp:hasInteractionalFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasQuestionStyle
+    a owl:ObjectProperty ;
+    rdfs:label "has question style"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing how it uses questions in interaction."@en ;
+    rdfs:subPropertyOf llmp:hasInteractionalFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasRepairStyle
+    a owl:ObjectProperty ;
+    rdfs:label "has repair style"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing how it handles misunderstanding, correction, clarification, or conversational breakdown."@en ;
+    rdfs:subPropertyOf llmp:hasInteractionalFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+
+#################################################################
+# Rhetorical style
+#################################################################
+
+llmp:hasRhetoricalFeature
+    a owl:ObjectProperty ;
+    rdfs:label "has rhetorical feature"@en ;
+    rdfs:comment "Links an LLM persona to a feature describing how it argues, explains, or attempts to persuade."@en ;
+    rdfs:subPropertyOf llmp:hasCommunicationFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+llmp:hasArgumentationStyle
+    a owl:ObjectProperty ;
+    rdfs:label "has argumentation style"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing how it tends to support claims, conclusions, or positions."@en ;
+    rdfs:subPropertyOf llmp:hasRhetoricalFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasExplanationStyle
+    a owl:ObjectProperty ;
+    rdfs:label "has explanation style"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing how it tends to explain concepts or information."@en ;
+    rdfs:subPropertyOf llmp:hasRhetoricalFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasPersuasionStyle
+    a owl:ObjectProperty ;
+    rdfs:label "has persuasion style"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing how it attempts to influence an interlocutor, when persuasion is applicable."@en ;
+    rdfs:subPropertyOf llmp:hasRhetoricalFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+
+#################################################################
+# Lexico-syntactic style
+#################################################################
+
+llmp:hasLexicoSyntacticFeature
+    a owl:ObjectProperty ;
+    rdfs:label "has lexico-syntactic feature"@en ;
+    rdfs:comment "Links an LLM persona to a non-literal feature describing its vocabulary choice, sentence complexity, jargon use, or lexical diversity."@en ;
+    rdfs:subPropertyOf llmp:hasCommunicationFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+llmp:hasLexicoSyntacticLiteralFeature
+    a owl:DatatypeProperty ;
+    rdfs:label "has lexico-syntactic literal feature"@en ;
+    rdfs:comment "Links an LLM persona to a literal value describing its lexical or syntactic communication style."@en ;
+    rdfs:subPropertyOf llmp:hasCommunicationLiteralFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+llmp:hasVocabularyRegister
+    a owl:ObjectProperty ;
+    rdfs:label "has vocabulary register"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing the lexical and social register of its word choice."@en ;
+    rdfs:subPropertyOf llmp:hasLexicoSyntacticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasSentenceComplexity
+    a owl:ObjectProperty ;
+    rdfs:label "has sentence complexity"@en ;
+    rdfs:comment "Links an LLM persona to an ordered level describing typical sentence length, clause complexity, and syntactic density."@en ;
+    rdfs:subPropertyOf llmp:hasLexicoSyntacticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasJargonLevel
+    a owl:ObjectProperty ;
+    rdfs:label "has jargon level"@en ;
+    rdfs:comment "Links an LLM persona to an ordered level describing its use of technical or domain-specific terminology."@en ;
+    rdfs:subPropertyOf llmp:hasLexicoSyntacticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasLexicalDiversity
+    a owl:ObjectProperty ;
+    rdfs:label "has lexical diversity"@en ;
+    rdfs:comment "Links an LLM persona to an ordered level describing the variety of vocabulary it typically uses."@en ;
+    rdfs:subPropertyOf llmp:hasLexicoSyntacticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasLexicalDiversityScore
+    a owl:DatatypeProperty ;
+    rdfs:label "has lexical diversity score"@en ;
+    rdfs:comment "Associates an LLM persona with a numeric measure of lexical diversity. The interpretation of the value depends on the lexical-diversity metric used."@en ;
+    rdfs:subPropertyOf llmp:hasLexicoSyntacticLiteralFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range xsd:decimal .
+
+llmp:hasSignatureExpression
+    a owl:DatatypeProperty ;
+    rdfs:label "has signature expression"@en ;
+    rdfs:comment "Associates an LLM persona with a catchphrase, repeated opening, idiom, or other characteristic expression."@en ;
+    rdfs:subPropertyOf llmp:hasLexicoSyntacticLiteralFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range rdf:langString .
+
+
+#################################################################
+# Affective-pragmatic style
+#################################################################
+
+llmp:hasAffectivePragmaticFeature
+    a owl:ObjectProperty ;
+    rdfs:label "has affective-pragmatic feature"@en ;
+    rdfs:comment "Links an LLM persona to a feature describing emotional tone, politeness, hedging, directness, or communicative stance."@en ;
+    rdfs:subPropertyOf llmp:hasCommunicationFeature ;
+    rdfs:domain llmp:LLMPersona .
+
+llmp:hasEmotionalTone
+    a owl:ObjectProperty ;
+    rdfs:label "has emotional tone"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing the emotional colouring of its language."@en ;
+    rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasPolitenessStrategy
+    a owl:ObjectProperty ;
+    rdfs:label "has politeness strategy"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing how it manages politeness, respect, face, and social distance."@en ;
+    rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasHedgingLevel
+    a owl:ObjectProperty ;
+    rdfs:label "has hedging level"@en ;
+    rdfs:comment "Links an LLM persona to an ordered level describing its use of uncertainty markers, qualifications, and hedging expressions (e.g. maybe, I think, it seems)."@en ;
+    rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasDirectnessLevel
+    a owl:ObjectProperty ;
+    rdfs:label "has directness level"@en ;
+    rdfs:comment "Links an LLM persona to an ordered level describing how directly or indirectly it communicates intentions, requests, claims, or evaluations."@en ;
+    rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
+
+llmp:hasStanceStyle
+    a owl:ObjectProperty ;
+    rdfs:label "has stance style"@en ;
+    rdfs:comment "Links an LLM persona to a controlled value describing how it characteristically positions itself toward claims, information, or topics."@en ;
+    rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept .
