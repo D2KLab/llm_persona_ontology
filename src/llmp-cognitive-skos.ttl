@@ -1,0 +1,415 @@
+@prefix llmpv: <https://w3id.org/llm-persona/vocab/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+# Reasoning mode
+#################################################################
+
+llmpv:ReasoningModeScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP reasoning mode vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing predominant modes through which an LLM persona reasons and reaches conclusions."@en .
+
+llmpv:analyticalReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningModeScheme ;
+    skos:prefLabel "analytical"@en ;
+    skos:definition "Reasoning based on systematic decomposition, examination of components, and explicit consideration of relations or evidence."@en .
+
+llmpv:intuitiveReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningModeScheme ;
+    skos:prefLabel "intuitive"@en ;
+    skos:definition "Reasoning characterised by rapid judgments or conclusions based on patterns, impressions, or implicit understanding rather than explicit analysis."@en .
+
+llmpv:pragmaticReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningModeScheme ;
+    skos:prefLabel "pragmatic"@en ;
+    skos:definition "Reasoning focused on practical consequences, feasibility, usefulness, and what is likely to work in the relevant situation."@en .
+
+llmpv:creativeReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningModeScheme ;
+    skos:prefLabel "creative"@en ;
+    skos:definition "Reasoning that actively explores novel combinations, alternatives, interpretations, or unconventional solutions."@en .
+
+llmpv:skepticalReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningModeScheme ;
+    skos:prefLabel "skeptical"@en ;
+    skos:definition "Reasoning characterised by questioning claims, assumptions, evidence, or conclusions before accepting them."@en .
+
+llmpv:ruleBasedReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningModeScheme ;
+    skos:prefLabel "rule-based"@en ;
+    skos:definition "Reasoning primarily guided by explicit rules, principles, procedures, constraints, or formal criteria."@en .
+
+llmpv:experienceBasedReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningModeScheme ;
+    skos:prefLabel "experience-based"@en ;
+    skos:definition "Reasoning that relies strongly on previous experiences, examples, precedents, or learned patterns."@en .
+
+
+#################################################################
+# Reasoning depth
+#################################################################
+
+llmpv:ReasoningDepthScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP reasoning depth vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing the typical depth and elaboration of an LLM persona's reasoning."@en .
+
+llmpv:shallowReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningDepthScheme ;
+    skos:prefLabel "shallow"@en ;
+    skos:definition "Reasoning that generally relies on limited elaboration, few inferential steps, or immediately available information."@en .
+
+llmpv:moderateReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningDepthScheme ;
+    skos:prefLabel "moderate"@en ;
+    skos:definition "Reasoning with an intermediate level of analysis and elaboration appropriate to ordinary decisions or explanations."@en .
+
+llmpv:deepReasoning
+    a skos:Concept ;
+    skos:inScheme llmpv:ReasoningDepthScheme ;
+    skos:prefLabel "deep"@en ;
+    skos:definition "Reasoning characterised by extensive analysis, multiple inferential steps, consideration of alternatives, or detailed justification."@en .
+
+llmpv:ReasoningDepthLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered reasoning depth levels"@en ;
+    skos:memberList (
+        llmpv:shallowReasoning
+        llmpv:moderateReasoning
+        llmpv:deepReasoning
+    ) .
+
+#################################################################
+# Evidence orientation
+#################################################################
+
+llmpv:EvidenceOrientationScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP evidence orientation vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing the kinds of evidence an LLM persona tends to seek or rely upon when evaluating claims."@en .
+
+llmpv:lowEvidenceOrientation
+    a skos:Concept ;
+    skos:inScheme llmpv:EvidenceOrientationScheme ;
+    skos:prefLabel "low-evidence"@en ;
+    skos:definition "Tends to accept or act on claims with limited demand for explicit supporting evidence."@en .
+
+llmpv:exampleBasedEvidenceOrientation
+    a skos:Concept ;
+    skos:inScheme llmpv:EvidenceOrientationScheme ;
+    skos:prefLabel "example-based"@en ;
+    skos:definition "Tends to rely on illustrative examples, cases, demonstrations, or precedents when evaluating claims."@en .
+
+llmpv:dataDrivenEvidenceOrientation
+    a skos:Concept ;
+    skos:inScheme llmpv:EvidenceOrientationScheme ;
+    skos:prefLabel "data-driven"@en ;
+    skos:definition "Tends to rely on empirical data, quantitative information, measurements, or observed evidence."@en .
+
+llmpv:expertDrivenEvidenceOrientation
+    a skos:Concept ;
+    skos:inScheme llmpv:EvidenceOrientationScheme ;
+    skos:prefLabel "expert-driven"@en ;
+    skos:definition "Tends to rely on expert judgment, professional authority, or recognised specialist knowledge."@en .
+
+llmpv:citationSeekingEvidenceOrientation
+    a skos:Concept ;
+    skos:inScheme llmpv:EvidenceOrientationScheme ;
+    skos:prefLabel "citation-seeking"@en ;
+    skos:definition "Tends to seek explicit references, citations, or identifiable sources supporting claims and conclusions."@en .
+
+
+#################################################################
+# Abstraction level
+#################################################################
+
+llmpv:AbstractionLevelScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP abstraction level vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing the level of abstraction at which an LLM persona tends to reason."@en .
+
+llmpv:concreteAbstractionLevel
+    a skos:Concept ;
+    skos:inScheme llmpv:AbstractionLevelScheme ;
+    skos:prefLabel "concrete"@en ;
+    skos:definition "Reasoning focused primarily on specific entities, situations, examples, actions, and directly observable details."@en .
+
+llmpv:mixedAbstractionLevel
+    a skos:Concept ;
+    skos:inScheme llmpv:AbstractionLevelScheme ;
+    skos:prefLabel "mixed"@en ;
+    skos:definition "Reasoning that moves between concrete examples and more abstract concepts depending on the task."@en .
+
+llmpv:abstractAbstractionLevel
+    a skos:Concept ;
+    skos:inScheme llmpv:AbstractionLevelScheme ;
+    skos:prefLabel "abstract"@en ;
+    skos:definition "Reasoning focused on general concepts, patterns, categories, principles, or relationships beyond individual examples."@en .
+
+llmpv:theoreticalAbstractionLevel
+    a skos:Concept ;
+    skos:inScheme llmpv:AbstractionLevelScheme ;
+    skos:prefLabel "theoretical"@en ;
+    skos:definition "Reasoning focused on formal, conceptual, explanatory, or theoretical models and their implications."@en .
+
+
+llmpv:DetailOrientationScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP detail orientation vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing the level of detail an LLM persona tends to prefer when processing information."@en .
+
+llmpv:summaryOriented
+    a skos:Concept ;
+    skos:inScheme llmpv:DetailOrientationScheme ;
+    skos:prefLabel "summary-oriented"@en ;
+    skos:definition "Prefers concise summaries, key points, and reduced detail."@en .
+
+llmpv:balancedDetail
+    a skos:Concept ;
+    skos:inScheme llmpv:DetailOrientationScheme ;
+    skos:prefLabel "balanced"@en ;
+    skos:definition "Balances concise overview with supporting detail depending on the task."@en .
+
+llmpv:detailOriented
+    a skos:Concept ;
+    skos:inScheme llmpv:DetailOrientationScheme ;
+    skos:prefLabel "detail-oriented"@en ;
+    skos:definition "Prefers fine-grained information, explicit distinctions, and detailed explanations."@en .
+
+llmpv:bigPictureOriented
+    a skos:Concept ;
+    skos:inScheme llmpv:DetailOrientationScheme ;
+    skos:prefLabel "big-picture-oriented"@en ;
+    skos:definition "Focuses primarily on overall structure, patterns, and high-level relationships rather than fine detail."@en .
+
+llmpv:AmbiguityToleranceScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP ambiguity tolerance vocabulary"@en .
+
+llmpv:lowAmbiguityTolerance
+    a skos:Concept ;
+    skos:inScheme llmpv:AmbiguityToleranceScheme ;
+    skos:prefLabel "low ambiguity tolerance"@en ;
+    skos:definition "Prefers clear, definite, and well-specified information and tends to seek resolution when information is uncertain or ambiguous."@en .
+
+llmpv:moderateAmbiguityTolerance
+    a skos:Concept ;
+    skos:inScheme llmpv:AmbiguityToleranceScheme ;
+    skos:prefLabel "moderate ambiguity tolerance"@en ;
+    skos:definition "Can work with some uncertainty or ambiguity while generally preferring clearer interpretations when available."@en .
+
+llmpv:highAmbiguityTolerance
+    a skos:Concept ;
+    skos:inScheme llmpv:AmbiguityToleranceScheme ;
+    skos:prefLabel "high ambiguity tolerance"@en ;
+    skos:definition "Is comfortable reasoning with incomplete or uncertain information and considering multiple plausible interpretations."@en .
+
+llmpv:veryHighAmbiguityTolerance
+    a skos:Concept ;
+    skos:inScheme llmpv:AmbiguityToleranceScheme ;
+    skos:prefLabel "very high ambiguity tolerance"@en ;
+    skos:definition "Readily works with unresolved uncertainty, competing interpretations, and underspecified situations without requiring premature resolution."@en .
+
+llmpv:AmbiguityToleranceLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered ambiguity tolerance levels"@en ;
+    skos:memberList (
+        llmpv:lowAmbiguityTolerance
+        llmpv:moderateAmbiguityTolerance
+        llmpv:highAmbiguityTolerance
+        llmpv:veryHighAmbiguityTolerance
+    ) .
+
+#################################################################
+# Cognitive confidence
+#################################################################
+
+llmpv:CognitiveConfidenceScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP cognitive confidence vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing an LLM persona's confidence in its own understanding and judgment."@en .
+
+llmpv:lowCognitiveConfidence
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveConfidenceScheme ;
+    skos:prefLabel "low"@en ;
+    skos:definition "Frequently expresses uncertainty or limited confidence in its own understanding or judgments."@en .
+
+llmpv:mediumCognitiveConfidence
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveConfidenceScheme ;
+    skos:prefLabel "medium"@en ;
+    skos:definition "Shows moderate confidence while remaining open to uncertainty, correction, or additional information."@en .
+
+llmpv:highCognitiveConfidence
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveConfidenceScheme ;
+    skos:prefLabel "high"@en ;
+    skos:definition "Generally expresses strong confidence in its own understanding or judgments."@en .
+
+llmpv:overconfidentCognitiveConfidence
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveConfidenceScheme ;
+    skos:prefLabel "overconfident"@en ;
+    skos:definition "Displays confidence that tends to exceed the available evidence, knowledge, or reliability of its judgments."@en .
+
+llmpv:CognitiveConfidenceLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered cognitive confidence levels"@en ;
+    skos:memberList (
+        llmpv:lowCognitiveConfidence
+        llmpv:mediumCognitiveConfidence
+        llmpv:highCognitiveConfidence
+        llmpv:overconfidentCognitiveConfidence
+    ) .
+
+llmpv:DomainUnderstandingLevelScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP domain understanding level vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing the level of an LLM persona's understanding of a particular domain, topic, system, product, or area of knowledge."@en .
+
+llmpv:DomainUnderstandingLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered domain understanding levels"@en ;
+    skos:memberList (
+        llmpv:minimalUnderstanding
+        llmpv:basicUnderstanding
+        llmpv:intermediateUnderstanding
+        llmpv:advancedUnderstanding
+        llmpv:expertUnderstanding
+    ) .
+
+llmpv:minimalUnderstanding
+    a skos:Concept ;
+    skos:inScheme llmpv:DomainUnderstandingLevelScheme ;
+    skos:prefLabel "minimal understanding"@en ;
+    skos:definition "Very limited understanding of the domain, restricted to a few basic notions or isolated facts."@en .
+
+llmpv:basicUnderstanding
+    a skos:Concept ;
+    skos:inScheme llmpv:DomainUnderstandingLevelScheme ;
+    skos:prefLabel "basic understanding"@en ;
+    skos:definition "Understands fundamental concepts and common terminology, but has limited depth or ability to handle more complex aspects of the domain."@en .
+
+llmpv:intermediateUnderstanding
+    a skos:Concept ;
+    skos:inScheme llmpv:DomainUnderstandingLevelScheme ;
+    skos:prefLabel "intermediate understanding"@en ;
+    skos:definition "Has a solid working understanding of the main concepts, relationships, and common practices within the domain."@en .
+
+llmpv:advancedUnderstanding
+    a skos:Concept ;
+    skos:inScheme llmpv:DomainUnderstandingLevelScheme ;
+    skos:prefLabel "advanced understanding"@en ;
+    skos:definition "Has detailed and well-structured understanding of the domain, including complex concepts, exceptions, and specialised practices."@en .
+
+llmpv:expertUnderstanding
+    a skos:Concept ;
+    skos:inScheme llmpv:DomainUnderstandingLevelScheme ;
+    skos:prefLabel "expert understanding"@en ;
+    skos:definition "Has extensive, highly specialised, and nuanced understanding of the domain, including advanced concepts, edge cases, and expert-level reasoning."@en .
+
+
+#################################################################
+# Cognitive flexibility
+#################################################################
+
+llmpv:CognitiveFlexibilityScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP cognitive flexibility vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing how readily an LLM persona revises perspectives or assumptions."@en .
+
+llmpv:rigidCognitiveFlexibility
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveFlexibilityScheme ;
+    skos:prefLabel "rigid"@en ;
+    skos:definition "Tends to maintain existing interpretations or assumptions despite alternative perspectives or new information."@en .
+
+llmpv:moderateCognitiveFlexibility
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveFlexibilityScheme ;
+    skos:prefLabel "moderate"@en ;
+    skos:definition "Can revise perspectives or assumptions when presented with sufficiently compelling reasons or evidence."@en .
+
+llmpv:flexibleCognitiveFlexibility
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveFlexibilityScheme ;
+    skos:prefLabel "flexible"@en ;
+    skos:definition "Readily considers alternative perspectives and updates interpretations or assumptions in response to new information."@en .
+
+llmpv:adaptiveCognitiveFlexibility
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveFlexibilityScheme ;
+    skos:prefLabel "adaptive"@en ;
+    skos:definition "Actively adjusts reasoning strategies, perspectives, and assumptions according to changing information or context."@en .
+
+llmpv:CognitiveFlexibilityLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered cognitive flexibility levels"@en ;
+    skos:memberList (
+        llmpv:rigidCognitiveFlexibility
+        llmpv:moderateCognitiveFlexibility
+        llmpv:flexibleCognitiveFlexibility
+        llmpv:adaptiveCognitiveFlexibility
+    ) .
+
+#################################################################
+# Cognitive biases
+#################################################################
+
+llmpv:CognitiveBiasScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP cognitive bias vocabulary"@en ;
+    skos:definition "Controlled vocabulary describing recurring cognitive tendencies that may systematically influence an LLM persona's judgments."@en .
+
+llmpv:confirmationBias
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveBiasScheme ;
+    skos:prefLabel "confirmation bias"@en ;
+    skos:definition "Tendency to seek, interpret, or favour information that supports an existing belief or assumption."@en .
+
+llmpv:anchoringBias
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveBiasScheme ;
+    skos:prefLabel "anchoring bias"@en ;
+    skos:definition "Tendency to rely disproportionately on an initial value, claim, example, or piece of information."@en .
+
+llmpv:authorityBias
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveBiasScheme ;
+    skos:prefLabel "authority bias"@en ;
+    skos:definition "Tendency to assign excessive weight to claims because they originate from an authority or perceived expert."@en .
+
+llmpv:availabilityBias
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveBiasScheme ;
+    skos:prefLabel "availability bias"@en ;
+    skos:definition "Tendency to give disproportionate importance to information or examples that are especially salient or readily recalled."@en .
+
+llmpv:statusQuoBias
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveBiasScheme ;
+    skos:prefLabel "status quo bias"@en ;
+    skos:definition "Tendency to favour existing states, practices, or choices over alternatives involving change."@en .
+
+llmpv:overconfidenceBias
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveBiasScheme ;
+    skos:prefLabel "overconfidence bias"@en ;
+    skos:definition "Tendency to overestimate the accuracy, completeness, or reliability of one's knowledge or judgments."@en .
