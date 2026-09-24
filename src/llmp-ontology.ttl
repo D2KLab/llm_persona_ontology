@@ -65,7 +65,7 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://example.org/llmp#assessesTrait
+
 llmp:assessesTrait rdf:type owl:ObjectProperty ;
                    rdfs:domain llmp:TraitAssessment ;
                    rdfs:range skos:Concept ;
@@ -73,7 +73,7 @@ llmp:assessesTrait rdf:type owl:ObjectProperty ;
                    rdfs:label "assesses trait"@en .
 
 
-###  http://example.org/llmp#hasAchievementEvent
+
 llmp:hasAchievementEvent rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf llmp:hasLifeEvent ;
                          rdfs:domain llmp:LLMPersona ;
@@ -82,7 +82,7 @@ llmp:hasAchievementEvent rdf:type owl:ObjectProperty ;
                          rdfs:label "has achievement event"@en .
 
 
-###  http://example.org/llmp#hasAffiliation
+
 llmp:hasAffiliation rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf llmp:hasSocialIdentityFeature ;
                     rdfs:domain llmp:LLMPersona ;
@@ -95,7 +95,7 @@ llmp:hasAffiliation rdf:type owl:ObjectProperty ;
                     rdfs:label "has affiliation"@en .
 
 
-###  http://example.org/llmp#hasAgentType
+
 llmp:hasAgentType rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf llmp:hasPersonalIdentityFeature ;
                   rdfs:domain llmp:LLMPersona ;
@@ -105,7 +105,7 @@ llmp:hasAgentType rdf:type owl:ObjectProperty ;
                   rdfs:label "has agent type"@en .
 
 
-###  http://example.org/llmp#hasApparentAge
+
 llmp:hasApparentAge rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf llmp:hasPersonalIdentityFeature ;
                     rdfs:domain llmp:LLMPersona ;
@@ -114,7 +114,7 @@ llmp:hasApparentAge rdf:type owl:ObjectProperty ;
                     rdfs:label "has apparent age"@en .
 
 
-###  http://example.org/llmp#hasAudienceRelationRole
+
 llmp:hasAudienceRelationRole rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf llmp:hasSocialIdentityFeature ;
                              rdfs:domain llmp:LLMPersona ;
@@ -123,7 +123,7 @@ llmp:hasAudienceRelationRole rdf:type owl:ObjectProperty ;
                              rdfs:label "has audience relation role"@en .
 
 
-###  http://example.org/llmp#hasBehaviorFeature
+
 llmp:hasBehaviorFeature rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf llmp:hasPersonaFeature ;
                         rdfs:domain llmp:LLMPersona ;
@@ -131,7 +131,7 @@ llmp:hasBehaviorFeature rdf:type owl:ObjectProperty ;
                         rdfs:label "has behavior feature"@en .
 
 
-###  http://example.org/llmp#hasBiographicalIdentityFeature
+
 llmp:hasBiographicalIdentityFeature rdf:type owl:ObjectProperty ;
                                     rdfs:subPropertyOf llmp:hasIdentityFeature ;
                                     rdfs:domain llmp:LLMPersona ;
@@ -139,7 +139,7 @@ llmp:hasBiographicalIdentityFeature rdf:type owl:ObjectProperty ;
                                     rdfs:label "has biographical identity feature"@en .
 
 
-###  http://example.org/llmp#hasBirthEvent
+
 llmp:hasBirthEvent rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf llmp:hasLifeEvent ;
                    rdfs:domain llmp:LLMPersona ;
@@ -148,7 +148,7 @@ llmp:hasBirthEvent rdf:type owl:ObjectProperty ;
                    rdfs:label "has birth event"@en .
 
 
-###  http://example.org/llmp#hasBirthPlace
+
 llmp:hasBirthPlace rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf llmp:hasPersonalIdentityFeature ,
                                       schema:birthPlace ;
@@ -158,7 +158,7 @@ llmp:hasBirthPlace rdf:type owl:ObjectProperty ;
                    rdfs:label "has birth place"@en .
 
 
-###  http://example.org/llmp#hasCareerPosition
+
 llmp:hasCareerPosition rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf llmp:hasBiographicalIdentityFeature ;
                        rdfs:domain llmp:LLMPersona ;
@@ -167,7 +167,7 @@ llmp:hasCareerPosition rdf:type owl:ObjectProperty ;
                        rdfs:label "has career position"@en .
 
 
-###  http://example.org/llmp#hasCollaborationPreference
+
 llmp:hasCollaborationPreference rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf llmp:hasDecisionFeature ;
                                 rdfs:domain llmp:LLMPersona ;
@@ -176,7 +176,7 @@ llmp:hasCollaborationPreference rdf:type owl:ObjectProperty ;
                                 rdfs:label "has collaboration preference"@en .
 
 
-###  http://example.org/llmp#hasCommunity
+
 llmp:hasCommunity rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf llmp:hasSocialIdentityFeature ;
                   rdfs:domain llmp:LLMPersona ;
@@ -185,7 +185,7 @@ llmp:hasCommunity rdf:type owl:ObjectProperty ;
                   rdfs:label "has community"@en .
 
 
-###  http://example.org/llmp#hasDecisionFeature
+
 llmp:hasDecisionFeature rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf llmp:hasBehaviorFeature ;
                         rdfs:domain llmp:LLMPersona ;
@@ -193,7 +193,7 @@ llmp:hasDecisionFeature rdf:type owl:ObjectProperty ;
                         rdfs:label "has decision feature"@en .
 
 
-###  http://example.org/llmp#hasDecisionSpeed
+
 llmp:hasDecisionSpeed rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf llmp:hasDecisionFeature ;
                       rdfs:domain llmp:LLMPersona ;
@@ -202,7 +202,7 @@ llmp:hasDecisionSpeed rdf:type owl:ObjectProperty ;
                       rdfs:label "has decision speed"@en .
 
 
-###  http://example.org/llmp#hasEducationTrainingEvent
+
 llmp:hasEducationTrainingEvent rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf llmp:hasLifeEvent ;
                                rdfs:domain llmp:LLMPersona ;
@@ -211,7 +211,7 @@ llmp:hasEducationTrainingEvent rdf:type owl:ObjectProperty ;
                                rdfs:label "has education or training event"@en .
 
 
-###  http://example.org/llmp#hasEndingEvent
+
 llmp:hasEndingEvent rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf llmp:hasLifeEvent ;
                     rdfs:domain llmp:LLMPersona ;
@@ -220,7 +220,7 @@ llmp:hasEndingEvent rdf:type owl:ObjectProperty ;
                     rdfs:label "has ending event"@en .
 
 
-###  http://example.org/llmp#hasFormativeExperience
+
 llmp:hasFormativeExperience rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf llmp:hasLifeEvent ;
                             rdfs:domain llmp:LLMPersona ;
@@ -229,7 +229,7 @@ llmp:hasFormativeExperience rdf:type owl:ObjectProperty ;
                             rdfs:label "has formative experience"@en .
 
 
-###  http://example.org/llmp#hasGender
+
 llmp:hasGender rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf llmp:hasPersonalIdentityFeature ,
                                   schema:gender ;
@@ -240,7 +240,7 @@ llmp:hasGender rdf:type owl:ObjectProperty ;
                rdfs:label "has gender"@en .
 
 
-###  http://example.org/llmp#hasGoal
+
 llmp:hasGoal rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf llmp:hasBehaviorFeature ;
              rdfs:domain llmp:LLMPersona ;
@@ -249,7 +249,7 @@ llmp:hasGoal rdf:type owl:ObjectProperty ;
              rdfs:label "has goal"@en .
 
 
-###  http://example.org/llmp#hasGoalType
+
 llmp:hasGoalType rdf:type owl:ObjectProperty ;
                  rdfs:domain llmp:Goal ;
                  rdfs:range skos:Concept ;
@@ -257,7 +257,7 @@ llmp:hasGoalType rdf:type owl:ObjectProperty ;
                  rdfs:label "has goal type"@en .
 
 
-###  http://example.org/llmp#hasHomeLocation
+
 llmp:hasHomeLocation rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf llmp:hasPersonalIdentityFeature ,
                                         schema:homeLocation ;
@@ -267,14 +267,14 @@ llmp:hasHomeLocation rdf:type owl:ObjectProperty ;
                      rdfs:label "has home location"@en .
 
 
-###  http://example.org/llmp#hasIdentityFeature
+
 llmp:hasIdentityFeature rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf llmp:hasPersonaFeature ;
                         rdfs:comment "Links a persona to a non-literal feature describing its identity."@en ;
                         rdfs:label "has identity feature"@en .
 
 
-###  http://example.org/llmp#hasInterest
+
 llmp:hasInterest rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf llmp:hasPreference ;
                  rdfs:domain llmp:LLMPersona ;
@@ -282,7 +282,7 @@ llmp:hasInterest rdf:type owl:ObjectProperty ;
                  rdfs:label "has interest"@en .
 
 
-###  http://example.org/llmp#hasLifeEvent
+
 llmp:hasLifeEvent rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf llmp:hasBiographicalIdentityFeature ,
                                      bio:event ;
@@ -292,7 +292,7 @@ llmp:hasLifeEvent rdf:type owl:ObjectProperty ;
                   rdfs:label "has life event"@en .
 
 
-###  http://example.org/llmp#hasNationality
+
 llmp:hasNationality rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf llmp:hasPersonalIdentityFeature ,
                                        schema:nationality ;
@@ -302,7 +302,7 @@ llmp:hasNationality rdf:type owl:ObjectProperty ;
                     rdfs:label "has nationality"@en .
 
 
-###  http://example.org/llmp#hasNeed
+
 llmp:hasNeed rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf llmp:hasBehaviorFeature ;
              rdfs:domain llmp:LLMPersona ;
@@ -311,7 +311,7 @@ llmp:hasNeed rdf:type owl:ObjectProperty ;
              rdfs:label "has need"@en .
 
 
-###  http://example.org/llmp#hasNeedType
+
 llmp:hasNeedType rdf:type owl:ObjectProperty ;
                  rdfs:domain llmp:Need ;
                  rdfs:range skos:Concept ;
@@ -319,7 +319,7 @@ llmp:hasNeedType rdf:type owl:ObjectProperty ;
                  rdfs:label "has need type"@en .
 
 
-###  http://example.org/llmp#hasOccupation
+
 llmp:hasOccupation rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf llmp:hasPersonalIdentityFeature ,
                                       schema:hasOccupation ;
@@ -329,7 +329,7 @@ llmp:hasOccupation rdf:type owl:ObjectProperty ;
                    rdfs:label "has occupation"@en .
 
 
-###  http://example.org/llmp#hasOriginEvent
+
 llmp:hasOriginEvent rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf llmp:hasLifeEvent ;
                     rdfs:domain llmp:LLMPersona ;
@@ -338,13 +338,13 @@ llmp:hasOriginEvent rdf:type owl:ObjectProperty ;
                     rdfs:label "has origin event"@en .
 
 
-###  http://example.org/llmp#hasPersonaFeature
+
 llmp:hasPersonaFeature rdf:type owl:ObjectProperty ;
                        rdfs:domain llmp:LLMPersona ;
                        rdfs:label "has persona feature"@en .
 
 
-###  http://example.org/llmp#hasPersonalIdentityFeature
+
 llmp:hasPersonalIdentityFeature rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf llmp:hasIdentityFeature ;
                                 rdfs:domain llmp:LLMPersona ;
@@ -352,7 +352,7 @@ llmp:hasPersonalIdentityFeature rdf:type owl:ObjectProperty ;
                                 rdfs:label "has personal identity feature"@en .
 
 
-###  http://example.org/llmp#hasPreference
+
 llmp:hasPreference rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf llmp:hasBehaviorFeature ;
                    rdfs:domain llmp:LLMPersona ;
@@ -361,7 +361,7 @@ llmp:hasPreference rdf:type owl:ObjectProperty ;
                    rdfs:label "has preference"@en .
 
 
-###  http://example.org/llmp#hasPreferredInteractionMode
+
 llmp:hasPreferredInteractionMode rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf llmp:hasPreference ;
                                  rdfs:domain llmp:LLMPersona ;
@@ -369,7 +369,7 @@ llmp:hasPreferredInteractionMode rdf:type owl:ObjectProperty ;
                                  rdfs:label "has preferred interaction mode"@en .
 
 
-###  http://example.org/llmp#hasRelationship
+
 llmp:hasRelationship rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf llmp:hasSocialIdentityFeature ;
                      rdfs:domain llmp:LLMPersona ;
@@ -378,7 +378,7 @@ llmp:hasRelationship rdf:type owl:ObjectProperty ;
                      rdfs:label "has relationship"@en .
 
 
-###  http://example.org/llmp#hasRelationshipEvent
+
 llmp:hasRelationshipEvent rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf llmp:hasLifeEvent ;
                           rdfs:domain llmp:LLMPersona ;
@@ -387,7 +387,7 @@ llmp:hasRelationshipEvent rdf:type owl:ObjectProperty ;
                           rdfs:label "has relationship event"@en .
 
 
-###  http://example.org/llmp#hasResidenceEvent
+
 llmp:hasResidenceEvent rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf llmp:hasLifeEvent ;
                        rdfs:domain llmp:LLMPersona ;
@@ -396,7 +396,7 @@ llmp:hasResidenceEvent rdf:type owl:ObjectProperty ;
                        rdfs:label "has residence event"@en .
 
 
-###  http://example.org/llmp#hasRiskAttitude
+
 llmp:hasRiskAttitude rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf llmp:hasDecisionFeature ;
                      rdfs:domain llmp:LLMPersona ;
@@ -405,7 +405,7 @@ llmp:hasRiskAttitude rdf:type owl:ObjectProperty ;
                      rdfs:label "has risk attitude"@en .
 
 
-###  http://example.org/llmp#hasSocialAlignment
+
 llmp:hasSocialAlignment rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf llmp:hasSocialIdentityFeature ;
                         rdfs:domain llmp:LLMPersona ;
@@ -414,7 +414,7 @@ llmp:hasSocialAlignment rdf:type owl:ObjectProperty ;
                         rdfs:label "has social alignment"@en .
 
 
-###  http://example.org/llmp#hasSocialIdentityFeature
+
 llmp:hasSocialIdentityFeature rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf llmp:hasIdentityFeature ;
                               rdfs:domain llmp:LLMPersona ;
@@ -422,7 +422,7 @@ llmp:hasSocialIdentityFeature rdf:type owl:ObjectProperty ;
                               rdfs:label "has social identity feature"@en .
 
 
-###  http://example.org/llmp#hasSocialRole
+
 llmp:hasSocialRole rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf llmp:hasSocialIdentityFeature ;
                    rdfs:domain llmp:LLMPersona ;
@@ -431,7 +431,7 @@ llmp:hasSocialRole rdf:type owl:ObjectProperty ;
                    rdfs:label "has social role"@en .
 
 
-###  http://example.org/llmp#hasSpecies
+
 llmp:hasSpecies rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf llmp:hasPersonalIdentityFeature ;
                 rdfs:domain llmp:LLMPersona ;
@@ -440,7 +440,7 @@ llmp:hasSpecies rdf:type owl:ObjectProperty ;
                 rdfs:label "has species"@en .
 
 
-###  http://example.org/llmp#hasTraitAssessment
+
 llmp:hasTraitAssessment rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf llmp:hasBehaviorFeature ;
                         rdfs:domain llmp:LLMPersona ;
@@ -449,7 +449,7 @@ llmp:hasTraitAssessment rdf:type owl:ObjectProperty ;
                         rdfs:label "has trait assessment"@en .
 
 
-###  http://example.org/llmp#preferencePolarity
+
 llmp:preferencePolarity rdf:type owl:ObjectProperty ;
                         rdfs:domain llmp:PreferenceStatement ;
                         rdfs:range skos:Concept ;
@@ -457,14 +457,14 @@ llmp:preferencePolarity rdf:type owl:ObjectProperty ;
                         rdfs:label "preference polarity"@en .
 
 
-###  http://example.org/llmp#preferenceTarget
+
 llmp:preferenceTarget rdf:type owl:ObjectProperty ;
                       rdfs:domain llmp:PreferenceStatement ;
                       rdfs:comment "Links a preference to the thing, topic, activity, channel, interaction mode, or option that the preference concerns."@en ;
                       rdfs:label "preference target"@en .
 
 
-###  http://example.org/llmp#usesDecisionCriterion
+
 llmp:usesDecisionCriterion rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf llmp:hasDecisionFeature ;
                            rdfs:domain llmp:LLMPersona ;
@@ -536,7 +536,7 @@ schema:nationality rdf:type owl:ObjectProperty .
 #    Data properties
 #################################################################
 
-###  http://example.org/llmp#followsSocialNorm
+
 llmp:followsSocialNorm rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf llmp:hasSocialIdentityLiteralFeature ;
                        rdfs:domain llmp:LLMPersona ;
@@ -545,7 +545,7 @@ llmp:followsSocialNorm rdf:type owl:DatatypeProperty ;
                        rdfs:label "follows social norm"@en .
 
 
-###  http://example.org/llmp#hasAlias
+
 llmp:hasAlias rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ,
                                  foaf:nick ,
@@ -556,7 +556,7 @@ llmp:hasAlias rdf:type owl:DatatypeProperty ;
               rdfs:label "has alias"@en .
 
 
-###  http://example.org/llmp#hasAttentionPattern
+
 llmp:hasAttentionPattern rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
                          rdfs:domain llmp:LLMPersona ;
@@ -565,7 +565,7 @@ llmp:hasAttentionPattern rdf:type owl:DatatypeProperty ;
                          rdfs:label "has attention pattern"@en .
 
 
-###  http://example.org/llmp#hasAutonomyLevel
+
 llmp:hasAutonomyLevel rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf llmp:hasDecisionLiteralFeature ;
                       rdfs:domain llmp:LLMPersona ;
@@ -574,7 +574,7 @@ llmp:hasAutonomyLevel rdf:type owl:DatatypeProperty ;
                       rdfs:label "has autonomy level"@en .
 
 
-###  http://example.org/llmp#hasBackstory
+
 llmp:hasBackstory rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf llmp:hasBiographicalIdentityLiteralFeature ,
                                      dcterms:description ;
@@ -584,7 +584,7 @@ llmp:hasBackstory rdf:type owl:DatatypeProperty ;
                   rdfs:label "has backstory"@en .
 
 
-###  http://example.org/llmp#hasBehaviorConstraintLiteralFeature
+
 llmp:hasBehaviorConstraintLiteralFeature rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf llmp:hasBehaviorLiteralFeature ;
                                          rdfs:domain llmp:LLMPersona ;
@@ -592,7 +592,7 @@ llmp:hasBehaviorConstraintLiteralFeature rdf:type owl:DatatypeProperty ;
                                          rdfs:label "has behavior constraint literal feature"@en .
 
 
-###  http://example.org/llmp#hasBehaviorDescription
+
 llmp:hasBehaviorDescription rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf llmp:hasBehaviorLiteralFeature ;
                             rdfs:domain llmp:LLMPersona ;
@@ -601,7 +601,7 @@ llmp:hasBehaviorDescription rdf:type owl:DatatypeProperty ;
                             rdfs:label "has behavior description"@en .
 
 
-###  http://example.org/llmp#hasBehaviorLiteralFeature
+
 llmp:hasBehaviorLiteralFeature rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf llmp:hasPersonaLiteralFeature ;
                                rdfs:domain llmp:LLMPersona ;
@@ -609,7 +609,7 @@ llmp:hasBehaviorLiteralFeature rdf:type owl:DatatypeProperty ;
                                rdfs:label "has behavior literal feature"@en .
 
 
-###  http://example.org/llmp#hasBiographicalIdentityLiteralFeature
+
 llmp:hasBiographicalIdentityLiteralFeature rdf:type owl:DatatypeProperty ;
                                            rdfs:subPropertyOf llmp:hasIdentityLiteralFeature ;
                                            rdfs:domain llmp:LLMPersona ;
@@ -617,7 +617,7 @@ llmp:hasBiographicalIdentityLiteralFeature rdf:type owl:DatatypeProperty ;
                                            rdfs:label "has biographical identity literal feature"@en .
 
 
-###  http://example.org/llmp#hasBirthDate
+
 llmp:hasBirthDate rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ,
                                      schema:birthDate ;
@@ -627,7 +627,7 @@ llmp:hasBirthDate rdf:type owl:DatatypeProperty ;
                   rdfs:label "has birth date"@en .
 
 
-###  http://example.org/llmp#hasBirthName
+
 llmp:hasBirthName rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ,
                                      schema:alternateName ;
@@ -637,7 +637,6 @@ llmp:hasBirthName rdf:type owl:DatatypeProperty ;
                   rdfs:label "has birth name"@en .
 
 
-###  http://example.org/llmp#hasConfidenceLevel
 llmp:hasConfidenceLevel rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf llmp:hasDecisionLiteralFeature ;
                         rdfs:domain llmp:LLMPersona ;
@@ -646,7 +645,7 @@ llmp:hasConfidenceLevel rdf:type owl:DatatypeProperty ;
                         rdfs:label "has confidence level"@en .
 
 
-###  http://example.org/llmp#hasDeathDate
+
 llmp:hasDeathDate rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ,
                                      schema:deathDate ;
@@ -656,7 +655,7 @@ llmp:hasDeathDate rdf:type owl:DatatypeProperty ;
                   rdfs:label "has death date"@en .
 
 
-###  http://example.org/llmp#hasDecisionLiteralFeature
+
 llmp:hasDecisionLiteralFeature rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf llmp:hasBehaviorLiteralFeature ;
                                rdfs:domain llmp:LLMPersona ;
@@ -664,7 +663,7 @@ llmp:hasDecisionLiteralFeature rdf:type owl:DatatypeProperty ;
                                rdfs:label "has decision literal feature"@en .
 
 
-###  http://example.org/llmp#hasErrorHandlingBehavior
+
 llmp:hasErrorHandlingBehavior rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
                               rdfs:domain llmp:LLMPersona ;
@@ -673,7 +672,7 @@ llmp:hasErrorHandlingBehavior rdf:type owl:DatatypeProperty ;
                               rdfs:label "has error-handling behavior"@en .
 
 
-###  http://example.org/llmp#hasExecutionBehavior
+
 llmp:hasExecutionBehavior rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
                           rdfs:domain llmp:LLMPersona ;
@@ -682,7 +681,7 @@ llmp:hasExecutionBehavior rdf:type owl:DatatypeProperty ;
                           rdfs:label "has execution behavior"@en .
 
 
-###  http://example.org/llmp#hasFamilyName
+
 llmp:hasFamilyName rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ,
                                       foaf:familyName ;
@@ -692,7 +691,7 @@ llmp:hasFamilyName rdf:type owl:DatatypeProperty ;
                    rdfs:label "has family name"@en .
 
 
-###  http://example.org/llmp#hasFullName
+
 llmp:hasFullName rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ,
                                     foaf:name ;
@@ -702,7 +701,7 @@ llmp:hasFullName rdf:type owl:DatatypeProperty ;
                  rdfs:label "has full name"@en .
 
 
-###  http://example.org/llmp#hasGivenName
+
 llmp:hasGivenName rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ,
                                      foaf:givenName ;
@@ -712,14 +711,14 @@ llmp:hasGivenName rdf:type owl:DatatypeProperty ;
                   rdfs:label "has given name"@en .
 
 
-###  http://example.org/llmp#hasIdentityLiteralFeature
+
 llmp:hasIdentityLiteralFeature rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf llmp:hasPersonaLiteralFeature ;
                                rdfs:comment "Links a persona to a literal value describing its identity."@en ;
                                rdfs:label "has identity literal feature"@en .
 
 
-###  http://example.org/llmp#hasInformationSeekingLevel
+
 llmp:hasInformationSeekingLevel rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf llmp:hasDecisionLiteralFeature ;
                                 rdfs:domain llmp:LLMPersona ;
@@ -728,7 +727,7 @@ llmp:hasInformationSeekingLevel rdf:type owl:DatatypeProperty ;
                                 rdfs:label "has information-seeking level"@en .
 
 
-###  http://example.org/llmp#hasLearningBehavior
+
 llmp:hasLearningBehavior rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
                          rdfs:domain llmp:LLMPersona ;
@@ -737,7 +736,7 @@ llmp:hasLearningBehavior rdf:type owl:DatatypeProperty ;
                          rdfs:label "has learning behavior"@en .
 
 
-###  http://example.org/llmp#hasNeedTrigger
+
 llmp:hasNeedTrigger rdf:type owl:DatatypeProperty ;
                     rdfs:domain llmp:Need ;
                     rdfs:range rdf:langString ;
@@ -745,7 +744,7 @@ llmp:hasNeedTrigger rdf:type owl:DatatypeProperty ;
                     rdfs:label "has need trigger"@en .
 
 
-###  http://example.org/llmp#hasPersistenceLevel
+
 llmp:hasPersistenceLevel rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
                          rdfs:domain llmp:LLMPersona ;
@@ -754,13 +753,13 @@ llmp:hasPersistenceLevel rdf:type owl:DatatypeProperty ;
                          rdfs:label "has persistence level"@en .
 
 
-###  http://example.org/llmp#hasPersonaLiteralFeature
+
 llmp:hasPersonaLiteralFeature rdf:type owl:DatatypeProperty ;
                               rdfs:domain llmp:LLMPersona ;
                               rdfs:label "has persona literal feature"@en .
 
 
-###  http://example.org/llmp#hasPersonalDescription
+
 llmp:hasPersonalDescription rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ,
                                                schema:description ;
@@ -770,7 +769,7 @@ llmp:hasPersonalDescription rdf:type owl:DatatypeProperty ;
                             rdfs:label "has personal description"@en .
 
 
-###  http://example.org/llmp#hasPersonalIdentityLiteralFeature
+
 llmp:hasPersonalIdentityLiteralFeature rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf llmp:hasIdentityLiteralFeature ;
                                        rdfs:domain llmp:LLMPersona ;
@@ -778,7 +777,7 @@ llmp:hasPersonalIdentityLiteralFeature rdf:type owl:DatatypeProperty ;
                                        rdfs:label "has personal identity literal feature"@en .
 
 
-###  http://example.org/llmp#hasPlanningBehavior
+
 llmp:hasPlanningBehavior rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
                          rdfs:domain llmp:LLMPersona ;
@@ -787,7 +786,7 @@ llmp:hasPlanningBehavior rdf:type owl:DatatypeProperty ;
                          rdfs:label "has planning behavior"@en .
 
 
-###  http://example.org/llmp#hasPriority
+
 llmp:hasPriority rdf:type owl:DatatypeProperty ;
                  rdfs:domain llmp:PrioritizableBehaviorItem ;
                  rdfs:range xsd:integer ;
@@ -795,7 +794,7 @@ llmp:hasPriority rdf:type owl:DatatypeProperty ;
                  rdfs:label "has priority"@en .
 
 
-###  http://example.org/llmp#hasResidenceDescription
+
 llmp:hasResidenceDescription rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf llmp:hasPersonalIdentityLiteralFeature ;
                              rdfs:domain llmp:LLMPersona ;
@@ -804,7 +803,7 @@ llmp:hasResidenceDescription rdf:type owl:DatatypeProperty ;
                              rdfs:label "has residence description"@en .
 
 
-###  http://example.org/llmp#hasSocialBoundary
+
 llmp:hasSocialBoundary rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf llmp:hasSocialIdentityLiteralFeature ;
                        rdfs:domain llmp:LLMPersona ;
@@ -813,7 +812,7 @@ llmp:hasSocialBoundary rdf:type owl:DatatypeProperty ;
                        rdfs:label "has social boundary"@en .
 
 
-###  http://example.org/llmp#hasSocialDescription
+
 llmp:hasSocialDescription rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf llmp:hasSocialIdentityLiteralFeature ,
                                              schema:description ;
@@ -823,7 +822,7 @@ llmp:hasSocialDescription rdf:type owl:DatatypeProperty ;
                           rdfs:label "has social description"@en .
 
 
-###  http://example.org/llmp#hasSocialIdentityLiteralFeature
+
 llmp:hasSocialIdentityLiteralFeature rdf:type owl:DatatypeProperty ;
                                      rdfs:subPropertyOf llmp:hasIdentityLiteralFeature ;
                                      rdfs:domain llmp:LLMPersona ;
@@ -831,7 +830,7 @@ llmp:hasSocialIdentityLiteralFeature rdf:type owl:DatatypeProperty ;
                                      rdfs:label "has social identity literal feature"@en .
 
 
-###  http://example.org/llmp#hasSocialStatus
+
 llmp:hasSocialStatus rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf llmp:hasSocialIdentityLiteralFeature ;
                      rdfs:domain llmp:LLMPersona ;
@@ -840,7 +839,7 @@ llmp:hasSocialStatus rdf:type owl:DatatypeProperty ;
                      rdfs:label "has social status"@en .
 
 
-###  http://example.org/llmp#hasTaskBehaviorLiteralFeature
+
 llmp:hasTaskBehaviorLiteralFeature rdf:type owl:DatatypeProperty ;
                                    rdfs:subPropertyOf llmp:hasBehaviorLiteralFeature ;
                                    rdfs:domain llmp:LLMPersona ;
@@ -848,7 +847,7 @@ llmp:hasTaskBehaviorLiteralFeature rdf:type owl:DatatypeProperty ;
                                    rdfs:label "has task behavior literal feature"@en .
 
 
-###  http://example.org/llmp#hasToolUseBehavior
+
 llmp:hasToolUseBehavior rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf llmp:hasTaskBehaviorLiteralFeature ;
                         rdfs:domain llmp:LLMPersona ;
@@ -857,7 +856,7 @@ llmp:hasToolUseBehavior rdf:type owl:DatatypeProperty ;
                         rdfs:label "has tool-use behavior"@en .
 
 
-###  http://example.org/llmp#hasTraitExpression
+
 llmp:hasTraitExpression rdf:type owl:DatatypeProperty ;
                         rdfs:domain llmp:TraitAssessment ;
                         rdfs:range rdf:langString ;
@@ -865,25 +864,23 @@ llmp:hasTraitExpression rdf:type owl:DatatypeProperty ;
                         rdfs:label "has trait expression"@en .
 
 llmp:Range1To5 a rdfs:Datatype ;
-                            owl:onDatatype xsd:integer ;
-                            owl:withRestrictions (
-                                [
-                                    xsd:minInclusive "1"^^xsd:integer
-                                ]
-                                [
-                                    xsd:maxInclusive "5"^^xsd:integer
-                                ]
-                            ).
-                        
+    owl:equivalentClass [
+        a rdfs:Datatype ;
+        owl:onDatatype xsd:integer ;
+        owl:withRestrictions (
+            [ xsd:minInclusive 1 ]
+            [ xsd:maxInclusive 5 ]
+        )
+    ] .
+    
 
-###  http://example.org/llmp#hasTraitIntensity
 llmp:hasTraitIntensity rdf:type owl:DatatypeProperty ;
                        rdfs:domain llmp:TraitAssessment ;
                         rdfs:range llmp:Range1To5 ;                rdfs:comment "Links a Big Five trait assessment to a quantitative score between 1 and 5, where 1 indicates low intensity, 3 is medium, and 5 indicates high intensity."@en ;
                        rdfs:label "has trait intensity"@en .
 
 
-###  http://example.org/llmp#mayDo
+
 llmp:mayDo rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf llmp:hasBehaviorConstraintLiteralFeature ;
            rdfs:domain llmp:LLMPersona ;
@@ -892,7 +889,7 @@ llmp:mayDo rdf:type owl:DatatypeProperty ;
            rdfs:label "may do"@en .
 
 
-###  http://example.org/llmp#mustDo
+
 llmp:mustDo rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf llmp:hasBehaviorConstraintLiteralFeature ;
             rdfs:domain llmp:LLMPersona ;
@@ -901,7 +898,7 @@ llmp:mustDo rdf:type owl:DatatypeProperty ;
             rdfs:label "must do"@en .
 
 
-###  http://example.org/llmp#mustNotDo
+
 llmp:mustNotDo rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf llmp:hasBehaviorConstraintLiteralFeature ;
                rdfs:domain llmp:LLMPersona ;
@@ -910,7 +907,7 @@ llmp:mustNotDo rdf:type owl:DatatypeProperty ;
                rdfs:label "must not do"@en .
 
 
-###  http://example.org/llmp#outOfCharacterBehavior
+
 llmp:outOfCharacterBehavior rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf llmp:hasBehaviorConstraintLiteralFeature ;
                             rdfs:domain llmp:LLMPersona ;
@@ -919,17 +916,16 @@ llmp:outOfCharacterBehavior rdf:type owl:DatatypeProperty ;
                             rdfs:label "out-of-character behavior"@en .
 
 llmp:Range0To1 a rdfs:Datatype ;
-                            owl:onDatatype xsd:decimal ;
-                            owl:withRestrictions (
-                                [
-                                    xsd:minInclusive "0"^^xsd:decimal
-                                ]
-                                [
-                                    xsd:maxInclusive "1"^^xsd:decimal
-                                ]
-                            ).
+    owl:equivalentClass [
+        a rdfs:Datatype ;
+        owl:onDatatype xsd:decimal ;
+        owl:withRestrictions (
+            [ xsd:minInclusive 0 ]
+            [ xsd:maxInclusive 1 ]
+        )
+    ] .
 
-###  http://example.org/llmp#preferenceStrength
+
 llmp:preferenceStrength rdf:type owl:DatatypeProperty ;
                         rdfs:domain llmp:PreferenceStatement ;
                         rdfs:range llmp:Range0To1 ;
@@ -937,7 +933,7 @@ llmp:preferenceStrength rdf:type owl:DatatypeProperty ;
                         rdfs:label "preference strength"@en .
 
 
-###  http://example.org/llmp#shouldDo
+
 llmp:shouldDo rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf llmp:hasBehaviorConstraintLiteralFeature ;
               rdfs:domain llmp:LLMPersona ;
@@ -946,7 +942,7 @@ llmp:shouldDo rdf:type owl:DatatypeProperty ;
               rdfs:label "should do"@en .
 
 
-###  http://example.org/llmp#shouldNotDo
+
 llmp:shouldNotDo rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf llmp:hasBehaviorConstraintLiteralFeature ;
                  rdfs:domain llmp:LLMPersona ;
@@ -995,47 +991,47 @@ schema:description rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
-###  http://example.org/llmp#Community
+
 llmp:Community rdf:type owl:Class ;
                rdfs:subClassOf foaf:Group ;
                rdfs:comment "A broad social, cultural, professional, interest-based, geographic, or fictional community with which a persona identifies, participates, or is socially associated."@en ;
                rdfs:label "community"@en .
 
 
-###  http://example.org/llmp#Goal
+
 llmp:Goal rdf:type owl:Class ;
           rdfs:subClassOf llmp:PrioritizableBehaviorItem ;
           rdfs:comment "An outcome, state, action, or avoided condition that an LLM persona tends to pursue, support, prioritise, or avoid."@en ;
           rdfs:label "goal"@en .
 
 
-###  http://example.org/llmp#LLMPersona
+
 llmp:LLMPersona rdf:type owl:Class ;
                 rdfs:subClassOf foaf:Agent ;
                 rdfs:comment "A structured persona intended to guide, describe, evaluate, or configure an LLM agent or role."@en ;
                 rdfs:label "LLM Persona"@en .
 
 
-###  http://example.org/llmp#Need
+
 llmp:Need rdf:type owl:Class ;
           rdfs:subClassOf llmp:PrioritizableBehaviorItem ;
           rdfs:comment "A condition, requirement, support factor, or constraint that affects whether an LLM persona can act successfully, comfortably, accessibly, or appropriately."@en ;
           rdfs:label "need"@en .
 
 
-###  http://example.org/llmp#PreferenceStatement
+
 llmp:PreferenceStatement rdf:type owl:Class ;
                          rdfs:comment "A structured statement describing a persona's attitude toward a target, such as liking, disliking, preferring, avoiding, or being interested in something."@en ;
                          rdfs:label "preference statement"@en .
 
 
-###  http://example.org/llmp#PrioritizableBehaviorItem
+
 llmp:PrioritizableBehaviorItem rdf:type owl:Class ;
                                rdfs:comment "A behaviour-related item whose relative importance for an LLM persona can be described, such as a goal or a need."@en ;
                                rdfs:label "prioritizable behaviour item"@en .
 
 
-###  http://example.org/llmp#TraitAssessment
+
 llmp:TraitAssessment rdf:type owl:Class ;
                      rdfs:subClassOf prov:Entity ;
                      rdfs:comment "A structured assessment of one Big Five personality trait associated with an LLM persona. It can record the assessed trait, score, score scale, intensity, and textual expression of the trait in behaviour or communication."@en ;
@@ -1102,8 +1098,8 @@ schema:Role rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  http://example.org/llmp
-<http://example.org/llmp> rdf:type owl:NamedIndividual ;
+
+llmp: rdf:type owl:Ontology ;
                           dcterms:description "An OWL ontology for representing LLM personas without profile wrapper classes. Persona features are organised around four modelling pillars: identity, behaviour, cognition, and communication. Controlled terms are externalised as SKOS concept schemes under a distinct vocabulary namespace."@en ,
                                               "The LLM Persona Ontology provides a structured model for representing personas used to guide, configure, describe, or evaluate LLM-based agents and roles. It organises persona information around the identity and behaviour pillars."@en .
 
@@ -1175,6 +1171,13 @@ llmp:hasAbstractionLevel
 # Information processing
 #################################################################
 
+llmp:hasInformationProcessingFeature
+    a owl:ObjectProperty ;
+    rdfs:label "has information processing feature"@en ;
+    rdfs:comment "Links an LLM persona to an entity describing how it receives, filters, compares, organises, and manages information."@en ;
+    rdfs:subPropertyOf llmp:hasCognitiveFeature ;
+    rdfs:domain llmp:LLMPersona .
+
 llmp:hasInformationProcessingLiteralFeature
     a owl:DatatypeProperty ;
     rdfs:label "has information processing literal feature"@en ;
@@ -1189,14 +1192,7 @@ llmp:hasDetailOrientation
     rdfs:subPropertyOf llmp:hasInformationProcessingFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
-    
-llmp:hasInformationLoadTolerance
-    a owl:DatatypeProperty ;
-    rdfs:label "has information load tolerance"@en ;
-    rdfs:comment "Describes how much information, complexity, density, or simultaneous detail an LLM persona can comfortably process."@en ;
-    rdfs:subPropertyOf llmp:hasInformationProcessingLiteralFeature ;
-    rdfs:domain llmp:LLMPersona ;
-    rdfs:range rdf:langString .
+
 
 llmp:hasAmbiguityTolerance
     a owl:ObjectProperty ;
@@ -1290,14 +1286,6 @@ llmp:hasCognitiveDispositionFeature
     rdfs:subPropertyOf llmp:hasCognitiveFeature ;
     rdfs:domain llmp:LLMPersona .
 
-llmp:hasCognitiveConfidence
-    a owl:ObjectProperty ;
-    rdfs:label "has cognitive confidence"@en ;
-    rdfs:comment "Links an LLM persona to a controlled value describing its confidence in its own understanding or judgment. Values should normally come from the LLMP cognitive confidence vocabulary."@en ;
-    rdfs:subPropertyOf llmp:hasCognitiveDispositionFeature ;
-    rdfs:domain llmp:LLMPersona ;
-    rdfs:range skos:Concept .
-
 llmp:hasCognitiveFlexibility
     a owl:ObjectProperty ;
     rdfs:label "has cognitive flexibility"@en ;
@@ -1345,19 +1333,6 @@ llmp:hasCognitiveLimitationAbout
     ) .
 
 
-    
-#################################################################
-# Learning style
-#################################################################
-
-llmp:hasLearningStyle
-    a owl:DatatypeProperty ;
-    rdfs:label "has learning style"@en ;
-    rdfs:comment "Describes how an LLM persona tends to learn, adapt, incorporate feedback, and update its knowledge, understanding, or assumptions."@en ;
-    rdfs:subPropertyOf llmp:hasCognitiveLiteralFeature ;
-    rdfs:domain llmp:LLMPersona ;
-    rdfs:range rdf:langString .
-
 #################################################################
 # Communication pillar
 #################################################################
@@ -1386,13 +1361,6 @@ llmp:hasRegisterFeature
     rdfs:label "has register feature"@en ;
     rdfs:comment "Links an LLM persona to a feature describing the field, tenor, or mode of its communication."@en ;
     rdfs:subPropertyOf llmp:hasCommunicationFeature ;
-    rdfs:domain llmp:LLMPersona .
-
-llmp:hasField
-    a owl:ObjectProperty ;
-    rdfs:label "has communicative field"@en ;
-    rdfs:comment "Links an LLM persona to a topic, activity domain, or subject matter that characterises its communication. The object may be any suitable concept or resource from an external or application vocabulary."@en ;
-    rdfs:subPropertyOf llmp:hasRegisterFeature ;
     rdfs:domain llmp:LLMPersona .
 
 llmp:CommunicativeTenor
@@ -1445,14 +1413,6 @@ llmp:hasDiscourseMode
     a owl:ObjectProperty ;
     rdfs:label "has discourse mode"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing the general organisation of its discourse, such as narrative, explanatory, argumentative, or procedural."@en ;
-    rdfs:subPropertyOf llmp:hasDiscourseFeature ;
-    rdfs:domain llmp:LLMPersona ;
-    rdfs:range skos:Concept .
-
-llmp:hasGenreStyle
-    a owl:ObjectProperty ;
-    rdfs:label "has genre style"@en ;
-    rdfs:comment "Links an LLM persona to a controlled value describing a genre-like format it tends to use, such as advice, tutorial, review, consultation, or brainstorming."@en ;
     rdfs:subPropertyOf llmp:hasDiscourseFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
@@ -1517,6 +1477,7 @@ llmp:hasArgumentationStyle
     a owl:ObjectProperty ;
     rdfs:label "has argumentation style"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing how it tends to support claims, conclusions, or positions."@en ;
+    skos:editorialNote "Values should normally come from the LLMP rethorical style vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasRhetoricalFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
@@ -1525,6 +1486,7 @@ llmp:hasExplanationStyle
     a owl:ObjectProperty ;
     rdfs:label "has explanation style"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing how it tends to explain concepts or information."@en ;
+    skos:editorialNote "Values should normally come from the LLMP rethorical style vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasRhetoricalFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
@@ -1533,6 +1495,7 @@ llmp:hasPersuasionStyle
     a owl:ObjectProperty ;
     rdfs:label "has persuasion style"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing how it attempts to influence an interlocutor, when persuasion is applicable."@en ;
+    skos:editorialNote "Values should normally come from the LLMP rethorical style vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasRhetoricalFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .

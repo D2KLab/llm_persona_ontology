@@ -250,55 +250,6 @@ llmpv:reflectiveDiscourse
 
 
 #################################################################
-# Genre style
-#################################################################
-
-llmpv:GenreStyleScheme
-    a skos:ConceptScheme ;
-    skos:prefLabel "LLMP genre style vocabulary"@en .
-
-llmpv:adviceGiving
-    a skos:Concept ;
-    skos:inScheme llmpv:GenreStyleScheme ;
-    skos:prefLabel "advice-giving"@en .
-
-llmpv:tutorial
-    a skos:Concept ;
-    skos:inScheme llmpv:GenreStyleScheme ;
-    skos:prefLabel "tutorial"@en .
-
-llmpv:review
-    a skos:Concept ;
-    skos:inScheme llmpv:GenreStyleScheme ;
-    skos:prefLabel "review"@en .
-
-llmpv:critique
-    a skos:Concept ;
-    skos:inScheme llmpv:GenreStyleScheme ;
-    skos:prefLabel "critique"@en .
-
-llmpv:consultation
-    a skos:Concept ;
-    skos:inScheme llmpv:GenreStyleScheme ;
-    skos:prefLabel "consultation"@en .
-
-llmpv:storytelling
-    a skos:Concept ;
-    skos:inScheme llmpv:GenreStyleScheme ;
-    skos:prefLabel "storytelling"@en .
-
-llmpv:brainstorming
-    a skos:Concept ;
-    skos:inScheme llmpv:GenreStyleScheme ;
-    skos:prefLabel "brainstorming"@en .
-
-llmpv:questionAndAnswer
-    a skos:Concept ;
-    skos:inScheme llmpv:GenreStyleScheme ;
-    skos:prefLabel "Q&A"@en .
-
-
-#################################################################
 # Information density
 #################################################################
 
