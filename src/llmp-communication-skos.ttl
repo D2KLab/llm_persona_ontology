@@ -249,43 +249,6 @@ llmpv:reflectiveDiscourse
     skos:prefLabel "reflective"@en .
 
 
-#################################################################
-# Information density
-#################################################################
-
-llmpv:InformationDensityScheme
-    a skos:ConceptScheme ;
-    skos:prefLabel "LLMP information density vocabulary"@en .
-
-llmpv:InformationDensityLevels
-    a skos:OrderedCollection ;
-    skos:prefLabel "Ordered information density levels"@en ;
-    skos:memberList (
-        llmpv:lowInformationDensity
-        llmpv:mediumInformationDensity
-        llmpv:highInformationDensity
-    ) .
-
-llmpv:lowInformationDensity
-    a skos:Concept ;
-    skos:inScheme llmpv:InformationDensityScheme ;
-    skos:prefLabel "low"@en ;
-    skos:definition "Communication containing relatively few information units and substantial space for explanation, repetition, or contextualisation."@en .
-
-llmpv:mediumInformationDensity
-    a skos:Concept ;
-    skos:inScheme llmpv:InformationDensityScheme ;
-    skos:prefLabel "medium"@en ;
-    skos:definition "Communication balancing informational content with explanation and contextualisation."@en .
-
-llmpv:highInformationDensity
-    a skos:Concept ;
-    skos:inScheme llmpv:InformationDensityScheme ;
-    skos:prefLabel "high"@en ;
-    skos:definition "Communication containing many information units with relatively little redundancy or elaboration."@en .
-
-
-#################################################################
 # Turn-taking style
 #################################################################
 
@@ -625,78 +588,6 @@ llmpv:complexSentenceComplexity
 
 
 #################################################################
-# Jargon level
-#################################################################
-
-llmpv:JargonLevelScheme
-    a skos:ConceptScheme ;
-    skos:prefLabel "LLMP jargon level vocabulary"@en .
-
-llmpv:JargonLevels
-    a skos:OrderedCollection ;
-    skos:prefLabel "Ordered jargon levels"@en ;
-    skos:memberList (
-        llmpv:noJargon
-        llmpv:lowJargon
-        llmpv:mediumJargon
-        llmpv:highJargon
-    ) .
-
-llmpv:noJargon
-    a skos:Concept ;
-    skos:inScheme llmpv:JargonLevelScheme ;
-    skos:prefLabel "none"@en .
-
-llmpv:lowJargon
-    a skos:Concept ;
-    skos:inScheme llmpv:JargonLevelScheme ;
-    skos:prefLabel "low"@en .
-
-llmpv:mediumJargon
-    a skos:Concept ;
-    skos:inScheme llmpv:JargonLevelScheme ;
-    skos:prefLabel "medium"@en .
-
-llmpv:highJargon
-    a skos:Concept ;
-    skos:inScheme llmpv:JargonLevelScheme ;
-    skos:prefLabel "high"@en .
-
-
-#################################################################
-# Lexical diversity
-#################################################################
-
-llmpv:LexicalDiversityScheme
-    a skos:ConceptScheme ;
-    skos:prefLabel "LLMP lexical diversity vocabulary"@en .
-
-llmpv:LexicalDiversityLevels
-    a skos:OrderedCollection ;
-    skos:prefLabel "Ordered lexical diversity levels"@en ;
-    skos:memberList (
-        llmpv:lowLexicalDiversity
-        llmpv:mediumLexicalDiversity
-        llmpv:highLexicalDiversity
-    ) .
-
-llmpv:lowLexicalDiversity
-    a skos:Concept ;
-    skos:inScheme llmpv:LexicalDiversityScheme ;
-    skos:prefLabel "low lexical diversity"@en .
-
-llmpv:mediumLexicalDiversity
-    a skos:Concept ;
-    skos:inScheme llmpv:LexicalDiversityScheme ;
-    skos:prefLabel "medium lexical diversity"@en .
-
-llmpv:highLexicalDiversity
-    a skos:Concept ;
-    skos:inScheme llmpv:LexicalDiversityScheme ;
-    skos:prefLabel "high lexical diversity"@en .
-
-
-#################################################################
 # Emotional tone
 #################################################################
 
@@ -782,46 +673,6 @@ llmpv:highlyFormal
     a skos:Concept ;
     skos:inScheme llmpv:PolitenessStrategyScheme ;
     skos:prefLabel "highly formal"@en .
-
-
-#################################################################
-# Hedging level
-#################################################################
-
-llmpv:HedgingLevelScheme
-    a skos:ConceptScheme ;
-    skos:prefLabel "LLMP hedging level vocabulary"@en .
-
-llmpv:HedgingLevels
-    a skos:OrderedCollection ;
-    skos:prefLabel "Ordered hedging levels"@en ;
-    skos:memberList (
-        llmpv:noHedging
-        llmpv:lowHedging
-        llmpv:mediumHedging
-        llmpv:highHedging
-    ) .
-
-llmpv:noHedging
-    a skos:Concept ;
-    skos:inScheme llmpv:HedgingLevelScheme ;
-    skos:prefLabel "none"@en .
-
-llmpv:lowHedging
-    a skos:Concept ;
-    skos:inScheme llmpv:HedgingLevelScheme ;
-    skos:prefLabel "low"@en .
-
-llmpv:mediumHedging
-    a skos:Concept ;
-    skos:inScheme llmpv:HedgingLevelScheme ;
-    skos:prefLabel "medium"@en .
-
-llmpv:highHedging
-    a skos:Concept ;
-    skos:inScheme llmpv:HedgingLevelScheme ;
-    skos:prefLabel "high"@en .
-
 
 #################################################################
 # Directness level

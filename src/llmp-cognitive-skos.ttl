@@ -198,44 +198,6 @@ llmpv:bigPictureOriented
     skos:prefLabel "big-picture-oriented"@en ;
     skos:definition "Focuses primarily on overall structure, patterns, and high-level relationships rather than fine detail."@en .
 
-llmpv:AmbiguityToleranceScheme
-    a skos:ConceptScheme ;
-    skos:prefLabel "LLMP ambiguity tolerance vocabulary"@en .
-
-llmpv:lowAmbiguityTolerance
-    a skos:Concept ;
-    skos:inScheme llmpv:AmbiguityToleranceScheme ;
-    skos:prefLabel "low ambiguity tolerance"@en ;
-    skos:definition "Prefers clear, definite, and well-specified information and tends to seek resolution when information is uncertain or ambiguous."@en .
-
-llmpv:moderateAmbiguityTolerance
-    a skos:Concept ;
-    skos:inScheme llmpv:AmbiguityToleranceScheme ;
-    skos:prefLabel "moderate ambiguity tolerance"@en ;
-    skos:definition "Can work with some uncertainty or ambiguity while generally preferring clearer interpretations when available."@en .
-
-llmpv:highAmbiguityTolerance
-    a skos:Concept ;
-    skos:inScheme llmpv:AmbiguityToleranceScheme ;
-    skos:prefLabel "high ambiguity tolerance"@en ;
-    skos:definition "Is comfortable reasoning with incomplete or uncertain information and considering multiple plausible interpretations."@en .
-
-llmpv:veryHighAmbiguityTolerance
-    a skos:Concept ;
-    skos:inScheme llmpv:AmbiguityToleranceScheme ;
-    skos:prefLabel "very high ambiguity tolerance"@en ;
-    skos:definition "Readily works with unresolved uncertainty, competing interpretations, and underspecified situations without requiring premature resolution."@en .
-
-llmpv:AmbiguityToleranceLevels
-    a skos:OrderedCollection ;
-    skos:prefLabel "Ordered ambiguity tolerance levels"@en ;
-    skos:memberList (
-        llmpv:lowAmbiguityTolerance
-        llmpv:moderateAmbiguityTolerance
-        llmpv:highAmbiguityTolerance
-        llmpv:veryHighAmbiguityTolerance
-    ) .
-
 #################################################################
 # Cognitive confidence
 #################################################################

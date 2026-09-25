@@ -7,6 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix llmp: <https://w3id.org/llm-persona#> .
+@prefix llmpv: <https://w3id.org/llm-persona/vocab/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -26,6 +27,11 @@
                            owl:versionInfo "0.1.1" .
 
 
+llmp:recommendedConceptScheme
+    a owl:AnnotationProperty ;
+    rdfs:label "recommended concept scheme"@en ;
+    rdfs:comment "Identifies a SKOS concept scheme recommended as the source of values for the annotated ontology property. Values from other compatible vocabularies may also be used."@en .
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -35,6 +41,7 @@ llmp:assessesTrait rdf:type owl:ObjectProperty ;
                    rdfs:domain llmp:TraitAssessment ;
                    rdfs:range skos:Concept ;
                    rdfs:comment "Links a trait assessment to the Big Five trait being assessed. The value should normally be a concept from the LLMP Big Five trait vocabulary."@en ;
+                   llmp:recommendedConceptScheme llmpv:BigFiveTraitScheme ;
                    rdfs:label "assesses trait"@en .
 
 
@@ -67,6 +74,7 @@ llmp:hasAgentType rdf:type owl:ObjectProperty ;
                   rdfs:range skos:Concept ;
                   rdfs:comment "Links an LLM persona to a controlled category specifying the kind of entity it represents, such as a natural person, fictional person, virtual character, artificial agent, or organisation representative."@en ,
                                "Values can come from llmpv:AgentTypeScheme."@en ;
+                  llmp:recommendedConceptScheme llmpv:AgentTypeScheme ;
                   rdfs:label "has agent type"@en .
 
 
@@ -85,6 +93,7 @@ llmp:hasAudienceRelationRole rdf:type owl:ObjectProperty ;
                              rdfs:domain llmp:LLMPersona ;
                              rdfs:range skos:Concept ;
                              rdfs:comment "Links an LLM persona to a controlled role describing how it should relate to the user or intended audience, such as assistant, coach, interviewer, companion, expert, or tutor."@en ;
+                             llmp:recommendedConceptScheme llmpv:AudienceRelationRoleScheme ;
                              rdfs:label "has audience relation role"@en .
 
 
@@ -138,6 +147,7 @@ llmp:hasCollaborationPreference rdf:type owl:ObjectProperty ;
                                 rdfs:domain llmp:LLMPersona ;
                                 rdfs:range skos:Concept ;
                                 rdfs:comment "Links an LLM persona to a controlled value describing whether it prefers independent, consultative, or group decision-making."@en ;
+                                llmp:recommendedConceptScheme llmpv:CollaborationPreferenceScheme ;
                                 rdfs:label "has collaboration preference"@en .
 
 
@@ -164,6 +174,7 @@ llmp:hasDecisionSpeed rdf:type owl:ObjectProperty ;
                       rdfs:domain llmp:LLMPersona ;
                       rdfs:range skos:Concept ;
                       rdfs:comment "Links an LLM persona to a controlled value describing whether it decides slowly, moderately, quickly, or impulsively."@en ;
+                      llmp:recommendedConceptScheme llmpv:DecisionSpeedScheme ;
                       rdfs:label "has decision speed"@en .
 
 
@@ -202,6 +213,7 @@ llmp:hasGender rdf:type owl:ObjectProperty ;
                rdfs:range skos:Concept ;
                rdfs:comment "Links an LLM persona to a gender value represented as a controlled concept or named resource. This property may be used for asserted, presented, fictional, or otherwise persona-relevant gender."@en ,
                             "Values can come from llmpv:GenderScheme."@en ;
+               llmp:recommendedConceptScheme llmpv:GenderScheme ;
                rdfs:label "has gender"@en .
 
 
@@ -219,6 +231,7 @@ llmp:hasGoalType rdf:type owl:ObjectProperty ;
                  rdfs:domain llmp:Goal ;
                  rdfs:range skos:Concept ;
                  rdfs:comment "Links a goal to a controlled type describing its function, such as primary goal, secondary goal, task goal, social goal, learning goal, product goal, or avoidance goal. Values should normally come from the LLMP goal type vocabulary."@en ;
+                 llmp:recommendedConceptScheme llmpv:GoalTypeScheme ;
                  rdfs:label "has goal type"@en .
 
 
@@ -282,6 +295,7 @@ llmp:hasNeedType rdf:type owl:ObjectProperty ;
                  rdfs:domain llmp:Need ;
                  rdfs:range skos:Concept ;
                  rdfs:comment "Links a need to a controlled type describing its function, such as functional need, emotional need, social need, information need, accessibility need, or activation need. Values should normally come from the LLMP need type vocabulary."@en ;
+                 llmp:recommendedConceptScheme llmpv:NeedTypeScheme ;
                  rdfs:label "has need type"@en .
 
 
@@ -369,6 +383,7 @@ llmp:hasRiskAttitude rdf:type owl:ObjectProperty ;
                      rdfs:domain llmp:LLMPersona ;
                      rdfs:range skos:Concept ;
                      rdfs:comment "Links an LLM persona to a controlled value describing whether it is risk-averse, risk-neutral, or risk-seeking."@en ;
+                     llmp:recommendedConceptScheme llmpv:RiskAttitudeScheme ;
                      rdfs:label "has risk attitude"@en .
 
 
@@ -378,6 +393,7 @@ llmp:hasSocialAlignment rdf:type owl:ObjectProperty ;
                         rdfs:domain llmp:LLMPersona ;
                         rdfs:range skos:Concept ;
                         rdfs:comment "Links an LLM persona to a controlled concept describing its social orientation toward other agents or groups, such as ally, rival, enemy, protector, neutral party, or dependent."@en ;
+                        llmp:recommendedConceptScheme llmpv:SocialAlignmentScheme ;
                         rdfs:label "has social alignment"@en .
 
 
@@ -421,6 +437,7 @@ llmp:preferencePolarity rdf:type owl:ObjectProperty ;
                         rdfs:domain llmp:PreferenceStatement ;
                         rdfs:range skos:Concept ;
                         rdfs:comment "Links a preference to a controlled polarity value, such as like, dislike, prefer, or avoid."@en ;
+                        llmp:recommendedConceptScheme llmpv:PreferencePolarityScheme ;
                         rdfs:label "preference polarity"@en .
 
 
@@ -437,6 +454,7 @@ llmp:usesDecisionCriterion rdf:type owl:ObjectProperty ;
                            rdfs:domain llmp:LLMPersona ;
                            rdfs:range skos:Concept ;
                            rdfs:comment "Links an LLM persona to a criterion it tends to use when making decisions, such as cost, speed, safety, novelty, trust, accuracy, or social impact."@en ;
+                           llmp:recommendedConceptScheme llmpv:DecisionCriterionScheme ;
                            rdfs:label "uses decision criterion"@en .
 
 #################################################################
@@ -977,6 +995,7 @@ llmp:hasReasoningMode
     rdfs:label "has reasoning mode"@en ;
     rdfs:comment "Links an LLM persona to its predominant reasoning mode, such as analytical, intuitive, pragmatic, creative, skeptical, rule-based, or experience-based reasoning. Values should normally come from the LLMP reasoning mode vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasReasoningFeature ;
+    llmp:recommendedConceptScheme llmpv:ReasoningModeScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -985,6 +1004,7 @@ llmp:hasReasoningDepth
     rdfs:label "has reasoning depth"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing the typical depth or elaboration of its reasoning. Values should normally come from the LLMP reasoning depth vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasReasoningFeature ;
+    llmp:recommendedConceptScheme llmpv:ReasoningDepthScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -993,6 +1013,7 @@ llmp:hasEvidenceOrientation
     rdfs:label "has evidence orientation"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing the kind and degree of evidence it tends to require when evaluating claims or reaching conclusions. Values should normally come from the LLMP evidence orientation vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasReasoningFeature ;
+    llmp:recommendedConceptScheme llmpv:EvidenceOrientationScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1001,6 +1022,7 @@ llmp:hasAbstractionLevel
     rdfs:label "has abstraction level"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing whether it tends to reason concretely, at mixed levels of abstraction, abstractly, or theoretically. Values should normally come from the LLMP abstraction level vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasReasoningFeature ;
+    llmp:recommendedConceptScheme llmpv:AbstractionLevelScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1028,6 +1050,7 @@ llmp:hasDetailOrientation
     rdfs:label "has detail orientation"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing the level and type of detail it tends to focus on when processing information."@en ;
     rdfs:subPropertyOf llmp:hasInformationProcessingFeature ;
+    llmp:recommendedConceptScheme llmpv:DetailOrientationScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1036,6 +1059,7 @@ llmp:hasAmbiguityTolerance
     a owl:ObjectProperty ;
     rdfs:label "has ambiguity tolerance"@en ;
     rdfs:comment "Links an LLM persona to a controlled level describing its comfort with incomplete, uncertain, vague, or multiply interpretable information."@en ;
+    llmp:recommendedConceptScheme llmpv:QualitativeLevelScheme ;
     rdfs:subPropertyOf llmp:hasInformationProcessingFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
@@ -1085,6 +1109,7 @@ llmp:hasUnderstandingLevel
     a owl:ObjectProperty ;
     rdfs:label "has understanding level"@en ;
     rdfs:comment "Links a domain understanding to a controlled level describing the persona's degree of understanding of the corresponding subject."@en ;
+    llmp:recommendedConceptScheme llmpv:DomainUnderstandingLevelScheme ;
     rdfs:domain llmp:DomainUnderstanding ;
     rdfs:range skos:Concept .
 
@@ -1129,16 +1154,52 @@ llmp:hasCognitiveFlexibility
     rdfs:label "has cognitive flexibility"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing how easily it changes perspective, revises interpretations, or updates assumptions in response to new information. Values should normally come from the LLMP cognitive flexibility vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasCognitiveDispositionFeature ;
+    llmp:recommendedConceptScheme llmpv:CognitiveFlexibilityScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
+
+
+llmp:CognitiveBias
+    a owl:Class ;
+    rdfs:label "cognitive bias"@en ;
+    rdfs:comment "A structured representation of a recurring cognitive tendency that may systematically influence an LLM persona's interpretation, judgement, reasoning, or decision-making."@en ;
+    skos:editorialNote "Use dcterms:subject to identify the topic, domain, entity, or issue with respect to which the cognitive bias applies, and dcterms:description for a textual characterisation of the bias."@en .
 
 llmp:hasCognitiveBias
     a owl:ObjectProperty ;
     rdfs:label "has cognitive bias"@en ;
-    rdfs:comment "Links an LLM persona to a recurring judgment tendency or cognitive bias that may influence its interpretation or decision-making. Values should normally come from the LLMP cognitive bias vocabulary."@en ;
+    rdfs:comment "Links an LLM persona to a structured cognitive bias that may influence its interpretation, judgement, reasoning, or decision-making."@en ;
     rdfs:subPropertyOf llmp:hasCognitiveDispositionFeature ;
     rdfs:domain llmp:LLMPersona ;
+    rdfs:range llmp:CognitiveBias .
+
+llmp:hasBiasType
+    a owl:ObjectProperty ;
+    rdfs:label "has bias type"@en ;
+    rdfs:comment "Links a cognitive bias to a controlled concept identifying the type of bias, such as confirmation bias, anchoring bias, availability bias, or authority bias."@en ;
+    llmp:recommendedConceptScheme llmpv:CognitiveBiasScheme ;
+    rdfs:domain llmp:CognitiveBias ;
     rdfs:range skos:Concept .
+
+llmp:hasBiasStrength
+    a owl:ObjectProperty ;
+    rdfs:label "has bias strength"@en ;
+    rdfs:comment "Links a cognitive bias to a controlled value describing how strongly the bias tends to influence the persona's cognition."@en ;
+    llmp:recommendedConceptScheme llmpv:QualitativeLevelScheme ;
+    rdfs:domain llmp:CognitiveBias ;
+    rdfs:range skos:Concept .
+
+llmp:hasCognitiveBiasType
+    a owl:ObjectProperty ;
+    rdfs:label "has cognitive bias type"@en ;
+    rdfs:comment "Links an LLM persona directly to the type of a cognitive bias associated with it. This relation can be inferred from the structured cognitive bias representation."@en ;
+    llmp:recommendedConceptScheme llmpv:CognitiveBiasScheme ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range skos:Concept ;
+    owl:propertyChainAxiom (
+        llmp:hasCognitiveBias
+        llmp:hasBiasType
+    ) .
 
 llmp:CognitiveLimitation
     a owl:Class ;
@@ -1219,6 +1280,7 @@ llmp:hasSpeakerRole
     a owl:ObjectProperty ;
     rdfs:label "has speaker role"@en ;
     rdfs:comment "Links a communicative tenor to a role assumed by the LLM persona in relation to its interlocutor."@en ;
+    llmp:recommendedConceptScheme llmpv:CommunicativeRoleScheme ;
     rdfs:domain llmp:CommunicativeTenor ;
     rdfs:range skos:Concept .
 
@@ -1226,6 +1288,7 @@ llmp:hasInterlocutorRole
     a owl:ObjectProperty ;
     rdfs:label "has interlocutor role"@en ;
     rdfs:comment "Links a communicative tenor to a role attributed to the interlocutor in relation to the LLM persona."@en ;
+    llmp:recommendedConceptScheme llmpv:CommunicativeRoleScheme ;
     rdfs:domain llmp:CommunicativeTenor ;
     rdfs:range skos:Concept .
 
@@ -1234,6 +1297,7 @@ llmp:hasCommunicationChannel
     rdfs:label "has communication channel"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing the channel or medium through which communication is realised, such as text chat, spoken dialogue, email, document, social media, or multimodal interaction."@en ;
     rdfs:subPropertyOf llmp:hasRegisterFeature ;
+    llmp:recommendedConceptScheme llmpv:CommunicationChannelScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1253,6 +1317,7 @@ llmp:hasDiscourseMode
     rdfs:label "has discourse mode"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing the general organisation of its discourse, such as narrative, explanatory, argumentative, or procedural."@en ;
     rdfs:subPropertyOf llmp:hasDiscourseFeature ;
+    llmp:recommendedConceptScheme llmpv:DiscourseModeScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1260,6 +1325,7 @@ llmp:hasInformationDensity
     a owl:ObjectProperty ;
     rdfs:label "has information density"@en ;
     rdfs:comment "Links an LLM persona to an ordered level describing how densely information is packed into its communication."@en ;
+    llmp:recommendedConceptScheme llmpv:QualitativeLevelScheme ;
     rdfs:subPropertyOf llmp:hasDiscourseFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
@@ -1281,6 +1347,7 @@ llmp:hasTurnTakingStyle
     rdfs:label "has turn-taking style"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing the characteristic form and initiative of its conversational turns."@en ;
     rdfs:subPropertyOf llmp:hasInteractionalFeature ;
+    llmp:recommendedConceptScheme llmpv:TurnTakingStyleScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1289,6 +1356,7 @@ llmp:hasQuestionStyle
     rdfs:label "has question style"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing how it uses questions in interaction."@en ;
     rdfs:subPropertyOf llmp:hasInteractionalFeature ;
+    llmp:recommendedConceptScheme llmpv:QuestionStyleScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1297,6 +1365,7 @@ llmp:hasRepairStyle
     rdfs:label "has repair style"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing how it handles misunderstanding, correction, clarification, or conversational breakdown."@en ;
     rdfs:subPropertyOf llmp:hasInteractionalFeature ;
+    llmp:recommendedConceptScheme llmpv:RepairStyleScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1318,6 +1387,7 @@ llmp:hasArgumentationStyle
     rdfs:comment "Links an LLM persona to a controlled value describing how it tends to support claims, conclusions, or positions."@en ;
     skos:editorialNote "Values should normally come from the LLMP rethorical style vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasRhetoricalFeature ;
+    llmp:recommendedConceptScheme llmpv:RhetoricalStyleScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1327,6 +1397,7 @@ llmp:hasExplanationStyle
     rdfs:comment "Links an LLM persona to a controlled value describing how it tends to explain concepts or information."@en ;
     skos:editorialNote "Values should normally come from the LLMP rethorical style vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasRhetoricalFeature ;
+    llmp:recommendedConceptScheme llmpv:RhetoricalStyleScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1336,6 +1407,7 @@ llmp:hasPersuasionStyle
     rdfs:comment "Links an LLM persona to a controlled value describing how it attempts to influence an interlocutor, when persuasion is applicable."@en ;
     skos:editorialNote "Values should normally come from the LLMP rethorical style vocabulary."@en ;
     rdfs:subPropertyOf llmp:hasRhetoricalFeature ;
+    llmp:recommendedConceptScheme llmpv:RhetoricalStyleScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1363,6 +1435,7 @@ llmp:hasVocabularyRegister
     rdfs:label "has vocabulary register"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing the lexical and social register of its word choice."@en ;
     rdfs:subPropertyOf llmp:hasLexicoSyntacticFeature ;
+    llmp:recommendedConceptScheme llmpv:VocabularyRegisterScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1371,6 +1444,7 @@ llmp:hasSentenceComplexity
     rdfs:label "has sentence complexity"@en ;
     rdfs:comment "Links an LLM persona to an ordered level describing typical sentence length, clause complexity, and syntactic density."@en ;
     rdfs:subPropertyOf llmp:hasLexicoSyntacticFeature ;
+    llmp:recommendedConceptScheme llmpv:SentenceComplexityScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1378,6 +1452,7 @@ llmp:hasJargonLevel
     a owl:ObjectProperty ;
     rdfs:label "has jargon level"@en ;
     rdfs:comment "Links an LLM persona to an ordered level describing its use of technical or domain-specific terminology."@en ;
+    llmp:recommendedConceptScheme llmpv:QualitativeLevelScheme ;
     rdfs:subPropertyOf llmp:hasLexicoSyntacticFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
@@ -1386,17 +1461,10 @@ llmp:hasLexicalDiversity
     a owl:ObjectProperty ;
     rdfs:label "has lexical diversity"@en ;
     rdfs:comment "Links an LLM persona to an ordered level describing the variety of vocabulary it typically uses."@en ;
+    llmp:recommendedConceptScheme llmpv:QualitativeLevelScheme ;
     rdfs:subPropertyOf llmp:hasLexicoSyntacticFeature ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
-
-llmp:hasLexicalDiversityScore
-    a owl:DatatypeProperty ;
-    rdfs:label "has lexical diversity score"@en ;
-    rdfs:comment "Associates an LLM persona with a numeric measure of lexical diversity. The interpretation of the value depends on the lexical-diversity metric used."@en ;
-    rdfs:subPropertyOf llmp:hasLexicoSyntacticLiteralFeature ;
-    rdfs:domain llmp:LLMPersona ;
-    rdfs:range xsd:decimal .
 
 llmp:hasSignatureExpression
     a owl:DatatypeProperty ;
@@ -1423,6 +1491,7 @@ llmp:hasEmotionalTone
     rdfs:label "has emotional tone"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing the emotional colouring of its language."@en ;
     rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    llmp:recommendedConceptScheme llmpv:EmotionalToneScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1431,6 +1500,7 @@ llmp:hasPolitenessStrategy
     rdfs:label "has politeness strategy"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing how it manages politeness, respect, face, and social distance."@en ;
     rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    llmp:recommendedConceptScheme llmpv:PolitenessStrategyScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1439,6 +1509,7 @@ llmp:hasHedgingLevel
     rdfs:label "has hedging level"@en ;
     rdfs:comment "Links an LLM persona to an ordered level describing its use of uncertainty markers, qualifications, and hedging expressions (e.g. maybe, I think, it seems)."@en ;
     rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    llmp:recommendedConceptScheme llmpv:QualitativeLevelScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1447,6 +1518,7 @@ llmp:hasDirectnessLevel
     rdfs:label "has directness level"@en ;
     rdfs:comment "Links an LLM persona to an ordered level describing how directly or indirectly it communicates intentions, requests, claims, or evaluations."@en ;
     rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    llmp:recommendedConceptScheme llmpv:DirectnessLevelScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
@@ -1455,5 +1527,6 @@ llmp:hasStanceStyle
     rdfs:label "has stance style"@en ;
     rdfs:comment "Links an LLM persona to a controlled value describing how it characteristically positions itself toward claims, information, or topics."@en ;
     rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    llmp:recommendedConceptScheme llmpv:StanceStyleScheme ;
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .

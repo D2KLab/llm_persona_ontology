@@ -1,0 +1,58 @@
+@prefix llmpv: <https://w3id.org/llm-persona/vocab/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+# Generic qualitative levels
+#################################################################
+
+llmpv:QualitativeLevelScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "LLMP qualitative level vocabulary"@en ;
+    skos:definition "Controlled vocabulary of generic qualitative levels used to express the relative degree or intensity of a characteristic."@en .
+
+llmpv:QualitativeLevels
+    a skos:OrderedCollection ;
+    skos:prefLabel "Ordered qualitative levels"@en ;
+    skos:memberList (
+        llmpv:none
+        llmpv:low
+        llmpv:medium
+        llmpv:high
+        llmpv:maximum
+    ) .
+
+llmpv:none
+    a skos:Concept ;
+    skos:inScheme llmpv:QualitativeLevelScheme ;
+    skos:prefLabel "none"@en ;
+    skos:definition "Indicates the absence, or effectively zero degree, of the characteristic being described."@en .
+
+llmpv:low
+    a skos:Concept ;
+    skos:inScheme llmpv:QualitativeLevelScheme ;
+    skos:prefLabel "low"@en ;
+    skos:definition "Indicates a comparatively low degree or intensity of the characteristic being described."@en .
+
+llmpv:medium
+    a skos:Concept ;
+    skos:inScheme llmpv:QualitativeLevelScheme ;
+    skos:prefLabel "medium"@en ;
+    skos:definition "Indicates an intermediate degree or intensity of the characteristic being described."@en .
+
+llmpv:high
+    a skos:Concept ;
+    skos:inScheme llmpv:QualitativeLevelScheme ;
+    skos:prefLabel "high"@en ;
+    skos:definition "Indicates a comparatively high degree or intensity of the characteristic being described."@en .
+
+llmpv:maximum
+    a skos:Concept ;
+    skos:inScheme llmpv:QualitativeLevelScheme ;
+    skos:prefLabel "maximum"@en ;
+    skos:definition "Indicates the highest level or intensity defined for the characteristic being described."@en .
