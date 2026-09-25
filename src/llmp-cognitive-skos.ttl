@@ -395,19 +395,23 @@ llmpv:memory
 llmpv:comprehension
     a skos:Concept ;
     skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:definition "Ability to understand and interpret information, explanations, instructions, or other content."@en ;
     skos:prefLabel "comprehension"@en .
 
 llmpv:numeracy
     a skos:Concept ;
     skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:definition "Ability to understand and work with numbers, quantities, calculations, and quantitative information."@en ;
     skos:prefLabel "numeracy"@en .
 
 llmpv:technicalLiteracy
     a skos:Concept ;
     skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:definition "Ability to understand and use technical concepts, terminology, tools, or systems."@en ;
     skos:prefLabel "technical literacy"@en .
 
 llmpv:domainExpertise
     a skos:Concept ;
     skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:definition "Depth of knowledge and competence in a particular subject or professional domain."@en ;
     skos:prefLabel "domain expertise"@en .

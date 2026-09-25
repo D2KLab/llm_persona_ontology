@@ -31,24 +31,31 @@ llmpv:FictionalPerson a skos:Concept ;
     skos:topConceptOf llmpv:AgentTypeScheme ;
     skos:prefLabel "Fictional person"@en .
 
+llmpv:OrganizationRepresentative
+    skos:definition "A persona that speaks or acts in a role representing an organisation rather than solely as an individual."@en .
+
 llmpv:HistoricalFigure a skos:Concept ;
     skos:inScheme llmpv:AgentTypeScheme ;
-    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:broader llmpv:NaturalPerson ;
+    skos:definition "A persona representing a real person primarily situated in a past historical context."@en ;
     skos:prefLabel "Historical figure"@en .
 
 llmpv:ArtificialAgent a skos:Concept ;
     skos:inScheme llmpv:AgentTypeScheme ;
     skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:definition "A non-human computational or synthetic agent capable of autonomous or semi-autonomous interaction."@en ;
     skos:prefLabel "Artificial agent"@en .
 
 llmpv:EmbodiedRobot a skos:Concept ;
     skos:inScheme llmpv:AgentTypeScheme ;
-    skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:broader llmpv:ArtificialAgent ;
+    skos:definition "An artificial agent represented as having a physical robotic embodiment."@en ;
     skos:prefLabel "Embodied robot"@en .
 
 llmpv:VirtualCharacter a skos:Concept ;
     skos:inScheme llmpv:AgentTypeScheme ;
     skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:definition "A non-physical character represented within a digital or virtual environment."@en ;
     skos:prefLabel "Virtual character"@en .
 
 llmpv:CompositePersona a skos:Concept ;
@@ -64,10 +71,12 @@ llmpv:AudienceSegmentPersona a skos:Concept ;
 llmpv:OrganizationRepresentative a skos:Concept ;
     skos:inScheme llmpv:AgentTypeScheme ;
     skos:topConceptOf llmpv:AgentTypeScheme ;
+    skos:definition "A persona that speaks or acts in a role representing an organisation rather than solely as an individual."@en ;
     skos:prefLabel "Organization representative"@en .
 
 llmpv:SocialAlignmentScheme a skos:ConceptScheme ;
     skos:prefLabel "social alignment scheme"@en ;
+    skos:definition "Controlled vocabulary describing an LLM persona's social orientation toward other agents, people, or groups."@en ;
     dcterms:description "Controlled values for social alignment."@en ;
     skos:hasTopConcept
         llmpv:Ally,
@@ -109,7 +118,7 @@ llmpv:Dependent a skos:Concept ;
 
 llmpv:AudienceRelationRoleScheme a skos:ConceptScheme ;
     skos:prefLabel "audience relation role scheme"@en ;
-    dcterms:description "Controlled values for audience relation role."@en ;
+    skos:definition "Controlled vocabulary describing the role an LLM persona assumes in relation to its intended user or audience."@en ;
     skos:hasTopConcept
         llmpv:RoleAssistant,
         llmpv:RoleCoach,
@@ -161,6 +170,7 @@ llmpv:RoleGuide a skos:Concept ;
     skos:prefLabel "guide"@en .
 
 llmpv:GenderScheme a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary of gender concepts that may be associated with an LLM persona."@en ;
     skos:prefLabel "LLMP gender vocabulary"@en .
 
 llmpv:Woman a skos:Concept ;
@@ -182,11 +192,3 @@ llmpv:Agender a skos:Concept ;
 llmpv:GenderFluid a skos:Concept ;
     skos:inScheme llmpv:GenderScheme ;
     skos:prefLabel "genderfluid"@en .
-
-llmpv:SelfDescribedGender a skos:Concept ;
-    skos:inScheme llmpv:GenderScheme ;
-    skos:prefLabel "self-described gender"@en .
-
-llmpv:User a schema:Person ;
-    rdfs:label "The current user"@en ;
-    rdfs:comment "The person who is currently interacting with the LLM."@en .

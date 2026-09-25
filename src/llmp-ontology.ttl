@@ -1544,3 +1544,7 @@ llmp:hasStanceStyle
     rdfs:domain llmp:Stance ;
     rdfs:range skos:Concept ;
     llmp:recommendedConceptScheme llmpv:StanceStyleScheme .
+
+llmpv:User a schema:Person ;
+    rdfs:label "The current user"@en ;
+    rdfs:comment "The person who is currently interacting with the LLM."@en .

@@ -130,7 +130,7 @@ llmpv:activationNeed
 
 llmpv:PreferencePolarityScheme a skos:ConceptScheme ;
     skos:prefLabel "preference polarity scheme"@en ;
-    dcterms:description "Controlled values for preference polarity."@en ;
+    skos:definition "Controlled vocabulary describing the direction of a persona's preference toward a target."@en ;
     skos:hasTopConcept llmpv:likes, llmpv:dislikes, llmpv:prefers, llmpv:avoids .
 
 llmpv:likes a skos:Concept ;
@@ -155,7 +155,7 @@ llmpv:avoids a skos:Concept ;
 
 llmpv:RiskAttitudeScheme a skos:ConceptScheme ;
     skos:prefLabel "risk attitude scheme"@en ;
-    dcterms:description "Controlled values for risk attitude."@en ;
+    skos:definition "Controlled vocabulary describing an LLM persona's general disposition toward uncertainty and potential gains or losses in decision-making."@en ;
     skos:hasTopConcept llmpv:RiskAverse, llmpv:RiskNeutral, llmpv:RiskSeeking .
 
 llmpv:RiskAverse a skos:Concept ;
@@ -175,7 +175,7 @@ llmpv:RiskSeeking a skos:Concept ;
 
 llmpv:DecisionSpeedScheme a skos:ConceptScheme ;
     skos:prefLabel "decision speed scheme"@en ;
-    dcterms:description "Controlled values for decision speed."@en ;
+    skos:definition "Controlled vocabulary describing the typical speed with which an LLM persona reaches decisions."@en ;
     skos:hasTopConcept llmpv:DecisionSpeedSlow, llmpv:DecisionSpeedModerate, llmpv:DecisionSpeedQuick, llmpv:DecisionSpeedImpulsive .
 
 llmpv:DecisionSpeedSlow a skos:Concept ;
@@ -200,7 +200,7 @@ llmpv:DecisionSpeedImpulsive a skos:Concept ;
 
 llmpv:CollaborationPreferenceScheme a skos:ConceptScheme ;
     skos:prefLabel "collaboration preference scheme"@en ;
-    dcterms:description "Controlled values for collaboration preference."@en ;
+    skos:definition "Controlled vocabulary describing how an LLM persona prefers to involve others in decision-making."@en ;
     skos:hasTopConcept llmpv:CollaborationPreferenceIndependent, llmpv:CollaborationPreferenceConsultative, llmpv:CollaborationPreferenceGroupDecision .
 
 llmpv:CollaborationPreferenceIndependent a skos:Concept ;
@@ -211,11 +211,13 @@ llmpv:CollaborationPreferenceIndependent a skos:Concept ;
 llmpv:CollaborationPreferenceConsultative a skos:Concept ;
     skos:inScheme llmpv:CollaborationPreferenceScheme ;
     skos:topConceptOf llmpv:CollaborationPreferenceScheme ;
-    skos:prefLabel "consultative"@en .
+    skos:prefLabel "consultative"@en ;
+    skos:definition "Prefers to seek input from others while retaining responsibility for the final decision."@en .
 
 llmpv:CollaborationPreferenceGroupDecision a skos:Concept ;
     skos:inScheme llmpv:CollaborationPreferenceScheme ;
     skos:topConceptOf llmpv:CollaborationPreferenceScheme ;
+    skos:definition "Prefers decisions to be reached collectively with other participants."@en ;
     skos:prefLabel "group decision"@en .
 
 llmpv:DecisionCriterionScheme

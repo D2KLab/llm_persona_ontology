@@ -246,6 +246,7 @@ llmpv:dialogicDiscourse
 llmpv:reflectiveDiscourse
     a skos:Concept ;
     skos:inScheme llmpv:DiscourseModeScheme ;
+    skos:definition "Discourse organised around consideration, interpretation, or evaluation of ideas, experiences, or alternatives."@en ;
     skos:prefLabel "reflective"@en .
 
 
@@ -254,6 +255,7 @@ llmpv:reflectiveDiscourse
 
 llmpv:TurnTakingStyleScheme
     a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary describing how an LLM persona typically manages the form, initiative, and responsiveness of its conversational turns."@en ;
     skos:prefLabel "LLMP turn-taking style vocabulary"@en .
 
 llmpv:conciseTurnTaking
@@ -274,10 +276,12 @@ llmpv:reactiveTurnTaking
 llmpv:proactiveTurnTaking
     a skos:Concept ;
     skos:inScheme llmpv:TurnTakingStyleScheme ;
+    skos:definition "Introduces relevant information, suggestions, or questions without requiring an explicit prompt from the interlocutor."@en ;
     skos:prefLabel "proactive"@en .
 
 llmpv:reflectiveTurnTaking
     a skos:Concept ;
+    skos:definition "Primarily responds to the interlocutor's preceding contribution rather than initiating new directions."@en ;
     skos:inScheme llmpv:TurnTakingStyleScheme ;
     skos:prefLabel "reflective"@en .
 
@@ -288,6 +292,7 @@ llmpv:reflectiveTurnTaking
 
 llmpv:QuestionStyleScheme
     a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary describing how and for what purpose an LLM persona typically uses questions in interaction."@en ;
     skos:prefLabel "LLMP question style vocabulary"@en .
 
 llmpv:rareQuestions
@@ -308,11 +313,13 @@ llmpv:exploratoryQuestions
 llmpv:socraticQuestions
     a skos:Concept ;
     skos:inScheme llmpv:QuestionStyleScheme ;
+    skos:definition "Uses questions to stimulate examination of assumptions, reasoning, or implications rather than directly providing answers."@en ;
     skos:prefLabel "Socratic"@en .
 
 llmpv:interviewLikeQuestions
     a skos:Concept ;
     skos:inScheme llmpv:QuestionStyleScheme ;
+    skos:definition "Uses a sequence of targeted questions to elicit information, experiences, preferences, or views from the interlocutor."@en ;
     skos:prefLabel "interview-like"@en .
 
 
@@ -322,6 +329,7 @@ llmpv:interviewLikeQuestions
 
 llmpv:RepairStyleScheme
     a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary describing how an LLM persona responds to misunderstanding, ambiguity, error, or conversational breakdown."@en ;
     skos:prefLabel "LLMP repair style vocabulary"@en .
 
 llmpv:ignoresMisunderstanding
@@ -521,6 +529,7 @@ llmpv:motivational
 
 llmpv:VocabularyRegisterScheme
     a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary describing the lexical and social register of an LLM persona's word choice."@en ;
     skos:prefLabel "LLMP vocabulary register vocabulary"@en .
 
 llmpv:colloquialRegister
@@ -560,6 +569,7 @@ llmpv:literaryRegister
 
 llmpv:SentenceComplexityScheme
     a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary describing the typical syntactic complexity of an LLM persona's sentences, including length, clause structure, and density."@en ;
     skos:prefLabel "LLMP sentence complexity vocabulary"@en .
 
 llmpv:SentenceComplexityLevels
@@ -593,6 +603,7 @@ llmpv:complexSentenceComplexity
 
 llmpv:EmotionalToneScheme
     a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary describing the general affective colouring expressed through an LLM persona's communication."@en ;
     skos:prefLabel "LLMP emotional tone vocabulary"@en .
 
 llmpv:neutralTone
@@ -613,6 +624,7 @@ llmpv:empatheticTone
 llmpv:enthusiasticTone
     a skos:Concept ;
     skos:inScheme llmpv:EmotionalToneScheme ;
+    skos:definition "Expresses an energetic, positive, and engaged affective tone across communication."@en ;
     skos:prefLabel "enthusiastic"@en .
 
 llmpv:seriousTone
@@ -642,6 +654,7 @@ llmpv:humorousTone
 
 llmpv:PolitenessStrategyScheme
     a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary describing how an LLM persona manages politeness, respect, face, deference, and social distance."@en ;
     skos:prefLabel "LLMP politeness strategy vocabulary"@en .
 
 llmpv:bluntPoliteness
@@ -662,12 +675,14 @@ llmpv:polite
 llmpv:deferential
     a skos:Concept ;
     skos:inScheme llmpv:PolitenessStrategyScheme ;
-    skos:prefLabel "deferential"@en .
+    skos:prefLabel "deferential"@en ;
+    skos:definition "Showing respect and consideration for others' feelings and dignity."@en .
 
 llmpv:faceSaving
     a skos:Concept ;
     skos:inScheme llmpv:PolitenessStrategyScheme ;
-    skos:prefLabel "face-saving"@en .
+    skos:prefLabel "face-saving"@en ;
+    skos:definition "Uses wording intended to reduce threats to the interlocutor's social image, autonomy, or self-esteem."@en .
 
 llmpv:highlyFormal
     a skos:Concept ;
@@ -680,6 +695,7 @@ llmpv:highlyFormal
 
 llmpv:DirectnessLevelScheme
     a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary describing how directly or indirectly an LLM persona expresses intentions, requests, claims, or evaluations."@en ;
     skos:prefLabel "LLMP directness level vocabulary"@en .
 
 llmpv:DirectnessLevels
@@ -719,6 +735,7 @@ llmpv:bluntDirectness
 
 llmpv:StanceStyleScheme
     a skos:ConceptScheme ;
+    skos:definition "Controlled vocabulary describing the characteristic attitude or position an LLM persona adopts toward the subject of a stance."@en ;
     skos:prefLabel "LLMP stance style vocabulary"@en .
 
 llmpv:certainStance
@@ -739,7 +756,8 @@ llmpv:skepticalStance
 llmpv:enthusiasticStance
     a skos:Concept ;
     skos:inScheme llmpv:StanceStyleScheme ;
-    skos:prefLabel "enthusiastic"@en .
+    skos:prefLabel "enthusiastic"@en ;
+    skos:definition "Adopts a strongly positive, engaged, or supportive attitude toward the subject of the stance."@en .
 
 llmpv:neutralStance
     a skos:Concept ;
@@ -749,4 +767,5 @@ llmpv:neutralStance
 llmpv:reflectiveStance
     a skos:Concept ;
     skos:inScheme llmpv:StanceStyleScheme ;
-    skos:prefLabel "reflective"@en .
+    skos:prefLabel "reflective"@en ;
+    skos:definition "Adopts a considered and deliberative attitude toward the subject, emphasising examination rather than immediate commitment."@en .
