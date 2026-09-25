@@ -375,3 +375,39 @@ llmpv:overconfidenceBias
     skos:inScheme llmpv:CognitiveBiasScheme ;
     skos:prefLabel "overconfidence bias"@en ;
     skos:definition "Tendency to overestimate the accuracy, completeness, or reliability of one's knowledge or judgments."@en .
+
+
+llmpv:CognitiveLimitationAreaScheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "Cognitive limitation area vocabulary"@en ;
+    skos:definition "Controlled vocabulary identifying broad cognitive capabilities or areas that may be affected by a cognitive limitation."@en .
+
+llmpv:attention
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:prefLabel "attention"@en .
+
+llmpv:memory
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:prefLabel "memory"@en .
+
+llmpv:comprehension
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:prefLabel "comprehension"@en .
+
+llmpv:numeracy
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:prefLabel "numeracy"@en .
+
+llmpv:technicalLiteracy
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:prefLabel "technical literacy"@en .
+
+llmpv:domainExpertise
+    a skos:Concept ;
+    skos:inScheme llmpv:CognitiveLimitationAreaScheme ;
+    skos:prefLabel "domain expertise"@en .

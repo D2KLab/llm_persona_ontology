@@ -1204,8 +1204,8 @@ llmp:hasCognitiveBiasType
 llmp:CognitiveLimitation
     a owl:Class ;
     rdfs:label "cognitive limitation"@en ;
-    rdfs:comment "A limitation affecting an LLM persona's cognitive capability, understanding, or processing with respect to a particular subject, domain, or cognitive function."@en ;
-    skos:editorialNote "Use dcterms:subject to identify the capability, domain, topic, or cognitive function affected by the limitation."@en .
+    rdfs:comment "A limitation affecting an LLM persona's cognitive capability, understanding, or processing."@en ;
+    skos:editorialNote "The broad affected area can be specified with llmp:hasLimitationArea, while dcterms:subject can identify a more specific topic or domain to which the limitation applies."@en .
 
 llmp:hasCognitiveLimitation
     a owl:ObjectProperty ;
@@ -1215,22 +1215,22 @@ llmp:hasCognitiveLimitation
     rdfs:domain llmp:LLMPersona ;
     rdfs:range llmp:CognitiveLimitation .
 
-llmp:hasLimitationSeverityScore
-    a owl:DatatypeProperty ;
-    rdfs:label "has limitation severity score"@en ;
-    rdfs:comment "Associates a cognitive limitation with a normalised severity score between 0 and 1, where higher values indicate a more substantial limitation."@en ;
-    rdfs:domain llmp:CognitiveLimitation ;
-    rdfs:range llmp:Range0to1 .
-
-llmp:hasCognitiveLimitationAbout
+llmp:hasLimitationArea
     a owl:ObjectProperty ;
-    rdfs:label "has cognitive limitation about"@en ;
-    rdfs:comment "Links an LLM persona directly to a subject, capability, domain, or cognitive function about which it has a cognitive limitation. This property can be inferred from a CognitiveLimitation and its dcterms:subject."@en ;
-    rdfs:domain llmp:LLMPersona ;
-    owl:propertyChainAxiom (
-        llmp:hasCognitiveLimitation
-        dcterms:subject
-    ) .
+    rdfs:label "has limitation area"@en ;
+    rdfs:comment "Identifies the broad cognitive capability or area affected by a cognitive limitation."@en ;
+    rdfs:domain llmp:CognitiveLimitation ;
+    rdfs:range skos:Concept ;
+    llmp:recommendedConceptScheme llmpv:CognitiveLimitationAreaScheme .
+
+
+llmp:hasLimitationSeverity
+    a owl:ObjectProperty ;
+    rdfs:label "has limitation severity"@en ;
+    rdfs:comment "Indicates the degree to which a cognitive limitation affects the persona."@en ;
+    rdfs:domain llmp:CognitiveLimitation ;
+    rdfs:range skos:Concept ;
+    llmp:recommendedConceptScheme llmpv:QualitativeLevelScheme .
 
 
 #################################################################
@@ -1522,11 +1522,25 @@ llmp:hasDirectnessLevel
     rdfs:domain llmp:LLMPersona ;
     rdfs:range skos:Concept .
 
+
+llmp:Stance
+    a owl:Class ;
+    rdfs:label "stance"@en ;
+    rdfs:comment "A structured representation of an LLM persona's characteristic position or attitude toward a particular subject, claim, topic, entity, or issue."@en ;
+    skos:editorialNote "Use dcterms:subject to identify what the stance concerns."@en .
+
+llmp:hasStance
+    a owl:ObjectProperty ;
+    rdfs:label "has stance"@en ;
+    rdfs:comment "Links an LLM persona to a structured stance toward a particular subject, claim, topic, entity, or issue."@en ;
+    rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
+    rdfs:domain llmp:LLMPersona ;
+    rdfs:range llmp:Stance .
+
 llmp:hasStanceStyle
     a owl:ObjectProperty ;
     rdfs:label "has stance style"@en ;
-    rdfs:comment "Links an LLM persona to a controlled value describing how it characteristically positions itself toward claims, information, or topics."@en ;
-    rdfs:subPropertyOf llmp:hasAffectivePragmaticFeature ;
-    llmp:recommendedConceptScheme llmpv:StanceStyleScheme ;
-    rdfs:domain llmp:LLMPersona ;
-    rdfs:range skos:Concept .
+    rdfs:comment "Links a stance to a controlled value describing how the persona positions itself toward the subject of that stance."@en ;
+    rdfs:domain llmp:Stance ;
+    rdfs:range skos:Concept ;
+    llmp:recommendedConceptScheme llmpv:StanceStyleScheme .
