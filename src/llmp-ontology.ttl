@@ -87,17 +87,6 @@ llmp:hasApparentAge rdf:type owl:ObjectProperty ;
                     rdfs:label "has apparent age"@en .
 
 
-
-llmp:hasAudienceRelationRole rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf llmp:hasSocialIdentityFeature ;
-                             rdfs:domain llmp:LLMPersona ;
-                             rdfs:range skos:Concept ;
-                             rdfs:comment "Links an LLM persona to a controlled role describing how it should relate to the user or intended audience, such as assistant, coach, interviewer, companion, expert, or tutor."@en ;
-                             llmp:recommendedConceptScheme llmpv:AudienceRelationRoleScheme ;
-                             rdfs:label "has audience relation role"@en .
-
-
-
 llmp:hasBehaviorFeature rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf llmp:hasPersonaFeature ;
                         rdfs:domain llmp:LLMPersona ;
@@ -1282,7 +1271,8 @@ llmp:hasSpeakerRole
     rdfs:comment "Links a communicative tenor to a role assumed by the LLM persona in relation to its interlocutor."@en ;
     llmp:recommendedConceptScheme llmpv:CommunicativeRoleScheme ;
     rdfs:domain llmp:CommunicativeTenor ;
-    rdfs:range skos:Concept .
+    rdfs:range skos:Concept ;
+    llmp:recommendedConceptScheme llmpv:CommunicativeRoleScheme .
 
 llmp:hasInterlocutorRole
     a owl:ObjectProperty ;
@@ -1290,7 +1280,8 @@ llmp:hasInterlocutorRole
     rdfs:comment "Links a communicative tenor to a role attributed to the interlocutor in relation to the LLM persona."@en ;
     llmp:recommendedConceptScheme llmpv:CommunicativeRoleScheme ;
     rdfs:domain llmp:CommunicativeTenor ;
-    rdfs:range skos:Concept .
+    rdfs:range skos:Concept ;
+    llmp:recommendedConceptScheme llmpv:CommunicativeRoleScheme .
 
 llmp:hasCommunicationChannel
     a owl:ObjectProperty ;

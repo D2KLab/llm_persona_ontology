@@ -58,10 +58,6 @@ llmpv:SocialRelationRole
     skos:definition "A communicative role characterised by social proximity or an interpersonal relationship."@en .
 
 
-#################################################################
-# Expertise roles
-#################################################################
-
 llmpv:expertRole
     a skos:Concept ;
     skos:inScheme llmpv:CommunicativeRoleScheme ;
@@ -76,10 +72,6 @@ llmpv:noviceRole
     skos:prefLabel "novice"@en ;
     skos:definition "A role in which the participant is treated as having comparatively limited expertise relevant to the interaction."@en .
 
-
-#################################################################
-# Interaction roles
-#################################################################
 
 llmpv:assistantRole
     a skos:Concept ;
@@ -96,10 +88,6 @@ llmpv:userRole
     skos:definition "A role representing the participant making use of an assistant, system, or interactive service."@en .
 
 
-#################################################################
-# Service roles
-#################################################################
-
 llmpv:customerRole
     a skos:Concept ;
     skos:inScheme llmpv:CommunicativeRoleScheme ;
@@ -114,10 +102,6 @@ llmpv:serviceAgentRole
     skos:prefLabel "service agent"@en ;
     skos:definition "A role representing a participant providing assistance or service on behalf of an organisation or system."@en .
 
-
-#################################################################
-# Hierarchical roles
-#################################################################
 
 llmpv:authorityRole
     a skos:Concept ;
@@ -134,10 +118,6 @@ llmpv:subordinateRole
     skos:definition "A role characterised by comparatively lower authority or hierarchical status relative to another participant."@en .
 
 
-#################################################################
-# Social relation roles
-#################################################################
-
 llmpv:peerRole
     a skos:Concept ;
     skos:inScheme llmpv:CommunicativeRoleScheme ;
@@ -152,6 +132,41 @@ llmpv:friendRole
     skos:prefLabel "friend"@en ;
     skos:definition "A peer role characterised by an informal and socially close interpersonal relationship."@en .
 
+llmpv:coachRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:InteractionRole ;
+    skos:prefLabel "coach"@en .
+
+llmpv:interviewerRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:InteractionRole ;
+    skos:prefLabel "interviewer"@en .
+
+llmpv:tutorRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:InteractionRole ;
+    skos:prefLabel "tutor"@en .
+
+llmpv:criticRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:InteractionRole ;
+    skos:prefLabel "critic"@en .
+
+llmpv:guideRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:InteractionRole ;
+    skos:prefLabel "guide"@en .
+
+llmpv:companionRole
+    a skos:Concept ;
+    skos:inScheme llmpv:CommunicativeRoleScheme ;
+    skos:broader llmpv:SocialRelationRole ;
+    skos:prefLabel "companion"@en .
 
 #################################################################
 # Communication channel

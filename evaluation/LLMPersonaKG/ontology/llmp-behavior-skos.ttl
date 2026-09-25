@@ -156,19 +156,19 @@ llmpv:avoids a skos:Concept ;
 llmpv:RiskAttitudeScheme a skos:ConceptScheme ;
     skos:prefLabel "risk attitude scheme"@en ;
     dcterms:description "Controlled values for risk attitude."@en ;
-    skos:hasTopConcept llmpv:RiskAverse, llmpv:RiskNeutral, llmpv:RiskSeeking .
+    skos:hasTopConcept llmpv:riskAverse, llmpv:riskNeutral, llmpv:riskSeeking .
 
-llmpv:RiskAverse a skos:Concept ;
+llmpv:riskAverse a skos:Concept ;
     skos:inScheme llmpv:RiskAttitudeScheme ;
     skos:topConceptOf llmpv:RiskAttitudeScheme ;
     skos:prefLabel "risk averse"@en .
 
-llmpv:RiskNeutral a skos:Concept ;
+llmpv:riskNeutral a skos:Concept ;
     skos:inScheme llmpv:RiskAttitudeScheme ;
     skos:topConceptOf llmpv:RiskAttitudeScheme ;
     skos:prefLabel "risk neutral"@en .
 
-llmpv:RiskSeeking a skos:Concept ;
+llmpv:riskSeeking a skos:Concept ;
     skos:inScheme llmpv:RiskAttitudeScheme ;
     skos:topConceptOf llmpv:RiskAttitudeScheme ;
     skos:prefLabel "risk seeking"@en .
@@ -176,24 +176,24 @@ llmpv:RiskSeeking a skos:Concept ;
 llmpv:DecisionSpeedScheme a skos:ConceptScheme ;
     skos:prefLabel "decision speed scheme"@en ;
     dcterms:description "Controlled values for decision speed."@en ;
-    skos:hasTopConcept llmpv:DecisionSpeedSlow, llmpv:DecisionSpeedModerate, llmpv:DecisionSpeedQuick, llmpv:DecisionSpeedImpulsive .
+    skos:hasTopConcept llmpv:decisionSpeedSlow, llmpv:decisionSpeedModerate, llmpv:decisionSpeedQuick, llmpv:decisionSpeedImpulsive .
 
-llmpv:DecisionSpeedSlow a skos:Concept ;
+llmpv:decisionSpeedSlow a skos:Concept ;
     skos:inScheme llmpv:DecisionSpeedScheme ;
     skos:topConceptOf llmpv:DecisionSpeedScheme ;
     skos:prefLabel "slow"@en .
 
-llmpv:DecisionSpeedModerate a skos:Concept ;
+llmpv:decisionSpeedModerate a skos:Concept ;
     skos:inScheme llmpv:DecisionSpeedScheme ;
     skos:topConceptOf llmpv:DecisionSpeedScheme ;
     skos:prefLabel "moderate"@en .
 
-llmpv:DecisionSpeedQuick a skos:Concept ;
+llmpv:decisionSpeedQuick a skos:Concept ;
     skos:inScheme llmpv:DecisionSpeedScheme ;
     skos:topConceptOf llmpv:DecisionSpeedScheme ;
     skos:prefLabel "quick"@en .
 
-llmpv:DecisionSpeedImpulsive a skos:Concept ;
+llmpv:decisionSpeedImpulsive a skos:Concept ;
     skos:inScheme llmpv:DecisionSpeedScheme ;
     skos:topConceptOf llmpv:DecisionSpeedScheme ;
     skos:prefLabel "impulsive"@en .
@@ -201,19 +201,19 @@ llmpv:DecisionSpeedImpulsive a skos:Concept ;
 llmpv:CollaborationPreferenceScheme a skos:ConceptScheme ;
     skos:prefLabel "collaboration preference scheme"@en ;
     dcterms:description "Controlled values for collaboration preference."@en ;
-    skos:hasTopConcept llmpv:CollaborationPreferenceIndependent, llmpv:CollaborationPreferenceConsultative, llmpv:CollaborationPreferenceGroupDecision .
+    skos:hasTopConcept llmpv:collaborationPreferenceIndependent, llmpv:collaborationPreferenceConsultative, llmpv:collaborationPreferenceGroupDecision .
 
-llmpv:CollaborationPreferenceIndependent a skos:Concept ;
+llmpv:collaborationPreferenceIndependent a skos:Concept ;
     skos:inScheme llmpv:CollaborationPreferenceScheme ;
     skos:topConceptOf llmpv:CollaborationPreferenceScheme ;
     skos:prefLabel "independent"@en .
 
-llmpv:CollaborationPreferenceConsultative a skos:Concept ;
+llmpv:collaborationPreferenceConsultative a skos:Concept ;
     skos:inScheme llmpv:CollaborationPreferenceScheme ;
     skos:topConceptOf llmpv:CollaborationPreferenceScheme ;
     skos:prefLabel "consultative"@en .
 
-llmpv:CollaborationPreferenceGroupDecision a skos:Concept ;
+llmpv:collaborationPreferenceGroupDecision a skos:Concept ;
     skos:inScheme llmpv:CollaborationPreferenceScheme ;
     skos:topConceptOf llmpv:CollaborationPreferenceScheme ;
     skos:prefLabel "group decision"@en .
@@ -223,37 +223,37 @@ llmpv:DecisionCriterionScheme
     skos:prefLabel "LLMP decision criterion vocabulary"@en ;
     skos:definition "Controlled vocabulary for criteria that an LLM persona may use when evaluating options, making choices, or deciding how to act."@en ;
     skos:hasTopConcept
-        llmpv:EpistemicDecisionCriterion ,
-        llmpv:PracticalDecisionCriterion ,
-        llmpv:RiskSafetyDecisionCriterion ,
-        llmpv:HumanCentredDecisionCriterion ,
-        llmpv:ValueImpactDecisionCriterion .
+        llmpv:epistemicDecisionCriterion ,
+        llmpv:practicalDecisionCriterion ,
+        llmpv:riskSafetyDecisionCriterion ,
+        llmpv:humanCentredDecisionCriterion ,
+        llmpv:valueImpactDecisionCriterion .
 
-llmpv:EpistemicDecisionCriterion
+    llmpv:epistemicDecisionCriterion
     a skos:Concept ;
     skos:topConceptOf llmpv:DecisionCriterionScheme ;
     skos:prefLabel "epistemic decision criterion"@en ;
     skos:definition "A decision criterion related to knowledge quality, correctness, evidence, uncertainty, or reliability."@en .
 
-llmpv:PracticalDecisionCriterion
+llmpv:practicalDecisionCriterion
     a skos:Concept ;
     skos:topConceptOf llmpv:DecisionCriterionScheme ;
     skos:prefLabel "practical decision criterion"@en ;
     skos:definition "A decision criterion related to feasibility, efficiency, cost, speed, or available resources."@en .
 
-llmpv:RiskSafetyDecisionCriterion
+llmpv:riskSafetyDecisionCriterion
     a skos:Concept ;
     skos:topConceptOf llmpv:DecisionCriterionScheme ;
     skos:prefLabel "risk and safety decision criterion"@en ;
     skos:definition "A decision criterion related to harm avoidance, risk management, safety, privacy, or compliance."@en .
 
-llmpv:HumanCentredDecisionCriterion
+llmpv:humanCentredDecisionCriterion
     a skos:Concept ;
     skos:topConceptOf llmpv:DecisionCriterionScheme ;
     skos:prefLabel "human-centred decision criterion"@en ;
     skos:definition "A decision criterion related to user needs, preferences, accessibility, usability, or user benefit."@en .
 
-llmpv:ValueImpactDecisionCriterion
+llmpv:valueImpactDecisionCriterion
     a skos:Concept ;
     skos:topConceptOf llmpv:DecisionCriterionScheme ;
     skos:prefLabel "value and impact decision criterion"@en ;
