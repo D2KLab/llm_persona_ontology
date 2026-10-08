@@ -4,6 +4,8 @@ The LLM Persona Ontology provides a structured model for representing personas u
 
 Rather than describing personas as free-text prompts, it encodes identity, behavioural characteristics, preferences, goals, and constraints as structured RDF knowledge. This enables semantic querying, validation, comparison, reuse, and automatic generation of persona prompts while remaining interoperable with existing Semantic Web vocabularies.
 
+[📄 READ THE PAPER @ISWC2026](https://www.eurecom.fr/en/publication/8935)
+
 ## Design choices
 
 - Main ontology namespace: `https://w3id.org/llm-persona/`.
@@ -39,6 +41,8 @@ After editing the template in `res`, regenerate the documentation using
 If you use this ontology, please cite ([bibtex](sillano2026persona_ontology.bib)):
 
 Sillano, Andrea, Lisena, Pasquale, Troncy, Raphaël and De Russis, Luigi. **Formalising personas for large language models: An ontological approach**. In: *25th International Semantic Web Conference (ISWC 2026)*, Posters and Demos Track, 25-29 October 2026, Bari, Italy
+
+Read the paper: https://www.eurecom.fr/en/publication/8935
 
 ----------
 
